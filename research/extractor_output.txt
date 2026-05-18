@@ -1,0 +1,5039 @@
+
+==================================================
+FILE: pm_cases_chatbot.md
+==================================================
+
+--- Context around line 71 ---
+   
+   In the rapidly evolving landscape of artificial intelligence, the ability to process and understand multi-modal documents — combin
+   
+=> This technical blog series explores the development of a sophisticated RAG chatbot that leverages the Model Context Protocol (MCP)
+   
+   ### **Evolution from LangGraph to MCP Architecture**
+   
+
+--- Context around line 94 ---
+   
+   Traditional RAG systems suffer from a fundamental form of “document blindness” — they can read words but cannot see meaning. When 
+   
+=> This limitation becomes particularly devastating in technical fields where visual information is not supplementary but essential. 
+   
+   ### **The Integration Isolation Problem**
+   
+
+--- Context around line 104 ---
+   
+   ### **The Static Knowledge Trap**
+   
+=> Perhaps the most limiting aspect of traditional RAG systems is their static nature — they’re like libraries that never acquire new
+   
+   This limitation creates a particularly frustrating user experience. Imagine asking a research assistant about “recent developments
+   
+
+--- Context around line 106 ---
+   
+   Perhaps the most limiting aspect of traditional RAG systems is their static nature — they’re like libraries that never acquire new
+   
+=> This limitation creates a particularly frustrating user experience. Imagine asking a research assistant about “recent developments
+   
+   The routing problem extends beyond simple currency issues. These systems cannot distinguish between queries that require deep, dom
+   
+
+--- Context around line 126 ---
+   
+   This led us to **\*\*unstructured.io\*\***, a revolutionary document processing library that treats documents as multi-modal entit
+   
+=> To complement unstructured.io’s capabilities, we integrated **\*\*pdfplumber\*\*** as our specialized table extraction engine. Whi
+   
+   ### **Challenge 2: AI-Powered Content Analysis — Addressed with Claude-3 Sonnet’s Vision Capabilities**
+   
+
+--- Context around line 154 ---
+   
+   The final challenge was maintaining semantic relationships between different content types while ensuring efficient storage, retri
+   
+=> For vector storage and semantic search, we chose **ChromaDB**, a database designed specifically for AI applications. Unlike tradit
+   
+   The intelligence behind our embeddings comes from **AWS Bedrock**, Amazon’s managed AI service that provides enterprise-grade acce
+   
+
+--- Context around line 156 ---
+   
+   For vector storage and semantic search, we chose **ChromaDB**, a database designed specifically for AI applications. Unlike tradit
+   
+=> The intelligence behind our embeddings comes from **AWS Bedrock**, Amazon’s managed AI service that provides enterprise-grade acce
+   
+   Tying everything together is **Streamlit**, our choice for the user interface layer. Streamlit’s Python-native approach means our 
+   
+
+--- Context around line 172 ---
+   
+   Our MCP server represents a paradigm shift from traditional API servers to an intelligent tooling ecosystem. Rather than hosting s
+   
+=> The AI-Enhanced DOCX Extractor Tool brings similar sophistication to Word documents, handling the complex challenge of embedded co
+   
+   Our Generate Answer Tool and Grade Relevance Tool work as a quality assurance partnership, ensuring that responses are not only co
+   
+
+--- Context around line 180 ---
+   
+   The MCP client serves as the intelligent conductor of our document processing symphony, managing complex workflows that span multi
+   
+=> The client’s query processing pipeline implements adaptive routing with comprehensive fallback mechanisms, ensuring users receive 
+   
+   Perhaps most importantly, the client implements robust error handling and recovery strategies that ensure system resilience. When 
+   
+
+--- Context around line 192 ---
+   
+   Claude-3 Sonnet represents the analytical powerhouse of our system, bringing sophisticated vision capabilities and complex reasoni
+   
+=> Titan Embeddings completes our Bedrock integration by generating high-quality vector representations that capture semantic meaning
+   
+   ### **unstructured.io — The Document Understanding Engine**
+   
+
+--- Context around line 212 ---
+   
+   ### **ChromaDB — The Semantic Memory System**
+   
+=> ChromaDB represents our choice for semantic memory, designed from the ground up for AI applications rather than adapted from tradi
+   
+   The database’s AI-native design means it handles the complexities of vector similarity calculations, metadata filtering, and persi
+   
+
+--- Context around line 302 ---
+   
+   ## **Conclusion**
+   
+=> In Part 1 of this technical blog series, we have explored the fundamental challenges that traditional RAG systems face when dealin
+   
+   ### **Key Insights from Part 1**
+   
+
+--- Context around line 436 ---
+   
+   Retrieval-Augmented Generation (RAG) is an approach that pairs a generative AI model (like an LLM) with an external knowledge sour
+   
+=> In simpler terms, RAG lets the AI model “open a book” or query a database _at the moment of answering a question_ so that its resp
+   
+   Contrast this with a vanilla LLM usage. A normal LLM generates answers only from its internal parameters (its pre-trained knowledg
+   
+
+--- Context around line 458 ---
+   
+   This is where _Retrieval-Augmented Generation_, or RAG, shoulders itself into an equation.
+   
+=> Every AI product manager building AI features today encounters the limitations of large language models (LLMs). These models are t
+   
+   They also tend to hallucinate. They make up answers when unsure, often with unwarranted confidence. One AWS expert quipped that yo
+   
+
+--- Context around line 482 ---
+   
+   First, the system gathers and prepares the external knowledge your [AI tool](https://productschool.com/blog/artificial-intelligenc
+   
+=> A common approach is to split documents into chunks and convert them into numerical vectors (embeddings) that capture semantic mea
+   
+   This index often lives in a vector database optimized for similarity search. By the end of ingestion, your RAG system has a search
+   
+
+--- Context around line 624 ---
+   
+   - **Chunking strategy** The way data is chunked directly affects retrieval accuracy. Chunks that are too large risk irrelevant con
+   
+=> - **Ambiguity in queries** User questions can be vague, and retrieval may miss or misinterpret intent. Hybrid search and classifie
+   
+   - **Latency and performance** Every retrieval and generation step adds time. Large indexes, multiple data sources, or overly compl
+   
+
+--- Context around line 798 ---
+   
+   We were brought in to eliminate that bottleneck entirely.
+   
+=> The standard playbook for this kind of problem is vector search: embed your documents, run similarity queries, feed results to an 
+   
+   So we built **Chief Bot**: an enterprise AI chatbot powered by a **Neo4j knowledge graph** and a **Graph based RAG (Retrieval Augm
+   
+
+--- Context around line 870 ---
+   
+   The Deterministic Core (FEL1). We performed a manual, high precision extraction of foundational project data from the client's pri
+   
+=> The Contextual Layer (DL2, Modular Processing). We developed a suite of specialized functions to process fluid data sources like m
+   
+   ### AI Reasoning & Transparent Interface
+   
+
+--- Context around line 900 ---
+   
+   Natural language to Cypher is fragile at the edges.Straightforward questions ("Who leads Project Atlas?") translate reliably. Ambi
+   
+=> We deliberately limited the PoC data scope.We ingested one primary document to validate the architecture. The modular ingestion pi
+   
+   Any AI system is only as good as the data it's built on.Chief Bot's accuracy depends entirely on the quality, completeness, and fr
+   
+
+==================================================
+FILE: anythingllm_embed_tutorial.md
+==================================================
+
+--- Context around line 0 ---
+=> # Query: AnythingLLM embed widget production setup tutorial
+   
+   ## 1. Overview ~ AnythingLLM
+   **URL:** https://docs.anythingllm.com/setup/embedder-configuration/overview
+
+--- Context around line 2 ---
+   # Query: AnythingLLM embed widget production setup tutorial
+   
+=> ## 1. Overview ~ AnythingLLM
+   **URL:** https://docs.anythingllm.com/setup/embedder-configuration/overview
+   
+   [🚀 AnythingLLM v1.12.1 is live! Update now →](https://anythingllm.com/download)
+
+--- Context around line 3 ---
+   # Query: AnythingLLM embed widget production setup tutorial
+   
+   ## 1. Overview ~ AnythingLLM
+=> **URL:** https://docs.anythingllm.com/setup/embedder-configuration/overview
+   
+   [🚀 AnythingLLM v1.12.1 is live! Update now →](https://anythingllm.com/download)
+   
+
+--- Context around line 5 ---
+   ## 1. Overview ~ AnythingLLM
+   **URL:** https://docs.anythingllm.com/setup/embedder-configuration/overview
+   
+=> [🚀 AnythingLLM v1.12.1 is live! Update now →](https://anythingllm.com/download)
+   
+   AnythingLLM Setup
+   
+
+--- Context around line 7 ---
+   
+   [🚀 AnythingLLM v1.12.1 is live! Update now →](https://anythingllm.com/download)
+   
+=> AnythingLLM Setup
+   
+   Embedder Setup
+   
+
+--- Context around line 9 ---
+   
+   AnythingLLM Setup
+   
+=> Embedder Setup
+   
+   Overview
+   
+
+--- Context around line 13 ---
+   
+   Overview
+   
+=> ![Embedder Configuration](https://docs.anythingllm.com/_next/image?url=%2Fimages%2Fanythingllm-setup%2Fembedder-configuration%2Fhe
+   
+   # Embedder Configuration
+   
+
+--- Context around line 15 ---
+   
+   ![Embedder Configuration](https://docs.anythingllm.com/_next/image?url=%2Fimages%2Fanythingllm-setup%2Fembedder-configuration%2Fhe
+   
+=> # Embedder Configuration
+   
+   Embedding models are specific types of models that turn text into vectors, which can be stored and searched in a vector database -
+   
+
+--- Context around line 17 ---
+   
+   # Embedder Configuration
+   
+=> Embedding models are specific types of models that turn text into vectors, which can be stored and searched in a vector database -
+   
+   ️💡
+   
+
+--- Context around line 23 ---
+   
+   **Tip:**
+   
+=> Embedding models are set system-wide and cannot be configured atomically per-workspace like LLMs can.
+   
+   ## Supported Embedding Model Providers [Permalink for this section](https://docs.anythingllm.com/setup/embedder-configuration/over
+   
+
+--- Context around line 25 ---
+   
+   Embedding models are set system-wide and cannot be configured atomically per-workspace like LLMs can.
+   
+=> ## Supported Embedding Model Providers [Permalink for this section](https://docs.anythingllm.com/setup/embedder-configuration/over
+   
+   ️⚠️
+   
+
+--- Context around line 31 ---
+   
+   **HEADS UP!**
+   
+=> Once you select your embedding model provider and begin uploading and embedding documents it is best to not change it.
+   
+   While you can change embedders, doing so will mean you will have to delete your uploaded documents and re-embed them so the new em
+   
+
+--- Context around line 33 ---
+   
+   Once you select your embedding model provider and begin uploading and embedding documents it is best to not change it.
+   
+=> While you can change embedders, doing so will mean you will have to delete your uploaded documents and re-embed them so the new em
+   
+   AnythingLLM supports many embedding model providers out of the box with very little, if any setup.
+   
+
+--- Context around line 35 ---
+   
+   While you can change embedders, doing so will mean you will have to delete your uploaded documents and re-embed them so the new em
+   
+=> AnythingLLM supports many embedding model providers out of the box with very little, if any setup.
+   
+   You can modify your embedding provider and model at any time in AnythingLLM. However doing so can result in broken queries and nee
+   
+
+--- Context around line 37 ---
+   
+   AnythingLLM supports many embedding model providers out of the box with very little, if any setup.
+   
+=> You can modify your embedding provider and model at any time in AnythingLLM. However doing so can result in broken queries and nee
+   
+   ### Local Embedding Model Providers [Permalink for this section](https://docs.anythingllm.com/setup/embedder-configuration/overvie
+   
+
+--- Context around line 39 ---
+   
+   You can modify your embedding provider and model at any time in AnythingLLM. However doing so can result in broken queries and nee
+   
+=> ### Local Embedding Model Providers [Permalink for this section](https://docs.anythingllm.com/setup/embedder-configuration/overvie
+   
+   [![AnythingLLM Built-in (default)](https://docs.anythingllm.com/_next/image?url=%2Fimages%2Fanythingllm-setup%2Fembedder-configura
+   
+
+--- Context around line 41 ---
+   
+   ### Local Embedding Model Providers [Permalink for this section](https://docs.anythingllm.com/setup/embedder-configuration/overvie
+   
+=> [![AnythingLLM Built-in (default)](https://docs.anythingllm.com/_next/image?url=%2Fimages%2Fanythingllm-setup%2Fembedder-configura
+   
+   ### Cloud Model Providers [Permalink for this section](https://docs.anythingllm.com/setup/embedder-configuration/overview\#cloud-m
+   
+
+--- Context around line 43 ---
+   
+   [![AnythingLLM Built-in (default)](https://docs.anythingllm.com/_next/image?url=%2Fimages%2Fanythingllm-setup%2Fembedder-configura
+   
+=> ### Cloud Model Providers [Permalink for this section](https://docs.anythingllm.com/setup/embedder-configuration/overview\#cloud-m
+   
+   [![OpenAI](https://docs.anythingllm.com/_next/image?url=%2Fimages%2Fanythingllm-setup%2Fembedder-configuration%2Fcloud%2Fopenai%2F
+   
+
+--- Context around line 45 ---
+   
+   ### Cloud Model Providers [Permalink for this section](https://docs.anythingllm.com/setup/embedder-configuration/overview\#cloud-m
+   
+=> [![OpenAI](https://docs.anythingllm.com/_next/image?url=%2Fimages%2Fanythingllm-setup%2Fembedder-configuration%2Fcloud%2Fopenai%2F
+   
+   Last updated on April 10, 2026
+   
+
+--- Context around line 49 ---
+   
+   Last updated on April 10, 2026
+   
+=> [System Prompt Variables](https://docs.anythingllm.com/features/system-prompt-variables "System Prompt Variables") [AnythingLLM De
+   
+   ---
+   
+
+--- Context around line 53 ---
+   
+   ---
+   
+=> ## 2. AnythingLLM: Complete Guide to Setup, RAG, and Use Cases | DataCamp
+   **URL:** https://www.datacamp.com/blog/anythingllm
+   
+   [![Promo | 50% Off](https://media.datacamp.com/cms/languageeng-left.png)\\
+
+--- Context around line 54 ---
+   ---
+   
+   ## 2. AnythingLLM: Complete Guide to Setup, RAG, and Use Cases | DataCamp
+=> **URL:** https://www.datacamp.com/blog/anythingllm
+   
+   [![Promo | 50% Off](https://media.datacamp.com/cms/languageeng-left.png)\\
+   \\
+
+--- Context around line 66 ---
+   \\
+   Buy Now](https://www.datacamp.com/promo/learn-data-ai-skills-may-26)
+   
+=> [Skip to main content](https://www.datacamp.com/blog/anythingllm#main)
+   
+   A common question in the self-hosted AI space is how to chat with private documents without sending them to a cloud API.
+   
+
+--- Context around line 70 ---
+   
+   A common question in the self-hosted AI space is how to chat with private documents without sending them to a cloud API.
+   
+=> AnythingLLM is a popular answer. It handles everything (document upload, embedding, search, and chat) in one interface and connect
+   
+   In this guide, I will explain what AnythingLLM is, walk through its architecture, show you how to install it with [Docker](https:/
+   
+
+--- Context around line 72 ---
+   
+   AnythingLLM is a popular answer. It handles everything (document upload, embedding, search, and chat) in one interface and connect
+   
+=> In this guide, I will explain what AnythingLLM is, walk through its architecture, show you how to install it with [Docker](https:/
+   
+   ## What Is AnythingLLM?
+   
+
+--- Context around line 74 ---
+   
+   In this guide, I will explain what AnythingLLM is, walk through its architecture, show you how to install it with [Docker](https:/
+   
+=> ## What Is AnythingLLM?
+   
+   AnythingLLM is an open-source application built by [Mintplex Labs](https://github.com/Mintplex-Labs/anything-llm) under the MIT li
+   
+
+--- Context around line 76 ---
+   
+   ## What Is AnythingLLM?
+   
+=> AnythingLLM is an open-source application built by [Mintplex Labs](https://github.com/Mintplex-Labs/anything-llm) under the MIT li
+   
+   Here's what it does: it turns your documents into context that a [large language model (LLM)](https://www.datacamp.com/blog/what-i
+   
+
+--- Context around line 80 ---
+   
+   Here's what it does: it turns your documents into context that a [large language model (LLM)](https://www.datacamp.com/blog/what-i
+   
+=> Two things to understand upfront. First, AnythingLLM is not a model itself. It's a bridge connecting you to external LLM providers
+   
+   Second, the platform organizes everything into workspaces. Think of these as separate rooms for different projects. Each workspace
+   
+
+--- Context around line 84 ---
+   
+   Second, the platform organizes everything into workspaces. Think of these as separate rooms for different projects. Each workspace
+   
+=> ![AnythingLLM workspace interface showing the chat panel and document sidebar.](https://media.datacamp.com/cms/df00d63336264041482
+   
+   _AnythingLLM workspace interface with documents. Image by Author._
+   
+
+--- Context around line 86 ---
+   
+   ![AnythingLLM workspace interface showing the chat panel and document sidebar.](https://media.datacamp.com/cms/df00d63336264041482
+   
+=> _AnythingLLM workspace interface with documents. Image by Author._
+   
+   ### AnythingLLM on desktop vs. Docker
+   
+
+--- Context around line 88 ---
+   
+   _AnythingLLM workspace interface with documents. Image by Author._
+   
+=> ### AnythingLLM on desktop vs. Docker
+   
+   The desktop app (macOS, Windows, Linux) is for single users running everything locally. It comes with a built-in LLM engine, CPU-b
+   
+
+--- Context around line 90 ---
+   
+   ### AnythingLLM on desktop vs. Docker
+   
+=> The desktop app (macOS, Windows, Linux) is for single users running everything locally. It comes with a built-in LLM engine, CPU-b
+   
+   The Docker version is built for teams and servers. It adds proper access control with Admin, Manager, and Default roles, plus embe
+   
+
+--- Context around line 92 ---
+   
+   The desktop app (macOS, Windows, Linux) is for single users running everything locally. It comes with a built-in LLM engine, CPU-b
+   
+=> The Docker version is built for teams and servers. It adds proper access control with Admin, Manager, and Default roles, plus embe
+   
+   |     |     |     |
+   | --- | --- | --- |
+
+--- Context around line 99 ---
+   | **Feature** | **Desktop** | **Docker** |
+   | Multi-user support | No | Yes (Admin, Manager, Default roles) |
+   | Built-in LLM engine | Yes | No (connect to external providers) |
+=> | Embeddable chat widgets | No | Yes |
+   | White-labeling | No | Yes |
+   | Setup complexity | One-click install | Requires Docker knowledge |
+   
+
+--- Context around line 103 ---
+   | White-labeling | No | Yes |
+   | Setup complexity | One-click install | Requires Docker knowledge |
+   
+=> ## Core Features of AnythingLLM
+   
+   Now that you know what AnythingLLM is and how to choose between Desktop and Docker, let's walk through the features that make it u
+   
+
+--- Context around line 105 ---
+   
+   ## Core Features of AnythingLLM
+   
+=> Now that you know what AnythingLLM is and how to choose between Desktop and Docker, let's walk through the features that make it u
+   
+   ### Document ingestion
+   
+
+--- Context around line 125 ---
+   
+   ### API access
+   
+=> The developer API lives at`/api/docs`(Swagger docs). You can programmatically manage workspaces, embed documents, and send chat me
+   
+   ## How AnythingLLM Works (Architecture Overview)
+   
+
+--- Context around line 127 ---
+   
+   The developer API lives at`/api/docs`(Swagger docs). You can programmatically manage workspaces, embed documents, and send chat me
+   
+=> ## How AnythingLLM Works (Architecture Overview)
+   
+   The application has three parts: the frontend (React/ViteJS) gives you the interface you see and interact with. The server (Expres
+   
+
+--- Context around line 129 ---
+   
+   ## How AnythingLLM Works (Architecture Overview)
+   
+=> The application has three parts: the frontend (React/ViteJS) gives you the interface you see and interact with. The server (Expres
+   
+   ### The RAG pipeline
+   
+
+--- Context around line 135 ---
+   
+   The pipeline works in two phases.
+   
+=> Ingestion: Your documents go to the collector, which extracts the text. The server then splits this text into chunks (up to 1,000 
+   
+   Query: Your question gets converted into a vector using the same embedding model. Then the system searches for the most similar ch
+   
+
+--- Context around line 137 ---
+   
+   Ingestion: Your documents go to the collector, which extracts the text. The server then splits this text into chunks (up to 1,000 
+   
+=> Query: Your question gets converted into a vector using the same embedding model. Then the system searches for the most similar ch
+   
+   ![Flowchart of the AnythingLLM RAG pipeline from document upload to LLM response.](https://media.datacamp.com/cms/2ee718c0ecca04a2
+   
+
+--- Context around line 139 ---
+   
+   Query: Your question gets converted into a vector using the same embedding model. Then the system searches for the most similar ch
+   
+=> ![Flowchart of the AnythingLLM RAG pipeline from document upload to LLM response.](https://media.datacamp.com/cms/2ee718c0ecca04a2
+   
+   _AnythingLLM RAG pipeline architecture overview. Image by Author._
+   
+
+--- Context around line 141 ---
+   
+   ![Flowchart of the AnythingLLM RAG pipeline from document upload to LLM response.](https://media.datacamp.com/cms/2ee718c0ecca04a2
+   
+=> _AnythingLLM RAG pipeline architecture overview. Image by Author._
+   
+   ## Installing AnythingLLM with Docker
+   
+
+--- Context around line 143 ---
+   
+   _AnythingLLM RAG pipeline architecture overview. Image by Author._
+   
+=> ## Installing AnythingLLM with Docker
+   
+   As you'll see in the FAQ, AnythingLLM is lightweight: around 2GB RAM, a 2-core CPU, and about 5GB of storage. Running a local LLM 
+   
+
+--- Context around line 145 ---
+   
+   ## Installing AnythingLLM with Docker
+   
+=> As you'll see in the FAQ, AnythingLLM is lightweight: around 2GB RAM, a 2-core CPU, and about 5GB of storage. Running a local LLM 
+   
+   ### Step 1: Install Ollama and pull models
+   
+
+--- Context around line 149 ---
+   
+   ### Step 1: Install Ollama and pull models
+   
+=> Download Ollama from [ollama.com/download](https://ollama.com/download), then pull a chat model and an embedding model:
+   
+   ```bash
+   ollama pull llama3.2:3b
+
+--- Context around line 153 ---
+   
+   ```bash
+   ollama pull llama3.2:3b
+=> ollama pull nomic-embed-text
+   ollama serve
+   
+   Powered By
+
+--- Context around line 159 ---
+   Powered By
+   ```
+   
+=> I use `llama3.2:3b` because it runs well on machines with limited VRAM (like an RTX 3050 with 6GB). For better quality, try `llama
+   
+   ### Step 2: Create the Docker Compose file
+   
+
+--- Context around line 164 ---
+   ### Step 2: Create the Docker Compose file
+   
+   ```bash
+=> mkdir anythingllm-setup && cd anythingllm-setup
+   touch .env
+   
+   Powered By
+
+--- Context around line 174 ---
+   
+   ```yaml
+   services:
+=>   anythingllm:
+       image: mintplexlabs/anythingllm:latest
+       container_name: anythingllm
+       ports:
+
+--- Context around line 175 ---
+   ```yaml
+   services:
+     anythingllm:
+=>     image: mintplexlabs/anythingllm:latest
+       container_name: anythingllm
+       ports:
+         - "3001:3001"
+
+--- Context around line 176 ---
+   services:
+     anythingllm:
+       image: mintplexlabs/anythingllm:latest
+=>     container_name: anythingllm
+       ports:
+         - "3001:3001"
+       cap_add:
+
+--- Context around line 182 ---
+       cap_add:
+         - SYS_ADMIN
+       volumes:
+=>       - anythingllm_storage:/app/server/storage
+         - ./.env:/app/server/.env
+       environment:
+         - STORAGE_DIR=/app/server/storage
+
+--- Context around line 191 ---
+       restart: unless-stopped
+   
+   volumes:
+=>   anythingllm_storage:
+   
+   Powered By
+   ```
+
+--- Context around line 200 ---
+   
+   The `extra_hosts` line solves the most common Docker networking issue: it allows the container to reach Ollama running on your hos
+   
+=> I use a named Docker volume (`anythingllm_storage`) instead of a bind mount for better cross-platform compatibility, especially on
+   
+   ### Step 3: Launch and configure
+   
+
+--- Context around line 212 ---
+   Powered By
+   ```
+   
+=> ![AnythingLLM first-run setup wizard after Docker installation.](https://media.datacamp.com/cms/5389f43240d5ef13e699bfba02648ded.p
+   
+   _AnythingLLM initial setup wizard on Docker. Image by Author._
+   
+
+--- Context around line 214 ---
+   
+   ![AnythingLLM first-run setup wizard after Docker installation.](https://media.datacamp.com/cms/5389f43240d5ef13e699bfba02648ded.p
+   
+=> _AnythingLLM initial setup wizard on Docker. Image by Author._
+   
+   **During the setup wizard, select Ollama as both the LLM and embedding provider, set the base URL to `http://host.docker.internal:
+   
+
+--- Context around line 216 ---
+   
+   _AnythingLLM initial setup wizard on Docker. Image by Author._
+   
+=> **During the setup wizard, select Ollama as both the LLM and embedding provider, set the base URL to `http://host.docker.internal:
+   
+   Anything\_LLM\_1
+   
+
+--- Context around line 220 ---
+   
+   Anything\_LLM\_1
+   
+=> ![Video Thumbnail](https://fast.wistia.net/embed/medias/p0ft33mfnv/swatch)
+   
+   ![Video Thumbnail](https://embed-ssl.wistia.com/deliveries/8ba71bd3612ebf59e4d295d6c7a38814f8568a28.webp?image_crop_resized=960x54
+   
+
+--- Context around line 222 ---
+   
+   ![Video Thumbnail](https://fast.wistia.net/embed/medias/p0ft33mfnv/swatch)
+   
+=> ![Video Thumbnail](https://embed-ssl.wistia.com/deliveries/8ba71bd3612ebf59e4d295d6c7a38814f8568a28.webp?image_crop_resized=960x54
+   
+   Click for sound
+   
+
+--- Context around line 230 ---
+   
+   Configuring Ollama as the LLM provider. Video by Author.
+   
+=> For the Desktop alternative, download the app from [anythingllm.com](https://anythingllm.com/). It bundles everything and works im
+   
+   ## Connecting LLM Providers
+   
+
+--- Context around line 234 ---
+   
+   ## Connecting LLM Providers
+   
+=> Beyond Ollama, you can connect cloud providers through Settings (as mentioned in FAQ 1, this is useful if your hardware is limited
+   
+   ### OpenAI
+   
+
+--- Context around line 242 ---
+   
+   ### Anthropic
+   
+=> Enter your key from [console.anthropic.com](https://console.anthropic.com/). All Claude models work for chat, but Anthropic doesn'
+   
+   ### Ollama configuration
+   
+
+--- Context around line 248 ---
+   
+   If you configured Ollama during installation as shown above, you are already set. For other setups, use `http://host.docker.intern
+   
+=> ## Using AnythingLLM for Document Chat
+   
+   Click "New Workspace" in the sidebar and name it. Upload files using the sidebar upload button or drag-and-drop.
+   
+
+--- Context around line 252 ---
+   
+   Click "New Workspace" in the sidebar and name it. Upload files using the sidebar upload button or drag-and-drop.
+   
+=> **AnythingLLM supports two document modes. Attaching (drag into chat) puts the full text into the conversation, but only for that 
+   
+   AnythingLLM\_2
+   
+
+--- Context around line 254 ---
+   
+   **AnythingLLM supports two document modes. Attaching (drag into chat) puts the full text into the conversation, but only for that 
+   
+=> AnythingLLM\_2
+   
+   ![Video Thumbnail](https://fast.wistia.net/embed/medias/uilay94kwz/swatch)
+   
+
+--- Context around line 256 ---
+   
+   AnythingLLM\_2
+   
+=> ![Video Thumbnail](https://fast.wistia.net/embed/medias/uilay94kwz/swatch)
+   
+   ![Video Thumbnail](https://embed-ssl.wistia.com/deliveries/856a14e9a4cbd7f02e9b0bc1b4792f622de4d728.webp?image_crop_resized=960x54
+   
+
+--- Context around line 258 ---
+   
+   ![Video Thumbnail](https://fast.wistia.net/embed/medias/uilay94kwz/swatch)
+   
+=> ![Video Thumbnail](https://embed-ssl.wistia.com/deliveries/856a14e9a4cbd7f02e9b0bc1b4792f622de4d728.webp?image_crop_resized=960x54
+   
+   Click for sound
+   
+
+--- Context around line 264 ---
+   
+   0:34
+   
+=> Uploading and embedding documents in a workspace. Video by Author.
+   
+   ### Tuning retrieval quality
+   
+
+--- Context around line 284 ---
+   
+   #### Document pinning
+   
+=> Pin critical documents to skip chunking entirely. The full text gets added to every query (assuming it fits within token limits).
+   
+   AnythingLLM\_3
+   
+
+--- Context around line 286 ---
+   
+   Pin critical documents to skip chunking entirely. The full text gets added to every query (assuming it fits within token limits).
+   
+=> AnythingLLM\_3
+   
+   ![Video Thumbnail](https://fast.wistia.net/embed/medias/5x3ml9ke68/swatch)
+   
+
+--- Context around line 288 ---
+   
+   AnythingLLM\_3
+   
+=> ![Video Thumbnail](https://fast.wistia.net/embed/medias/5x3ml9ke68/swatch)
+   
+   ![Video Thumbnail](https://embed-ssl.wistia.com/deliveries/d4897851c9f4dc5c60eab9a4373a580f4e35e1fa.webp?image_crop_resized=960x54
+   
+
+--- Context around line 290 ---
+   
+   ![Video Thumbnail](https://fast.wistia.net/embed/medias/5x3ml9ke68/swatch)
+   
+=> ![Video Thumbnail](https://embed-ssl.wistia.com/deliveries/d4897851c9f4dc5c60eab9a4373a580f4e35e1fa.webp?image_crop_resized=960x54
+   
+   Click for sound
+   
+
+--- Context around line 298 ---
+   
+   Document chat response with RAG context. Video by Author.
+   
+=> ## AnythingLLM vs. Open WebUI
+   
+   Both tools are solid, but they're built for different users.
+   
+
+--- Context around line 304 ---
+   
+   |     |     |     |
+   | --- | --- | --- |
+=> | **Dimension** | **AnythingLLM** | **Open WebUI** |
+   | **Primary audience** | Business users, small teams | Developers, technical users |
+   | **Desktop app** | Yes (macOS, Windows, Linux) | No (web-based only) |
+   | **Setup complexity** | Desktop: one-click; Docker: straightforward | Requires Docker or server setup |
+
+--- Context around line 309 ---
+   | **Desktop app** | Yes (macOS, Windows, Linux) | No (web-based only) |
+   | **Setup complexity** | Desktop: one-click; Docker: straightforward | Requires Docker or server setup |
+   | **RAG implementation** | Built-in with multi-vector DB support, reranking | Extensive RAG, plugin-based extensibility |
+=> | **Multi-user** | Docker only; three RBAC roles | Limited collaboration features |
+   | **Plugin ecosystem** | Growing; custom skills via Node.js | More mature and extensive |
+   | **License** | MIT | Modified BSD-3-Clause with branding protection since v0.6.6 |
+   
+
+--- Context around line 313 ---
+   | **Plugin ecosystem** | Growing; custom skills via Node.js | More mature and extensive |
+   | **License** | MIT | Modified BSD-3-Clause with branding protection since v0.6.6 |
+   
+=> AnythingLLM tends to fit teams that prioritize workspace management and embeddable widgets, while [Open WebUI](https://github.com/
+   
+   ## AnythingLLM vs. ChatGPT
+   
+
+--- Context around line 315 ---
+   
+   AnythingLLM tends to fit teams that prioritize workspace management and embeddable widgets, while [Open WebUI](https://github.com/
+   
+=> ## AnythingLLM vs. ChatGPT
+   
+   This comparison is about priorities, not which tool is "better."
+   
+
+--- Context around line 321 ---
+   
+   |     |     |     |
+   | --- | --- | --- |
+=> | **Dimension** | **AnythingLLM** | **ChatGPT** |
+   | **Data privacy** | Full ownership with local models | Data sent to OpenAI servers |
+   | **Cost** | Free (self-hosted); cloud from $50/month | Free tier; Plus $20/month; Pro $200/month |
+   | **Customization** | Any LLM, embedder, vector DB, agents | Limited to OpenAI models |
+
+--- Context around line 324 ---
+   | **Dimension** | **AnythingLLM** | **ChatGPT** |
+   | **Data privacy** | Full ownership with local models | Data sent to OpenAI servers |
+   | **Cost** | Free (self-hosted); cloud from $50/month | Free tier; Plus $20/month; Pro $200/month |
+=> | **Customization** | Any LLM, embedder, vector DB, agents | Limited to OpenAI models |
+   | **Offline capability** | Yes (with local models) | No |
+   | **Setup effort** | Requires installation | Zero setup, browser-based |
+   | **Document chat** | Full RAG control (thresholds, chunking, reranking) | File uploads with usage limits |
+
+--- Context around line 327 ---
+   | **Customization** | Any LLM, embedder, vector DB, agents | Limited to OpenAI models |
+   | **Offline capability** | Yes (with local models) | No |
+   | **Setup effort** | Requires installation | Zero setup, browser-based |
+=> | **Document chat** | Full RAG control (thresholds, chunking, reranking) | File uploads with usage limits |
+   
+   ChatGPT emphasizes a fully hosted experience and strong default model quality, while AnythingLLM emphasizes privacy, flexibility, 
+   
+
+--- Context around line 329 ---
+   | **Setup effort** | Requires installation | Zero setup, browser-based |
+   | **Document chat** | Full RAG control (thresholds, chunking, reranking) | File uploads with usage limits |
+   
+=> ChatGPT emphasizes a fully hosted experience and strong default model quality, while AnythingLLM emphasizes privacy, flexibility, 
+   
+   ## AnythingLLM Use Cases
+   
+
+--- Context around line 331 ---
+   
+   ChatGPT emphasizes a fully hosted experience and strong default model quality, while AnythingLLM emphasizes privacy, flexibility, 
+   
+=> ## AnythingLLM Use Cases
+   
+   Here's where AnythingLLM works best:
+   
+
+--- Context around line 333 ---
+   
+   ## AnythingLLM Use Cases
+   
+=> Here's where AnythingLLM works best:
+   
+   ### Internal knowledge bases
+   
+
+--- Context around line 341 ---
+   
+   ### Research workflows
+   
+=> Academics can search across hundreds of papers instantly. Embed your research library and surface relevant findings without manual
+   
+   ### Private enterprise deployments
+   
+
+--- Context around line 353 ---
+   
+   ### Customer chat widgets
+   
+=> Embed a chat interface on your website using Docker. Configure domain allowlists and per-session limits for public use.
+   
+   ### Meeting transcription
+   
+
+--- Context around line 359 ---
+   
+   The Meeting Assistant feature works like cloud note-taking tools but runs locally. Requires around 16GB RAM for smooth operation.
+   
+=> ## Limitations
+   
+   As discussed earlier, Desktop and Docker have different features, which confuse new users.
+   
+
+--- Context around line 367 ---
+   
+   The plugin system is smaller than Open WebUI's, and building custom agent skills requires knowledge of Node.js.
+   
+=> Finally, there's no built-in fine-tuning. You can only customize through system prompts, temperature, and token limits.
+   
+   ## AnythingLLM Security and Privacy
+   
+
+--- Context around line 369 ---
+   
+   Finally, there's no built-in fine-tuning. You can only customize through system prompts, temperature, and token limits.
+   
+=> ## AnythingLLM Security and Privacy
+   
+   Local deployment keeps all data on your device. (I have more details in the third FAQ down below.) When using cloud providers, onl
+   
+
+--- Context around line 371 ---
+   
+   ## AnythingLLM Security and Privacy
+   
+=> Local deployment keeps all data on your device. (I have more details in the third FAQ down below.) When using cloud providers, onl
+   
+   The Docker version includes Simple SSO via `SIMPLE_SSO_ENABLED`, which creates temporary access tokens. API keys give full access 
+   
+
+--- Context around line 373 ---
+   
+   Local deployment keeps all data on your device. (I have more details in the third FAQ down below.) When using cloud providers, onl
+   
+=> The Docker version includes Simple SSO via `SIMPLE_SSO_ENABLED`, which creates temporary access tokens. API keys give full access 
+   
+   ## Conclusion
+   
+
+--- Context around line 377 ---
+   
+   ## Conclusion
+   
+=> AnythingLLM solves a real problem in the self-hosted AI space. It gives you an interface for chatting with your documents, connect
+   
+   Like any tool, it has trade-offs. RAG quality depends on how you configure it, and the Desktop/Docker feature differences can conf
+   
+
+--- Context around line 399 ---
+   
+   ### Can I run this on my old laptop without a GPU?
+   
+=> **Yes! AnythingLLM itself is lightweight: around 2GB RAM, a 2-core CPU, and about 5GB of storage. The heavy part is running the LL
+   
+   ### What happens if I change my vector database later?
+   
+
+--- Context around line 403 ---
+   
+   ### What happens if I change my vector database later?
+   
+=> **Plan ahead on this one. There's no automatic migration between vector databases. Switching from LanceDB to Pinecone means re-emb
+   
+   ### Is my data really private if I use OpenAI for the LLM?
+   
+
+--- Context around line 407 ---
+   
+   ### Is my data really private if I use OpenAI for the LLM?
+   
+=> **Here's the key point: your documents and embeddings never leave your server. But when you ask questions, the retrieved text chun
+   
+   ### Can my team share one AnythingLLM setup?
+   
+
+--- Context around line 409 ---
+   
+   **Here's the key point: your documents and embeddings never leave your server. But when you ask questions, the retrieved text chun
+   
+=> ### Can my team share one AnythingLLM setup?
+   
+   **Yes, but only with the Docker version. It supports multi-user with three roles: Admin, Manager, and Default. The Desktop app is 
+   
+
+--- Context around line 415 ---
+   
+   ### Why does it sometimes ignore my documents when answering?
+   
+=> **Usually three reasons: similarity threshold too high, vague queries, or non-English documents with the default English embedder.
+   
+   Topics
+   
+
+--- Context around line 477 ---
+   \\
+   **RAG With Llama 3.1 8B, Ollama, and Langchain: Tutorial**](https://www.datacamp.com/tutorial/llama-3-1-rag)
+   
+=> Learn to build a RAG application with Llama 3.1 8B using Ollama and Langchain by setting up the environment, processing documents,
+   
+   ![Ryan Ong's photo](https://media.datacamp.com/legacy/v1716384390/ryan_ong_6374f19892.jpg?w=48)
+   
+
+--- Context around line 527 ---
+   
+   ---
+   
+=> ## 3. AnythingLLM Default Embedder ~ AnythingLLM
+   **URL:** https://docs.anythingllm.com/setup/embedder-configuration/local/built-in
+   
+   [🚀 AnythingLLM v1.12.1 is live! Update now →](https://anythingllm.com/download)
+
+--- Context around line 528 ---
+   ---
+   
+   ## 3. AnythingLLM Default Embedder ~ AnythingLLM
+=> **URL:** https://docs.anythingllm.com/setup/embedder-configuration/local/built-in
+   
+   [🚀 AnythingLLM v1.12.1 is live! Update now →](https://anythingllm.com/download)
+   
+
+--- Context around line 530 ---
+   ## 3. AnythingLLM Default Embedder ~ AnythingLLM
+   **URL:** https://docs.anythingllm.com/setup/embedder-configuration/local/built-in
+   
+=> [🚀 AnythingLLM v1.12.1 is live! Update now →](https://anythingllm.com/download)
+   
+   AnythingLLM Setup
+   
+
+--- Context around line 532 ---
+   
+   [🚀 AnythingLLM v1.12.1 is live! Update now →](https://anythingllm.com/download)
+   
+=> AnythingLLM Setup
+   
+   Embedder Setup
+   
+
+--- Context around line 534 ---
+   
+   AnythingLLM Setup
+   
+=> Embedder Setup
+   
+   Local
+   
+
+--- Context around line 538 ---
+   
+   Local
+   
+=> AnythingLLM Default
+   
+   ![AnythingLLM Default Embedder](https://docs.anythingllm.com/_next/image?url=%2Fimages%2Fanythingllm-setup%2Fembedder-configuratio
+   
+
+--- Context around line 540 ---
+   
+   AnythingLLM Default
+   
+=> ![AnythingLLM Default Embedder](https://docs.anythingllm.com/_next/image?url=%2Fimages%2Fanythingllm-setup%2Fembedder-configuratio
+   
+   # AnythingLLM Default Embedder
+   
+
+--- Context around line 542 ---
+   
+   ![AnythingLLM Default Embedder](https://docs.anythingllm.com/_next/image?url=%2Fimages%2Fanythingllm-setup%2Fembedder-configuratio
+   
+=> # AnythingLLM Default Embedder
+   
+   ️⚠️
+   
+
+--- Context around line 548 ---
+   
+   **Heads up!**
+   
+=> This embedding model will download (25mb) on the very first embed **and** runs on CPU. You should have at least 2GB of RAM availab
+   
+   AnythingLLM ships with a built-in embedder model that runs on CPU.
+   
+
+--- Context around line 550 ---
+   
+   This embedding model will download (25mb) on the very first embed **and** runs on CPU. You should have at least 2GB of RAM availab
+   
+=> AnythingLLM ships with a built-in embedder model that runs on CPU.
+   
+   The model is the popular [all-MiniLM-L6-v2 (opens in a new tab)](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2) mo
+   
+
+--- Context around line 554 ---
+   
+   The model is the popular [all-MiniLM-L6-v2 (opens in a new tab)](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2) mo
+   
+=> ![AnythingLLM Default Embedder](https://docs.anythingllm.com/_next/image?url=%2Fimages%2Fanythingllm-setup%2Fembedder-configuratio
+   
+   Last updated on April 14, 2026
+   
+
+--- Context around line 558 ---
+   
+   Last updated on April 14, 2026
+   
+=> [Overview](https://docs.anythingllm.com/setup/embedder-configuration/overview "Overview") [LM Studio](https://docs.anythingllm.com
+   
+   ---
+   
+
+--- Context around line 562 ---
+   
+   ---
+   
+=> ## 4. Embedded Chat Widgets ~ AnythingLLM
+   **URL:** https://docs.useanything.com/features/chat-widgets
+   
+   [🚀 AnythingLLM v1.12.1 is live! Update now →](https://anythingllm.com/download)
+
+--- Context around line 565 ---
+   ## 4. Embedded Chat Widgets ~ AnythingLLM
+   **URL:** https://docs.useanything.com/features/chat-widgets
+   
+=> [🚀 AnythingLLM v1.12.1 is live! Update now →](https://anythingllm.com/download)
+   
+   Feature Overview
+   
+
+--- Context around line 569 ---
+   
+   Feature Overview
+   
+=> Embedded Chat Widgets
+   
+   ![AnythingLLM Embedded Chat Widgets](https://docs.useanything.com/_next/image?url=%2Fimages%2Ffeatures%2Fchat-widgets%2Fheader-ima
+   
+
+--- Context around line 571 ---
+   
+   Embedded Chat Widgets
+   
+=> ![AnythingLLM Embedded Chat Widgets](https://docs.useanything.com/_next/image?url=%2Fimages%2Ffeatures%2Fchat-widgets%2Fheader-ima
+   
+   # Embedded Chat Widgets
+   
+
+--- Context around line 573 ---
+   
+   ![AnythingLLM Embedded Chat Widgets](https://docs.useanything.com/_next/image?url=%2Fimages%2Ffeatures%2Fchat-widgets%2Fheader-ima
+   
+=> # Embedded Chat Widgets
+   
+   ️💡
+   
+
+--- Context around line 579 ---
+   
+   **DOCKER VERSION ONLY!**
+   
+=> These settings are only available in the Docker version of AnythingLLM
+   
+   ![Embedded Chat Widget](https://docs.useanything.com/_next/image?url=%2Fimages%2Ffeatures%2Fchat-widgets%2Fchat-widget.png&w=3840&
+   
+
+--- Context around line 581 ---
+   
+   These settings are only available in the Docker version of AnythingLLM
+   
+=> ![Embedded Chat Widget](https://docs.useanything.com/_next/image?url=%2Fimages%2Ffeatures%2Fchat-widgets%2Fchat-widget.png&w=3840&
+   
+   AnythingLLM allows you to create embedded chat widgets that can be easily integrated into any website using a simple `<script>` ta
+   
+
+--- Context around line 583 ---
+   
+   ![Embedded Chat Widget](https://docs.useanything.com/_next/image?url=%2Fimages%2Ffeatures%2Fchat-widgets%2Fchat-widget.png&w=3840&
+   
+=> AnythingLLM allows you to create embedded chat widgets that can be easily integrated into any website using a simple `<script>` ta
+   
+   ## Configuration Options [Permalink for this section](https://docs.useanything.com/features/chat-widgets\#configuration-options)
+   
+
+--- Context around line 587 ---
+   
+   ## Configuration Options [Permalink for this section](https://docs.useanything.com/features/chat-widgets\#configuration-options)
+   
+=> When creating an embedded chat widget, you have several configuration options available to customize its behavior and appearance.
+   
+   ![Embedded Chat Options 1](https://docs.useanything.com/_next/image?url=%2Fimages%2Ffeatures%2Fchat-widgets%2Fconfiguration-option
+   
+
+--- Context around line 589 ---
+   
+   When creating an embedded chat widget, you have several configuration options available to customize its behavior and appearance.
+   
+=> ![Embedded Chat Options 1](https://docs.useanything.com/_next/image?url=%2Fimages%2Ffeatures%2Fchat-widgets%2Fconfiguration-option
+   
+   ### Workspace [Permalink for this section](https://docs.useanything.com/features/chat-widgets\#workspace)
+   
+
+--- Context around line 604 ---
+   
+   ### Restrict Requests from Domains [Permalink for this section](https://docs.useanything.com/features/chat-widgets\#restrict-reque
+   
+=> This filter allows you to block any requests that come from domains other than the specified list. Leaving this field empty means 
+   
+   ![Embedded Chat Options 2](https://docs.useanything.com/_next/image?url=%2Fimages%2Ffeatures%2Fchat-widgets%2Fdomain-blacklist.png
+   
+
+--- Context around line 606 ---
+   
+   This filter allows you to block any requests that come from domains other than the specified list. Leaving this field empty means 
+   
+=> ![Embedded Chat Options 2](https://docs.useanything.com/_next/image?url=%2Fimages%2Ffeatures%2Fchat-widgets%2Fdomain-blacklist.png
+   
+   ### Max Chats per Day [Permalink for this section](https://docs.useanything.com/features/chat-widgets\#max-chats-per-day)
+   
+
+--- Context around line 610 ---
+   
+   ### Max Chats per Day [Permalink for this section](https://docs.useanything.com/features/chat-widgets\#max-chats-per-day)
+   
+=> You can limit the number of chats this embedded chat widget can process in a 24-hour period. Setting this value to zero means unli
+   
+   ### Max Chats per Session [Permalink for this section](https://docs.useanything.com/features/chat-widgets\#max-chats-per-session)
+   
+
+--- Context around line 614 ---
+   
+   ### Max Chats per Session [Permalink for this section](https://docs.useanything.com/features/chat-widgets\#max-chats-per-session)
+   
+=> You can limit the number of chats a session user can send with this embedded chat widget in a 24-hour period. Setting this value t
+   
+   ### Enable Dynamic Model Use [Permalink for this section](https://docs.useanything.com/features/chat-widgets\#enable-dynamic-model
+   
+
+--- Context around line 628 ---
+   
+   By enabling prompt override, you allow the setting of the system prompt to override the workspace default.
+   
+=> ## Embedding the Chat Widget [Permalink for this section](https://docs.useanything.com/features/chat-widgets\#embedding-the-chat-w
+   
+   ![Embedded Chat Code](https://docs.useanything.com/_next/image?url=%2Fimages%2Ffeatures%2Fchat-widgets%2Fembed-code.png&w=3840&q=1
+   
+
+--- Context around line 630 ---
+   
+   ## Embedding the Chat Widget [Permalink for this section](https://docs.useanything.com/features/chat-widgets\#embedding-the-chat-w
+   
+=> ![Embedded Chat Code](https://docs.useanything.com/_next/image?url=%2Fimages%2Ffeatures%2Fchat-widgets%2Fembed-code.png&w=3840&q=1
+   
+   After creating an embedded chat widget, you will be provided with a link that you can publish on your website using a simple `<scr
+   
+
+--- Context around line 632 ---
+   
+   ![Embedded Chat Code](https://docs.useanything.com/_next/image?url=%2Fimages%2Ffeatures%2Fchat-widgets%2Fembed-code.png&w=3840&q=1
+   
+=> After creating an embedded chat widget, you will be provided with a link that you can publish on your website using a simple `<scr
+   
+   Last updated on April 14, 2026
+   
+
+--- Context around line 640 ---
+   
+   ---
+   
+=> ## 5. anythingllm-embed/README.md at main · Mintplex-Labs/anythingllm-embed · GitHub
+   **URL:** https://github.com/Mintplex-Labs/anythingllm-embed/blob/main/README.md
+   
+   [Skip to content](https://github.com/Mintplex-Labs/anythingllm-embed/blob/main/README.md#start-of-content)
+
+--- Context around line 641 ---
+   ---
+   
+   ## 5. anythingllm-embed/README.md at main · Mintplex-Labs/anythingllm-embed · GitHub
+=> **URL:** https://github.com/Mintplex-Labs/anythingllm-embed/blob/main/README.md
+   
+   [Skip to content](https://github.com/Mintplex-Labs/anythingllm-embed/blob/main/README.md#start-of-content)
+   
+
+--- Context around line 643 ---
+   ## 5. anythingllm-embed/README.md at main · Mintplex-Labs/anythingllm-embed · GitHub
+   **URL:** https://github.com/Mintplex-Labs/anythingllm-embed/blob/main/README.md
+   
+=> [Skip to content](https://github.com/Mintplex-Labs/anythingllm-embed/blob/main/README.md#start-of-content)
+   
+   You signed in with another tab or window. [Reload](https://github.com/Mintplex-Labs/anythingllm-embed/blob/main/README.md) to refr
+   
+
+--- Context around line 645 ---
+   
+   [Skip to content](https://github.com/Mintplex-Labs/anythingllm-embed/blob/main/README.md#start-of-content)
+   
+=> You signed in with another tab or window. [Reload](https://github.com/Mintplex-Labs/anythingllm-embed/blob/main/README.md) to refr
+   
+   {{ message }}
+   
+
+--- Context around line 649 ---
+   
+   {{ message }}
+   
+=> [Mintplex-Labs](https://github.com/Mintplex-Labs)/ **[anythingllm-embed](https://github.com/Mintplex-Labs/anythingllm-embed)** Pub
+   
+   - [Notifications](https://github.com/login?return_to=%2FMintplex-Labs%2Fanythingllm-embed) You must be signed in to change notific
+   - [Fork\\
+
+--- Context around line 651 ---
+   
+   [Mintplex-Labs](https://github.com/Mintplex-Labs)/ **[anythingllm-embed](https://github.com/Mintplex-Labs/anythingllm-embed)** Pub
+   
+=> - [Notifications](https://github.com/login?return_to=%2FMintplex-Labs%2Fanythingllm-embed) You must be signed in to change notific
+   - [Fork\\
+   92](https://github.com/login?return_to=%2FMintplex-Labs%2Fanythingllm-embed)
+   - [Star\\
+
+--- Context around line 653 ---
+   
+   - [Notifications](https://github.com/login?return_to=%2FMintplex-Labs%2Fanythingllm-embed) You must be signed in to change notific
+   - [Fork\\
+=> 92](https://github.com/login?return_to=%2FMintplex-Labs%2Fanythingllm-embed)
+   - [Star\\
+   158](https://github.com/login?return_to=%2FMintplex-Labs%2Fanythingllm-embed)
+   
+
+--- Context around line 655 ---
+   - [Fork\\
+   92](https://github.com/login?return_to=%2FMintplex-Labs%2Fanythingllm-embed)
+   - [Star\\
+=> 158](https://github.com/login?return_to=%2FMintplex-Labs%2Fanythingllm-embed)
+   
+   
+   ## Collapse file tree
+
+--- Context around line 682 ---
+   
+   ## Latest commit
+   
+=> [![timothycarambat](https://avatars.githubusercontent.com/u/16845892?v=4&size=40)](https://github.com/timothycarambat)[timothycara
+   
+   [Merge branch 'main' into main](https://github.com/Mintplex-Labs/anythingllm-embed/commit/658946388453b7e3edd63f4b5f5a655e3d465111
+   
+
+--- Context around line 684 ---
+   
+   [![timothycarambat](https://avatars.githubusercontent.com/u/16845892?v=4&size=40)](https://github.com/timothycarambat)[timothycara
+   
+=> [Merge branch 'main' into main](https://github.com/Mintplex-Labs/anythingllm-embed/commit/658946388453b7e3edd63f4b5f5a655e3d465111
+   
+   last yearApr 27, 2025
+   
+
+--- Context around line 688 ---
+   
+   last yearApr 27, 2025
+   
+=> [6589463](https://github.com/Mintplex-Labs/anythingllm-embed/commit/658946388453b7e3edd63f4b5f5a655e3d465111) · last yearApr 27, 2
+   
+   ## History
+   
+
+--- Context around line 692 ---
+   
+   ## History
+   
+=> [History](https://github.com/Mintplex-Labs/anythingllm-embed/commits/main/README.md)
+   
+   Open commit details
+   
+
+--- Context around line 696 ---
+   
+   Open commit details
+   
+=> [View commit history for this file.](https://github.com/Mintplex-Labs/anythingllm-embed/commits/main/README.md) History
+   
+   124 lines (72 loc) · 6.54 KB
+   
+
+--- Context around line 717 ---
+   
+   124 lines (72 loc) · 6.54 KB
+   
+=> [Raw](https://github.com/Mintplex-Labs/anythingllm-embed/raw/refs/heads/main/README.md)
+   
+   Copy raw file
+   
+
+--- Context around line 727 ---
+   
+   Edit and raw actions
+   
+=> # AnythingLLM Embedded Chat Widget
+   
+   [Permalink: AnythingLLM Embedded Chat Widget](https://github.com/Mintplex-Labs/anythingllm-embed/blob/main/README.md#anythingllm-e
+   
+
+--- Context around line 729 ---
+   
+   # AnythingLLM Embedded Chat Widget
+   
+=> [Permalink: AnythingLLM Embedded Chat Widget](https://github.com/Mintplex-Labs/anythingllm-embed/blob/main/README.md#anythingllm-e
+   
+   **This is a submodule of [AnythingLLM](https://github.com/Mintplex-Labs/anything-llm) \- the all-in-one AI Application**
+   
+
+--- Context around line 731 ---
+   
+   [Permalink: AnythingLLM Embedded Chat Widget](https://github.com/Mintplex-Labs/anythingllm-embed/blob/main/README.md#anythingllm-e
+   
+=> **This is a submodule of [AnythingLLM](https://github.com/Mintplex-Labs/anything-llm) \- the all-in-one AI Application**
+   
+   **Please report any issues or feature requests to the [main repo](https://github.com/Mintplex-Labs/anything-llm)**
+   
+
+--- Context around line 737 ---
+   
+   Warning
+   
+=> The core AnythingLLM team publishes a pre-built version of the script that is bundled
+   with the main application. You can find [it in the main repo here.](https://github.com/Mintplex-Labs/anything-llm/tree/master/fron
+   You should only be working in this repo if you are wanting to build your own custom embed widget for AnythingLLM
+   
+
+--- Context around line 738 ---
+   Warning
+   
+   The core AnythingLLM team publishes a pre-built version of the script that is bundled
+=> with the main application. You can find [it in the main repo here.](https://github.com/Mintplex-Labs/anything-llm/tree/master/fron
+   You should only be working in this repo if you are wanting to build your own custom embed widget for AnythingLLM
+   
+   This folder of AnythingLLM contains the source code for how the embedded version of AnythingLLM works to provide a public facing i
+
+--- Context around line 739 ---
+   
+   The core AnythingLLM team publishes a pre-built version of the script that is bundled
+   with the main application. You can find [it in the main repo here.](https://github.com/Mintplex-Labs/anything-llm/tree/master/fron
+=> You should only be working in this repo if you are wanting to build your own custom embed widget for AnythingLLM
+   
+   This folder of AnythingLLM contains the source code for how the embedded version of AnythingLLM works to provide a public facing i
+   
+
+--- Context around line 741 ---
+   with the main application. You can find [it in the main repo here.](https://github.com/Mintplex-Labs/anything-llm/tree/master/fron
+   You should only be working in this repo if you are wanting to build your own custom embed widget for AnythingLLM
+   
+=> This folder of AnythingLLM contains the source code for how the embedded version of AnythingLLM works to provide a public facing i
+   
+   The AnythingLLM Embedded chat widget allows you to expose a workspace and its embedded knowledge base as a chat bubble via a `<scr
+   
+
+--- Context around line 743 ---
+   
+   This folder of AnythingLLM contains the source code for how the embedded version of AnythingLLM works to provide a public facing i
+   
+=> The AnythingLLM Embedded chat widget allows you to expose a workspace and its embedded knowledge base as a chat bubble via a `<scr
+   
+   ### Security
+   
+
+--- Context around line 747 ---
+   
+   ### Security
+   
+=> [Permalink: Security](https://github.com/Mintplex-Labs/anythingllm-embed/blob/main/README.md#security)
+   
+   - Users will _not_ be able to view or read context snippets like they can in the core AnythingLLM application
+   - Users are assigned a random session ID that they use to persist a chat session.
+
+--- Context around line 749 ---
+   
+   [Permalink: Security](https://github.com/Mintplex-Labs/anythingllm-embed/blob/main/README.md#security)
+   
+=> - Users will _not_ be able to view or read context snippets like they can in the core AnythingLLM application
+   - Users are assigned a random session ID that they use to persist a chat session.
+   - **Recommended** You can limit both the number of chats an embedding can process **and** per-session.
+   
+
+--- Context around line 751 ---
+   
+   - Users will _not_ be able to view or read context snippets like they can in the core AnythingLLM application
+   - Users are assigned a random session ID that they use to persist a chat session.
+=> - **Recommended** You can limit both the number of chats an embedding can process **and** per-session.
+   
+   _by using the AnythingLLM embedded chat widget you are responsible for securing and configuration of the embed as to not allow exc
+   
+
+--- Context around line 753 ---
+   - Users are assigned a random session ID that they use to persist a chat session.
+   - **Recommended** You can limit both the number of chats an embedding can process **and** per-session.
+   
+=> _by using the AnythingLLM embedded chat widget you are responsible for securing and configuration of the embed as to not allow exc
+   
+   ### Developer Setup
+   
+
+--- Context around line 757 ---
+   
+   ### Developer Setup
+   
+=> [Permalink: Developer Setup](https://github.com/Mintplex-Labs/anythingllm-embed/blob/main/README.md#developer-setup)
+   
+   - `cd embed` from the root of the repo
+   - `yarn` to install all dev and script dependencies
+
+--- Context around line 759 ---
+   
+   [Permalink: Developer Setup](https://github.com/Mintplex-Labs/anythingllm-embed/blob/main/README.md#developer-setup)
+   
+=> - `cd embed` from the root of the repo
+   - `yarn` to install all dev and script dependencies
+   - `yarn dev` to boot up an example HTML page to use the chat embed widget.
+   
+
+--- Context around line 761 ---
+   
+   - `cd embed` from the root of the repo
+   - `yarn` to install all dev and script dependencies
+=> - `yarn dev` to boot up an example HTML page to use the chat embed widget.
+   
+   While in development mode (`yarn dev`) the script will rebuild on any changes to files in the `src` directory. Ensure that the req
+   
+
+--- Context around line 763 ---
+   - `yarn` to install all dev and script dependencies
+   - `yarn dev` to boot up an example HTML page to use the chat embed widget.
+   
+=> While in development mode (`yarn dev`) the script will rebuild on any changes to files in the `src` directory. Ensure that the req
+   
+   `yarn build` will compile and minify your build of the script. You can then host and link your built script wherever you like.
+   
+
+--- Context around line 767 ---
+   
+   `yarn build` will compile and minify your build of the script. You can then host and link your built script wherever you like.
+   
+=> ## Integrations & Embed Types
+   
+   [Permalink: Integrations & Embed Types](https://github.com/Mintplex-Labs/anythingllm-embed/blob/main/README.md#integrations--embed
+   
+
+--- Context around line 769 ---
+   
+   ## Integrations & Embed Types
+   
+=> [Permalink: Integrations & Embed Types](https://github.com/Mintplex-Labs/anythingllm-embed/blob/main/README.md#integrations--embed
+   
+   ### `<script>` tag HTML embed
+   
+
+--- Context around line 771 ---
+   
+   [Permalink: Integrations & Embed Types](https://github.com/Mintplex-Labs/anythingllm-embed/blob/main/README.md#integrations--embed
+   
+=> ### `<script>` tag HTML embed
+   
+   [Permalink: <script> tag HTML embed](https://github.com/Mintplex-Labs/anythingllm-embed/blob/main/README.md#script-tag-html-embed)
+   
+
+--- Context around line 773 ---
+   
+   ### `<script>` tag HTML embed
+   
+=> [Permalink: <script> tag HTML embed](https://github.com/Mintplex-Labs/anythingllm-embed/blob/main/README.md#script-tag-html-embed)
+   
+   The primary way of embedding a workspace as a chat widget is via a simple `<script>`
+   
+
+--- Context around line 775 ---
+   
+   [Permalink: <script> tag HTML embed](https://github.com/Mintplex-Labs/anythingllm-embed/blob/main/README.md#script-tag-html-embed)
+   
+=> The primary way of embedding a workspace as a chat widget is via a simple `<script>`
+   
+   ```
+   <!--
+
+--- Context around line 779 ---
+   
+   ```
+   <!--
+=> An example of a script tag embed
+   REQUIRED data attributes:
+     data-embed-id // The unique id of your embed with its default settings
+     data-base-api-url // The URL of your anythingLLM instance backend
+
+--- Context around line 781 ---
+   <!--
+   An example of a script tag embed
+   REQUIRED data attributes:
+=>   data-embed-id // The unique id of your embed with its default settings
+     data-base-api-url // The URL of your anythingLLM instance backend
+   -->
+   <script
+
+--- Context around line 782 ---
+   An example of a script tag embed
+   REQUIRED data attributes:
+     data-embed-id // The unique id of your embed with its default settings
+=>   data-base-api-url // The URL of your anythingLLM instance backend
+   -->
+   <script
+     data-embed-id="5fc05aaf-2f2c-4c84-87a3-367a4692c1ee"
+
+--- Context around line 785 ---
+     data-base-api-url // The URL of your anythingLLM instance backend
+   -->
+   <script
+=>   data-embed-id="5fc05aaf-2f2c-4c84-87a3-367a4692c1ee"
+     data-base-api-url="http://localhost:3001/api/embed"
+     src="http://localhost:3000/embed/anythingllm-chat-widget.min.js"
+   ></script>
+
+--- Context around line 786 ---
+   -->
+   <script
+     data-embed-id="5fc05aaf-2f2c-4c84-87a3-367a4692c1ee"
+=>   data-base-api-url="http://localhost:3001/api/embed"
+     src="http://localhost:3000/embed/anythingllm-chat-widget.min.js"
+   ></script>
+   ```
+
+--- Context around line 787 ---
+   <script
+     data-embed-id="5fc05aaf-2f2c-4c84-87a3-367a4692c1ee"
+     data-base-api-url="http://localhost:3001/api/embed"
+=>   src="http://localhost:3000/embed/anythingllm-chat-widget.min.js"
+   ></script>
+   ```
+   
+
+--- Context around line 793 ---
+   
+   ## `<script>` Customization Options
+   
+=> [Permalink: <script> Customization Options](https://github.com/Mintplex-Labs/anythingllm-embed/blob/main/README.md#script-customiz
+   
+   **LLM Overrides**
+   
+
+--- Context around line 797 ---
+   
+   **LLM Overrides**
+   
+=> - `data-prompt` — Override the chat window with a custom system prompt. This is not visible to the user. If undefined it will use 
+   
+   - `data-model` — Override the chat model used for responses. This must be a valid model string for your AnythingLLM LLM provider. 
+   
+
+--- Context around line 799 ---
+   
+   - `data-prompt` — Override the chat window with a custom system prompt. This is not visible to the user. If undefined it will use 
+   
+=> - `data-model` — Override the chat model used for responses. This must be a valid model string for your AnythingLLM LLM provider. 
+   
+   - `data-temperature` — Override the chat model temperature. This must be a valid value for your AnythingLLM LLM provider. If unset
+   
+
+--- Context around line 801 ---
+   
+   - `data-model` — Override the chat model used for responses. This must be a valid model string for your AnythingLLM LLM provider. 
+   
+=> - `data-temperature` — Override the chat model temperature. This must be a valid value for your AnythingLLM LLM provider. If unset
+   
+   
+   **Language & Localization**
+
+--- Context around line 806 ---
+   
+   **Language & Localization**
+   
+=> - `data-language` — Set the language for the chat interface. If not specified, it will default to English (en). [Currently support
+   
+   **Style Overrides**
+   
+
+--- Context around line 830 ---
+   
+   - `data-sponsor-text` — The text displays in sponsor text in the footer of an open chat window.
+   
+=> - `data-position` \- Adjust the positioning of the embed chat widget and open chat button. Default `bottom-right`. Options are `bo
+   
+   - `data-assistant-name` \- Set the chat assistant name that appears above each chat message. Default `AnythingLLM Chat Assistant`
+   
+
+--- Context around line 832 ---
+   
+   - `data-position` \- Adjust the positioning of the embed chat widget and open chat button. Default `bottom-right`. Options are `bo
+   
+=> - `data-assistant-name` \- Set the chat assistant name that appears above each chat message. Default `AnythingLLM Chat Assistant`
+   
+   - `data-assistant-icon` \- Set the icon of the chat assistant.
+   
+
+--- Context around line 842 ---
+   
+   - `data-text-size` \- Set the text size of the chats in pixels.
+   
+=> - `data-username` \- A specific readable name or identifier for the client for your reference. Will be shown in AnythingLLM chat l
+   
+   - `data-default-messages` \- A string of comma-separated messages you want to display to the user when the chat widget has no hist
+   
+
+--- Context around line 860 ---
+   - `data-support-email` — Shows a support email that the user can used to draft an email via the "three dot" menu in the top right.
+   
+   
+=> ### `<iframe>` tag HTML embed
+   
+   [Permalink: <iframe> tag HTML embed](https://github.com/Mintplex-Labs/anythingllm-embed/blob/main/README.md#iframe-tag-html-embed)
+   
+
+--- Context around line 862 ---
+   
+   ### `<iframe>` tag HTML embed
+   
+=> [Permalink: <iframe> tag HTML embed](https://github.com/Mintplex-Labs/anythingllm-embed/blob/main/README.md#iframe-tag-html-embed)
+   
+   _work in progress_
+   
+
+--- Context around line 868 ---
+   
+   ### `<iframe>` Customization Options
+   
+=> [Permalink: <iframe> Customization Options](https://github.com/Mintplex-Labs/anythingllm-embed/blob/main/README.md#iframe-customiz
+   
+   _work in progress_
+   
+
+==================================================
+FILE: rag_chatbot_widget.md
+==================================================
+
+--- Context around line 0 ---
+=> # Query: open source RAG chatbot plug-and-play web widget embed JS snippet BYOK
+   
+   ## 1. GitHub - rootsongjc/rag-chatbot: Build an embeddable RAG Chatbot for your website using Cloudflare Workers. · GitHub
+   **URL:** https://github.com/rootsongjc/rag-chatbot
+
+--- Context around line 2 ---
+   # Query: open source RAG chatbot plug-and-play web widget embed JS snippet BYOK
+   
+=> ## 1. GitHub - rootsongjc/rag-chatbot: Build an embeddable RAG Chatbot for your website using Cloudflare Workers. · GitHub
+   **URL:** https://github.com/rootsongjc/rag-chatbot
+   
+   [Skip to content](https://github.com/rootsongjc/rag-chatbot#start-of-content)
+
+--- Context around line 37 ---
+   | Name | Name | Last commit message | Last commit date |
+   | --- | --- | --- | --- |
+   | ## Latest commit<br>[![rootsongjc](https://avatars.githubusercontent.com/u/3328185?v=4&size=40)](https://github.com/rootsongjc)[
+=> | [scripts](https://github.com/rootsongjc/rag-chatbot/tree/main/scripts "scripts") | [scripts](https://github.com/rootsongjc/rag-c
+   | [src](https://github.com/rootsongjc/rag-chatbot/tree/main/src "src") | [src](https://github.com/rootsongjc/rag-chatbot/tree/main
+   | [tests](https://github.com/rootsongjc/rag-chatbot/tree/main/tests "tests") | [tests](https://github.com/rootsongjc/rag-chatbot/t
+   | [LICENSE](https://github.com/rootsongjc/rag-chatbot/blob/main/LICENSE "LICENSE") | [LICENSE](https://github.com/rootsongjc/rag-c
+
+--- Context around line 39 ---
+   | ## Latest commit<br>[![rootsongjc](https://avatars.githubusercontent.com/u/3328185?v=4&size=40)](https://github.com/rootsongjc)[
+   | [scripts](https://github.com/rootsongjc/rag-chatbot/tree/main/scripts "scripts") | [scripts](https://github.com/rootsongjc/rag-c
+   | [src](https://github.com/rootsongjc/rag-chatbot/tree/main/src "src") | [src](https://github.com/rootsongjc/rag-chatbot/tree/main
+=> | [tests](https://github.com/rootsongjc/rag-chatbot/tree/main/tests "tests") | [tests](https://github.com/rootsongjc/rag-chatbot/t
+   | [LICENSE](https://github.com/rootsongjc/rag-chatbot/blob/main/LICENSE "LICENSE") | [LICENSE](https://github.com/rootsongjc/rag-c
+   | [README.md](https://github.com/rootsongjc/rag-chatbot/blob/main/README.md "README.md") | [README.md](https://github.com/rootsong
+   | [package-lock.json](https://github.com/rootsongjc/rag-chatbot/blob/main/package-lock.json "package-lock.json") | [package-lock.j
+
+--- Context around line 43 ---
+   | [LICENSE](https://github.com/rootsongjc/rag-chatbot/blob/main/LICENSE "LICENSE") | [LICENSE](https://github.com/rootsongjc/rag-c
+   | [README.md](https://github.com/rootsongjc/rag-chatbot/blob/main/README.md "README.md") | [README.md](https://github.com/rootsong
+   | [package-lock.json](https://github.com/rootsongjc/rag-chatbot/blob/main/package-lock.json "package-lock.json") | [package-lock.j
+=> | [package.json](https://github.com/rootsongjc/rag-chatbot/blob/main/package.json "package.json") | [package.json](https://github.
+   | [playwright.config.ts](https://github.com/rootsongjc/rag-chatbot/blob/main/playwright.config.ts "playwright.config.ts") | [playw
+   | [tsconfig.json](https://github.com/rootsongjc/rag-chatbot/blob/main/tsconfig.json "tsconfig.json") | [tsconfig.json](https://git
+   | [vitest.config.ts](https://github.com/rootsongjc/rag-chatbot/blob/main/vitest.config.ts "vitest.config.ts") | [vitest.config.ts]
+
+--- Context around line 56 ---
+   
+   [Permalink: Website RAG Chatbot](https://github.com/rootsongjc/rag-chatbot#website-rag-chatbot)
+   
+=> Build an embeddable RAG Chatbot for your website using Cloudflare Workers. The JavaScript widget is stored locally for easy mainte
+   Data source: The `content/` directory (Markdown) of your Hugo website repository `website`.
+   Model backend: Switchable between Gemini and Qwen (Tongyi Qianwen).
+   
+
+--- Context around line 64 ---
+   
+   [Permalink: Features](https://github.com/rootsongjc/rag-chatbot#features)
+   
+=> - Markdown -> Plain text -> Chunking -> Embedding -> Write to Vectorize
+   - /chat: Retrieve Top-K chunks + assemble prompt + call LLM to generate Chinese answers
+   - Returns source references (source, url)
+   - Embeddable frontend `widget.js` for your Hugo site
+
+--- Context around line 67 ---
+   - Markdown -> Plain text -> Chunking -> Embedding -> Write to Vectorize
+   - /chat: Retrieve Top-K chunks + assemble prompt + call LLM to generate Chinese answers
+   - Returns source references (source, url)
+=> - Embeddable frontend `widget.js` for your Hugo site
+   
+   ## Directory Structure
+   
+
+--- Context around line 100 ---
+   wrangler secret put GOOGLE_API_KEY     # If PROVIDER=gemini
+   wrangler secret put QWEN_API_KEY       # If PROVIDER=qwen
+   # (Optional) wrangler secret put QWEN_BASE
+=> # (Optional) wrangler secret put QWEN_EMBED_MODEL
+   ```
+   
+   
+
+--- Context around line 109 ---
+   
+   
+   
+=> And set in `[vars]` of `wrangler.toml`: `PROVIDER`, `EMBED_DIM`, `LLM_MODEL`.
+   
+   
+   ## Development & Deployment
+
+--- Context around line 157 ---
+   WORKER_URL=https://<your-worker>.workers.dev \
+   CONTENT_DIR=../website/content \
+   BASE_URL=https://your-site.com \
+=> EMBED_DIM=1024 \
+   npm run ingest
+   ```
+   
+
+--- Context around line 170 ---
+   WORKER_URL=https://<your-worker>.workers.dev \
+   CONTENT_DIR=../website/content \
+   BASE_URL=https://your-site.com \
+=> EMBED_DIM=1024 \
+   npm run ingest
+   ```
+   
+
+--- Context around line 174 ---
+   npm run ingest
+   ```
+   
+=> > Tip: Ensure the Vectorize index dimension (e.g., 1024) matches the embedding dimension.
+   
+   ## Embed in Your Website
+   
+
+--- Context around line 176 ---
+   
+   > Tip: Ensure the Vectorize index dimension (e.g., 1024) matches the embedding dimension.
+   
+=> ## Embed in Your Website
+   
+   [Permalink: Embed in Your Website](https://github.com/rootsongjc/rag-chatbot#embed-in-your-website)
+   
+
+--- Context around line 178 ---
+   
+   ## Embed in Your Website
+   
+=> [Permalink: Embed in Your Website](https://github.com/rootsongjc/rag-chatbot#embed-in-your-website)
+   
+   In your Hugo template (e.g., `layouts/partials/footer.html`), add the following, referencing your local JavaScript path:
+   
+
+--- Context around line 258 ---
+   wrangler vectorize create website-rag --dimensions=1024
+   ```
+   
+=> 2. **Configure embedding dimension**:
+   In `wrangler.toml`:
+   
+   
+
+--- Context around line 265 ---
+   
+   ```
+   [vars]
+=> EMBED_DIM = 1024  # Must match Vectorize index dimension
+   PROVIDER = "qwen"  # Or "gemini"
+   ```
+   
+
+--- Context around line 280 ---
+   ADMIN_TOKEN=your_admin_token \
+   WORKER_URL=https://<your-worker>.workers.dev \
+   CONTENT_DIR=../website/content \
+=> EMBED_DIM=1024 \
+   npm run ingest
+   ```
+   
+
+--- Context around line 427 ---
+   # Environment variables
+   [vars]
+   PROVIDER = "qwen"                    # Model provider: gemini or qwen
+=> EMBED_DIM = 1024                     # Embedding dimension, must match index
+   LLM_MODEL = "qwen-turbo-latest"      # LLM model name
+   QWEN_EMBED_MODEL = "text-embedding-v4"  # Qwen embedding model
+   
+
+--- Context around line 429 ---
+   PROVIDER = "qwen"                    # Model provider: gemini or qwen
+   EMBED_DIM = 1024                     # Embedding dimension, must match index
+   LLM_MODEL = "qwen-turbo-latest"      # LLM model name
+=> QWEN_EMBED_MODEL = "text-embedding-v4"  # Qwen embedding model
+   
+   # Vectorize binding
+   [[vectorize]]
+
+--- Context around line 477 ---
+      - **Vectorize**: Billed by vector count and query times
+      - **Workers**: Billed by request count and CPU time
+      - **KV** (if used): Billed by storage and operation count
+=>    - Monitor usage and set appropriate limits
+      - Free tier available for development/testing
+   
+   ### Troubleshooting
+
+--- Context around line 484 ---
+   
+   [Permalink: Troubleshooting](https://github.com/rootsongjc/rag-chatbot#troubleshooting)
+   
+=> 1. **Embedding dimension mismatch**:
+   Ensure `EMBED_DIM` matches the Vectorize index dimension
+   
+   2. **API quota exceeded**:
+
+--- Context around line 485 ---
+   [Permalink: Troubleshooting](https://github.com/rootsongjc/rag-chatbot#troubleshooting)
+   
+   1. **Embedding dimension mismatch**:
+=> Ensure `EMBED_DIM` matches the Vectorize index dimension
+   
+   2. **API quota exceeded**:
+   Adjust `MAX_CONCURRENT_EMBEDDINGS` and batch size parameters
+
+--- Context around line 488 ---
+   Ensure `EMBED_DIM` matches the Vectorize index dimension
+   
+   2. **API quota exceeded**:
+=> Adjust `MAX_CONCURRENT_EMBEDDINGS` and batch size parameters
+   
+   3. **Permission errors**:
+   Check if `ADMIN_TOKEN` is set correctly and not expired
+
+--- Context around line 505 ---
+   
+   ## About
+   
+=> Build an embeddable RAG Chatbot for your website using Cloudflare Workers.
+   
+   
+   [jimmysong.io/book/rag-handbook/](https://jimmysong.io/book/rag-handbook/ "https://jimmysong.io/book/rag-handbook/")
+
+--- Context around line 613 ---
+   
+   Share
+   
+=> An open-source, multi-tenant RAG chatbot for websites — embeddable with one script tag, powered by Rust, AWS Lambda, and real-time
+   
+   Press enter or click to view image in full size
+   
+
+--- Context around line 621 ---
+   
+   Open by Design — Like a Papaya, Everything Inside Is Visible
+   
+=> Most website chatbots are closed-source, expensive, and lock you into a platform. I wanted something different: a chatbot that ans
+   
+   So I built one.
+   
+
+--- Context around line 629 ---
+   
+   This is **Papaya Assist** — a multi-tenant, RAG-powered chatbot for websites.
+   
+=> In this article, I’ll walk through the full architecture, explain why I chose Rust for the backend, and show two live examples: on
+   
+   ## What It Does
+   
+
+--- Context around line 633 ---
+   
+   ## What It Does
+   
+=> You upload documents (PDF, DOCX, or plain text). The system chunks them, generates embeddings, and stores the vectors.
+   
+   When a visitor asks a question, the chatbot retrieves the most relevant chunks, feeds them to an LLM as context, and streams the a
+   
+
+--- Context around line 647 ---
+   
+   The chat bubble appears in the bottom-right corner of the page.
+   
+=> ## The Embed: One Script Tag
+   
+   The widget is a self-contained JavaScript file.
+   
+
+--- Context around line 738 ---
+   
+   1. Files are uploaded to S3 via presigned URLs — the browser uploads directly to storage
+   2. The admin API downloads the file, extracts text, and splits it into chunks of roughly 500 tokens with 50-token overlap
+=> 3. Chunks are sent to OpenAI’s embedding API in batches of 100
+   4. Each chunk becomes a 1536-dimensional vector stored in Pinecone with tenant metadata
+   
+   ## Query (when a visitor asks a question)
+
+--- Context around line 744 ---
+   ## Query (when a visitor asks a question)
+   
+   1. If conversation history exists, the question is first contextualized using a lightweight LLM call
+=> 2. The contextualized question is embedded into a vector
+   3. Pinecone returns the top 5 most semantically similar chunks from that tenant’s namespace
+   4. Those chunks are injected into the system prompt as context
+   5. GPT-4o-mini generates the answer, either streamed or returned fully
+
+--- Context around line 775 ---
+   
+   - display name
+   - system prompt
+=> - pricing tier
+   - message counts
+   - usage tracking
+   
+
+--- Context around line 781 ---
+   
+   A separate Users table handles authentication.
+   
+=> Pricing tiers control quotas:
+   
+   - Free → 50 messages/month + 2 documents
+   - Standard → 500 messages + 20 documents
+
+--- Context around line 785 ---
+   
+   - Free → 50 messages/month + 2 documents
+   - Standard → 500 messages + 20 documents
+=> - Pro → 5,000 messages + unlimited documents
+   
+   Usage resets monthly based on each tenant’s billing cycle day.
+   
+
+--- Context around line 826 ---
+   
+   The beauty of this approach is that the WordPress site owner never touches code.
+   
+=> They never see embed snippets, API keys, or endpoint URLs.
+   
+   The plugin handles everything internally.
+   
+
+--- Context around line 867 ---
+   | Chat API (REST)  | Rust, lambda_http                         |
+   | Chat (streaming) | Rust, Axum, Lambda Web Adapter            |
+   | Admin API        | Rust, Axum, Firebase Auth                 |
+=> | Vector search    | Pinecone (1536-d, text-embedding-ada-002) |
+   | LLM              | GPT-4o-mini                               |
+   | Storage          | DynamoDB, S3                              |
+   | Infrastructure   | AWS SAM, Docker, Lambda                   |
+
+--- Context around line 1026 ---
+   example of a TXT file or a PDF. Then the
+   second thing that you need is to extract
+   this information and store it as
+=> embeddings. Okay. So embeddings is just
+   like the representation of data into
+   like ones and zeros. You don't need to
+   understand this. But basically what you
+
+--- Context around line 1032 ---
+   understand this. But basically what you
+   need to understand is you need to
+   convert this information and store it as
+=> embeddings. Now the biggest of all is
+   going to be this orchestration service.
+   So orchestration service is going to be
+   communicating with the normal users who
+
+--- Context around line 1039 ---
+   are using the chatbot
+   and also the knowledge base. So the
+   knowledge base is a database uh that can
+=> store these embeddings. So when you
+   generate these embeddings after
+   generating them you go ahead and store
+   them in a
+
+--- Context around line 1040 ---
+   and also the knowledge base. So the
+   knowledge base is a database uh that can
+   store these embeddings. So when you
+=> generate these embeddings after
+   generating them you go ahead and store
+   them in a
+   a a database which we normally call a a
+
+--- Context around line 1065 ---
+   base now as I said this knowledge base
+   has to be a vector database. A vector
+   database is the one that can actually
+=> store embeddings. Okay. Now, the one I
+   used specifically is Quadrant. There are
+   so many you can use, but I used
+   Quadrant. Uh it is fast, lightweight,
+
+--- Context around line 1079 ---
+   information and gives a better
+   representation to the user. Okay. Now we
+   use it in two ways. Even here in in
+=> between here to do embeddings, we use
+   actually to do uh the embeddings in
+   between here and also we use it again
+   here to make sure that we interpret the
+
+--- Context around line 1080 ---
+   representation to the user. Okay. Now we
+   use it in two ways. Even here in in
+   between here to do embeddings, we use
+=> actually to do uh the embeddings in
+   between here and also we use it again
+   here to make sure that we interpret the
+   knowledge base information using to give
+
+--- Context around line 1198 ---
+   So I'm using R2 for keeping this and
+   then you chunk this using quadrant. So
+   this is saved in quadrant. So quadrant
+=> is only used to save the embeddings as
+   you can see them here. But this other
+   normal information is saved in
+   postgrace. Uh okay. So now that you have
+
+--- Context around line 1343 ---
+   
+   ---
+   
+=> ## 4. Build a RAG Chatbot with Chat, Embed & Rerank | Cohere
+   **URL:** https://cohere.com/llmu/rag-chatbot
+   
+   [< Back to modules](https://cohere.com/llmu)
+
+--- Context around line 1348 ---
+   
+   [< Back to modules](https://cohere.com/llmu)
+   
+=> # How to Build a RAG-Powered Chatbot with Chat, Embed, and Rerank
+   
+   [![Image of Meor Amer](https://storage.ghost.io/c/81/47/8147eb50-617d-4929-b563-3922b88421fd/content/images/2024/04/meor.png)](htt
+   
+
+--- Context around line 1358 ---
+   
+   ![X (Formerly Twitter) Icon](https://cohere.com/images/twitter_icon.svg)![LinkedIn Icon](https://cohere.com/images/linkedin_icon.s
+   
+=> In this chapter, you’ll learn how to build a RAG-powered chatbot that leverages text embeddings using the Chat, Embed, and Rerank 
+   
+   We’ll use [Cohere’s Python SDK](https://docs.cohere.com/reference/about?ref=txt.cohere.com#python) for the code examples. Follow a
+   
+
+--- Context around line 1360 ---
+   
+   In this chapter, you’ll learn how to build a RAG-powered chatbot that leverages text embeddings using the Chat, Embed, and Rerank 
+   
+=> We’ll use [Cohere’s Python SDK](https://docs.cohere.com/reference/about?ref=txt.cohere.com#python) for the code examples. Follow a
+   
+   ## Contents
+   
+
+--- Context around line 1369 ---
+   - [Setup](https://cohere.com/llmu/rag-chatbot#setup)
+   - [Create the Vectorstore Component](https://cohere.com/llmu/rag-chatbot#create-the-vectorstore-component)
+     - [Load and Chunk the Documents](https://cohere.com/llmu/rag-chatbot#load-and-chunk-the-documents)
+=>   - [Embed the Document Chunks](https://cohere.com/llmu/rag-chatbot#embed-the-document-chunks)
+     - [Index Document Chunks](https://cohere.com/llmu/rag-chatbot#index-document-chunks)
+     - [Implement Retrieval](https://cohere.com/llmu/rag-chatbot#implement-retrieval)
+       - [Dense Retrieval](https://cohere.com/llmu/rag-chatbot#dense-retrieval)
+
+--- Context around line 1388 ---
+   
+   In the [previous chapter](https://cohere.com/llmu/rag-start), you learned how to get started with RAG using the Chat endpoint.
+   
+=> In this chapter, you’ll learn how to add RAG applications that leverage text embeddings and how to build a chatbot using RAG in do
+   
+   In the previous chapter, we used a short list of simple documents. In real-world applications, however, developers typically need 
+   
+
+--- Context around line 1392 ---
+   
+   In the previous chapter, we used a short list of simple documents. In real-world applications, however, developers typically need 
+   
+=> This is where text embeddings can help. With embeddings, we can split these documents into smaller chunks and build a semantic sea
+   
+   ## Step-by-Step Guide
+   
+
+--- Context around line 1414 ---
+   
+   **Setup phase:**
+   
+=> - **Step 0**: Ingest the documents – get documents, chunk, embed, and index
+   
+   **For each user-chatbot interaction:**
+   
+
+--- Context around line 1434 ---
+   To build a RAG system that can effectively handle a complex corpus of documents, we’ll need to use several Cohere API endpoints, i
+   
+   - [**Chat**](https://docs.cohere.com/reference/chat): For handling the main logic of the chatbot, including turning a user message
+=> - [**Embed**](https://docs.cohere.com/reference/embed) **:** For turning textual documents into their embeddings representation, l
+   - [**Rerank**](https://docs.cohere.com/reference/rerank-1) **:** For reranking the retrieved documents according to their relevanc
+   
+   ![This demo application will use Cohere’s Chat, Embed, and Rerank endpoints](https://storage.ghost.io/c/81/47/8147eb50-617d-4929-b
+
+--- Context around line 1437 ---
+   - [**Embed**](https://docs.cohere.com/reference/embed) **:** For turning textual documents into their embeddings representation, l
+   - [**Rerank**](https://docs.cohere.com/reference/rerank-1) **:** For reranking the retrieved documents according to their relevanc
+   
+=> ![This demo application will use Cohere’s Chat, Embed, and Rerank endpoints](https://storage.ghost.io/c/81/47/8147eb50-617d-4929-b
+   
+   For further reading, [the API reference](https://docs.cohere.com/reference/chat) page contains a detailed description of the Chat 
+   
+
+--- Context around line 1464 ---
+   
+   ## Create the Vectorstore Component
+   
+=> The `Vectorstore` class handles the ingestion of documents into embeddings (or vectors) and the retrieval of relevant documents gi
+   
+   ![The Vectorstore component handles document ingestion and retrieval](https://storage.ghost.io/c/81/47/8147eb50-617d-4929-b563-392
+   
+
+--- Context around line 1498 ---
+           self.retrieve_top_k = 10
+           self.rerank_top_k = 3
+           self.load_and_chunk()
+=>         self.embed()
+           self.index()
+   ```
+   
+
+--- Context around line 1502 ---
+           self.index()
+   ```
+   
+=> We also initialize a few instance attributes and methods. The attributes include `self.raw_documents` to represent the raw documen
+   
+   Meanwhile, the methods include `load_and_chunk()`, `embed()`, and `index()` for ingesting raw documents. As you’ll see, we will al
+   
+
+--- Context around line 1504 ---
+   
+   We also initialize a few instance attributes and methods. The attributes include `self.raw_documents` to represent the raw documen
+   
+=> Meanwhile, the methods include `load_and_chunk()`, `embed()`, and `index()` for ingesting raw documents. As you’ll see, we will al
+   
+   ![The document ingestion portion of the Documents component](https://storage.ghost.io/c/81/47/8147eb50-617d-4929-b563-3922b88421fd
+   
+
+--- Context around line 1506 ---
+   
+   Meanwhile, the methods include `load_and_chunk()`, `embed()`, and `index()` for ingesting raw documents. As you’ll see, we will al
+   
+=> ![The document ingestion portion of the Documents component](https://storage.ghost.io/c/81/47/8147eb50-617d-4929-b563-3922b88421fd
+   
+   ## Load and Chunk the Documents
+   
+
+--- Context around line 1518 ---
+   - `text`: The textual content of the chunk
+   - `url`: The web page’s URL
+   
+=> This information will eventually be passed to the chatbot’s prompt for generating the response, so it’s crucial to populate releva
+   
+   The resulting dictionaries are stored in the `self.docs` attribute.
+   
+
+--- Context around line 1547 ---
+                   )
+   ```
+   
+=> ## Embed the Document Chunks
+   
+   The `embed()` method generates embeddings of the chunked documents. We use the [Embed](https://docs.cohere.com/reference/embed) en
+   
+
+--- Context around line 1549 ---
+   
+   ## Embed the Document Chunks
+   
+=> The `embed()` method generates embeddings of the chunked documents. We use the [Embed](https://docs.cohere.com/reference/embed) en
+   
+   With the Embed v3 model, we need to define an `input_type`, of which there are four options depending on the type of task. Using t
+   
+
+--- Context around line 1551 ---
+   
+   The `embed()` method generates embeddings of the chunked documents. We use the [Embed](https://docs.cohere.com/reference/embed) en
+   
+=> With the Embed v3 model, we need to define an `input_type`, of which there are four options depending on the type of task. Using t
+   
+   The resulting chunk embeddings are stored in the `self.docs_embs` attribute.
+   
+
+--- Context around line 1553 ---
+   
+   With the Embed v3 model, we need to define an `input_type`, of which there are four options depending on the type of task. Using t
+   
+=> The resulting chunk embeddings are stored in the `self.docs_embs` attribute.
+   
+   ```python
+   class Vectorstore:
+
+--- Context around line 1561 ---
+       ...
+       ...
+   
+=>     def embed(self) -> None:
+           """
+           Embeds the document chunks using the Cohere API.
+           """
+
+--- Context around line 1563 ---
+   
+       def embed(self) -> None:
+           """
+=>         Embeds the document chunks using the Cohere API.
+           """
+           print("Embedding document chunks...")
+   
+
+--- Context around line 1565 ---
+           """
+           Embeds the document chunks using the Cohere API.
+           """
+=>         print("Embedding document chunks...")
+   
+           batch_size = 90
+           self.docs_len = len(self.docs)
+
+--- Context around line 1572 ---
+           for i in range(0, self.docs_len, batch_size):
+               batch = self.docs[i : min(i + batch_size, self.docs_len)]
+               texts = [item["text"] for item in batch]
+=>             docs_embs_batch = co.embed(
+                   texts=texts, model="embed-v4.0", input_type="search_document"
+               ).embeddings
+               self.docs_embs.extend(docs_embs_batch)
+
+--- Context around line 1573 ---
+               batch = self.docs[i : min(i + batch_size, self.docs_len)]
+               texts = [item["text"] for item in batch]
+               docs_embs_batch = co.embed(
+=>                 texts=texts, model="embed-v4.0", input_type="search_document"
+               ).embeddings
+               self.docs_embs.extend(docs_embs_batch)
+   ```
+
+--- Context around line 1574 ---
+               texts = [item["text"] for item in batch]
+               docs_embs_batch = co.embed(
+                   texts=texts, model="embed-v4.0", input_type="search_document"
+=>             ).embeddings
+               self.docs_embs.extend(docs_embs_batch)
+   ```
+   
+
+--- Context around line 1580 ---
+   
+   ## Index Document Chunks
+   
+=> The `index()` method indexes the document chunk embeddings. We build an index to store the embeddings in a structured and organize
+   
+   There are many options available for building an index. For production environments, typically a vector database (like Weaviate or
+   
+
+--- Context around line 1584 ---
+   
+   There are many options available for building an index. For production environments, typically a vector database (like Weaviate or
+   
+=> In our example, however, we’ll keep it simple and use a vector library instead. We can choose from many open-source projects, such
+   
+   The resulting document chunk embeddings are stored in the `self.idx` attribute.
+   
+
+--- Context around line 1586 ---
+   
+   In our example, however, we’ll keep it simple and use a vector library instead. We can choose from many open-source projects, such
+   
+=> The resulting document chunk embeddings are stored in the `self.idx` attribute.
+   
+   ```python
+   class Vectorstore:
+
+--- Context around line 1615 ---
+   
+   ### Dense Retrieval
+   
+=> We implement a dense retrieval system that leverages embeddings to retrieve document chunks, offering significant improvements ove
+   
+   We embed the query using the same `embed-v4.0` model that we used to embed the document chunks, but this time, we set `input_type=
+   
+
+--- Context around line 1617 ---
+   
+   We implement a dense retrieval system that leverages embeddings to retrieve document chunks, offering significant improvements ove
+   
+=> We embed the query using the same `embed-v4.0` model that we used to embed the document chunks, but this time, we set `input_type=
+   
+   Search is performed by the `knn_query()` method from the `hnswlib` library. Given a query, it returns the document chunks most sim
+   
+
+--- Context around line 1647 ---
+           """
+   
+           # Dense retrieval
+=>         query_emb = co.embed(
+               texts=[query], model="embed-v4.0", input_type="search_query"
+           ).embeddings
+   
+
+--- Context around line 1648 ---
+   
+           # Dense retrieval
+           query_emb = co.embed(
+=>             texts=[query], model="embed-v4.0", input_type="search_query"
+           ).embeddings
+   
+           doc_ids = self.idx.knn_query(query_emb, k=self.retrieve_top_k)[0][0]
+
+--- Context around line 1649 ---
+           # Dense retrieval
+           query_emb = co.embed(
+               texts=[query], model="embed-v4.0", input_type="search_query"
+=>         ).embeddings
+   
+           doc_ids = self.idx.knn_query(query_emb, k=self.retrieve_top_k)[0][0]
+   
+
+--- Context around line 1691 ---
+   
+   ```json
+   Loading documents...
+=> Embedding documents...
+   Indexing documents...
+   Indexing complete with 134 documents.
+   ```
+
+--- Context around line 1915 ---
+   In the conversation above, notice a few observations that reflect the different components of what we built:
+   
+   - **Direct response**: For user messages that don’t require retrieval (“Hello, I have a question”), the chatbot responds directly 
+=> - **Citation generation**: For responses that do require retrieval (“What’s the difference between word and sentence embeddings”),
+   - **State management**: The endpoint maintains the state of the conversation via the conversation\_id parameter, for example, by b
+   - **Response synthesis**: The model can decide if none of the retrieved documents provide the necessary information required to an
+   
+
+--- Context around line 1965 ---
+   This LLMU module consists of the following chapters:
+   
+   1. [Introduction to RAG](https://cohere.com/llmu/rag-start)
+=> 2. [RAG with Chat, Embed, and Rerank](https://cohere.com/llmu/rag-chatbot) (this chapter)
+   3. [RAG with Connectors](https://cohere.com/llmu/rag-connectors)
+   4. [RAG with Quickstart Connectors](https://cohere.com/llmu/rag-quickstart-connectors)
+   5. [RAG over Large-Scale Data](https://cohere.com/llmu/rag-large-scale-data)
+
+--- Context around line 1972 ---
+   
+   ---
+   
+=> ## 5. feat: Support "Embeddable Chat JS Widget for Custom-Models" for individual websites · Issue #19876 · open-webui/open-webui
+   **URL:** https://github.com/open-webui/open-webui/issues/19876
+   
+   [Skip to content](https://github.com/open-webui/open-webui/issues/19876#start-of-content)
+
+--- Context around line 1993 ---
+   
+   This issue has been moved to a discussion [Go to the discussion](https://github.com/open-webui/open-webui/discussions/19887)
+   
+=> # feat: Support "Embeddable Chat JS Widget for Custom-Models" for individual websites\#19876
+   
+   [New issue](https://github.com/login?return_to=https://github.com/open-webui/open-webui/issues/19876)
+   
+
+--- Context around line 2007 ---
+   
+   Closed
+   
+=> [feat: Support "Embeddable Chat JS Widget for Custom-Models" for individual websites](https://github.com/open-webui/open-webui/iss
+   
+   Copy link
+   
+
+--- Context around line 2044 ---
+   
+   The missing piece is:
+   
+=> There is no **official, first-class way** to expose a _single custom model / chat panel_ as a **minimal embeddable widget** on an 
+   
+   Right now, I can create a model like `my-solidjs-model` with a RAG context (`solidjs-full-llms.txt`) and use it inside Open WebUI,
+   
+
+--- Context around line 2046 ---
+   
+   There is no **official, first-class way** to expose a _single custom model / chat panel_ as a **minimal embeddable widget** on an 
+   
+=> Right now, I can create a model like `my-solidjs-model` with a RAG context (`solidjs-full-llms.txt`) and use it inside Open WebUI,
+   
+   ### Desired Solution you'd like
+   
+
+--- Context around line 2050 ---
+   
+   ### Desired Solution you'd like
+   
+=> I’d like Open WebUI to support an **“Embeddable Chat Panel”** mode for custom models / chat panels, so that a website can do somet
+   
+   ```
+   <body>
+
+--- Context around line 2057 ---
+     <div id="chatbot-widget"></div>
+   
+     <script type="module">
+=>     import { mount } from "https://<cdn>/assets/open-webui-chat-widget/@0.0.1/openwebui-embed-manager.js";
+   
+       mount(
+         // DOM selector where the widget should attach
+
+--- Context around line 2077 ---
+   
+   High-level idea:
+   
+=> - On `/workspace/models/edit?id=my-solidjs-model` (or equivalent UI), add an **“Embeddable widget”** option for a custom model / c
+   
+   - When enabled, Open WebUI:
+     - Exposes built-in manager a small JS bundle (e.g. `openwebui-embed-manager.js`) that:
+
+--- Context around line 2080 ---
+   - On `/workspace/models/edit?id=my-solidjs-model` (or equivalent UI), add an **“Embeddable widget”** option for a custom model / c
+   
+   - When enabled, Open WebUI:
+=>   - Exposes built-in manager a small JS bundle (e.g. `openwebui-embed-manager.js`) that:
+       - Renders a floating/chat-style widget on the host page.
+       - Connects to the selected chat panel / model.
+       - Optionally uses a passed-in JWT to identify the user (for auth, history, guardrails, etc.).
+
+--- Context around line 2084 ---
+       - Renders a floating/chat-style widget on the host page.
+       - Connects to the selected chat panel / model.
+       - Optionally uses a passed-in JWT to identify the user (for auth, history, guardrails, etc.).
+=>   - Provides a copy-paste embed snippet (like above) for website owners.
+   
+   Widget UX & technical requirements (proposal):
+   
+
+--- Context around line 2101 ---
+   - Respects existing Open WebUI capabilities:
+     - Uses the selected custom model (e.g. `my-solidjs-model`) and its RAG context.
+     - Supports tools, uploads, STT/TTI, citations, and guardrails the same way as in the main UI.
+=>   - Uses JWT for auth, where the token includes `{ sub, user: { id, name, avatar } }` so the embed can still be personalized and s
+   
+   In short:
+   
+
+--- Context around line 2105 ---
+   
+   In short:
+   
+=> **Take the existing “Custom-Model Chat Panel” experience and make it available as a pluggable, floating widget that any website ca
+   
+   ### Alternatives Considered
+   
+
+--- Context around line 2120 ---
+   
+   
+       This defeats the purpose of having Open WebUI as a central, powerful control plane.
+=> - **iFrame-based embedding**
+   
+   
+   It is technically possible to embed a full Open WebUI page inside an `<iframe>`, but:
+
+--- Context around line 2123 ---
+   - **iFrame-based embedding**
+   
+   
+=> It is technically possible to embed a full Open WebUI page inside an `<iframe>`, but:
+     - UX is not ideal (full app UI vs minimal widget).
+     - Harder to style, position as a floating bubble, and integrate with the host site’s look-and-feel.
+     - Passing per-user JWT and mapping to specific chat panels is more awkward.
+
+--- Context around line 2135 ---
+     - They can’t reuse my locally hosted Ollama models (e.g. `qwen3:4b-thinking`).
+     - They don’t share Open WebUI’s debug and tracing experience.
+   
+=> The most natural and powerful solution is for Open WebUI itself to expose embeddable chat widgets tied directly to its own custom 
+   
+   ### Additional Context
+   
+
+--- Context around line 2149 ---
+   
+   4. I use it inside Open WebUI as a dedicated chat panel, which already works great.
+   
+=> 5. Now I want to embed this exact experience on:
+      - My personal blog,
+      - My SaaS dashboard,
+      - Or my documentation site.
+
+--- Context around line 2156 ---
+   
+   For that, I’d like:
+   
+=> - A toggle on the model/edit page: **“Enable as embeddable widget”**.
+   
+   - A generated snippet like:
+   
+
+--- Context around line 2165 ---
+   ```
+   <div id="chatbot-widget"></div>
+   <script type="module">
+=>     import { mount } from "https://<openwebui-host>/embed/open-webui-chatbot.js";
+       mount("#chatbot-widget", "cw-panel-123456", "eyJh...");
+   </script>
+   ```
+
+--- Context around line 2183 ---
+   
+   Proposed implementation checklist (as a starting point):
+   
+=> - Add **“Embeddable Option”** checkbox inside `/workspace/models/edit?id=<model-id>`.
+   
+   
+   
+
+--- Context around line 2362 ---
+   
+   _by digitalassassins • May 28, 2025_
+   
+=> 2. [#16936](https://github.com/open-webui/open-webui/issues/16936) **feat: Embed browser-use/web-ui for immersive browser-based ag
+   
+   _by Varun-SV • Aug 26, 2025_
+   
+
+--- Context around line 2398 ---
+   
+   [![](https://avatars.githubusercontent.com/u/43668181?s=64&u=8b895dd38e713668ae4267027e8cecab0e14a09a&v=4)alperreha](https://githu
+   
+=> changed the title ~~\[-\]feat: Support "Embeddable Chat JS Widget for Custom-Models" for individual websites\[/-\]~~\[+\]feat: Add
+   
+   [![](https://avatars.githubusercontent.com/u/43668181?s=64&u=8b895dd38e713668ae4267027e8cecab0e14a09a&v=4)alperreha](https://githu
+   
+
+--- Context around line 2402 ---
+   
+   [![](https://avatars.githubusercontent.com/u/43668181?s=64&u=8b895dd38e713668ae4267027e8cecab0e14a09a&v=4)alperreha](https://githu
+   
+=> changed the title ~~\[-\]feat: Add "Custom-Models Embeddable Chat JS Widget" for individual websites\[/-\]~~\[+\]feat: Support "Em
+   
+   [![](https://avatars.githubusercontent.com/u/158137808?s=64&v=4)open-webui](https://github.com/open-webui)
+   
+
+--- Context around line 2406 ---
+   
+   [![](https://avatars.githubusercontent.com/u/158137808?s=64&v=4)open-webui](https://github.com/open-webui)
+   
+=> locked and limited conversation to collaborators [on Dec 11, 2025on Dec 11, 2025](https://github.com/open-webui/open-webui/issues/
+   
+   [![](https://avatars.githubusercontent.com/u/25473318?s=64&u=32822de45076906c693574021d9005b64e867f84&v=4)tjbck](https://github.co
+   
+
+==================================================
+FILE: competitors_benchmark.md
+==================================================
+
+--- Context around line 0 ---
+=> # Query: Chatbase Botpress Flowise comparison benchmark RAG widget pricing
+   
+   ## 1. AI Chatbot Pricing Comparison 2026: Costs, Models and Best Value
+   **URL:** https://blog.fastbots.ai/ai-chatbot-pricing-comparison-what-businesses-actually-pay-in-2026/
+
+--- Context around line 2 ---
+   # Query: Chatbase Botpress Flowise comparison benchmark RAG widget pricing
+   
+=> ## 1. AI Chatbot Pricing Comparison 2026: Costs, Models and Best Value
+   **URL:** https://blog.fastbots.ai/ai-chatbot-pricing-comparison-what-businesses-actually-pay-in-2026/
+   
+   CLAIM YOUR FREE CHATBOT NOW AT FASTBOTS.AI
+
+--- Context around line 3 ---
+   # Query: Chatbase Botpress Flowise comparison benchmark RAG widget pricing
+   
+   ## 1. AI Chatbot Pricing Comparison 2026: Costs, Models and Best Value
+=> **URL:** https://blog.fastbots.ai/ai-chatbot-pricing-comparison-what-businesses-actually-pay-in-2026/
+   
+   CLAIM YOUR FREE CHATBOT NOW AT FASTBOTS.AI
+   
+
+--- Context around line 7 ---
+   
+   CLAIM YOUR FREE CHATBOT NOW AT FASTBOTS.AI
+   
+=> If you are comparing **AI chatbot pricing in 2026**, the most important thing to know is this: the headline monthly price rarely t
+   
+   > **TL;DR**
+   >
+
+--- Context around line 11 ---
+   
+   > **TL;DR**
+   >
+=> > - **Best for predictable chatbot pricing overall:** [FastBots.ai](https://fastbots.ai/?ref=blog.fastbots.ai)
+   > - **Best for flat workspace pricing:** Crisp
+   > - **Best for fast website-bot testing:** Chatbase
+   > - **Best for live chat plus AI support:** Tidio
+
+--- Context around line 12 ---
+   > **TL;DR**
+   >
+   > - **Best for predictable chatbot pricing overall:** [FastBots.ai](https://fastbots.ai/?ref=blog.fastbots.ai)
+=> > - **Best for flat workspace pricing:** Crisp
+   > - **Best for fast website-bot testing:** Chatbase
+   > - **Best for live chat plus AI support:** Tidio
+   > - **Best for agent-based support teams:** Freshchat
+
+--- Context around line 13 ---
+   >
+   > - **Best for predictable chatbot pricing overall:** [FastBots.ai](https://fastbots.ai/?ref=blog.fastbots.ai)
+   > - **Best for flat workspace pricing:** Crisp
+=> > - **Best for fast website-bot testing:** Chatbase
+   > - **Best for live chat plus AI support:** Tidio
+   > - **Best for agent-based support teams:** Freshchat
+   > - **Best for technical teams that want usage-level control:** Botpress
+
+--- Context around line 16 ---
+   > - **Best for fast website-bot testing:** Chatbase
+   > - **Best for live chat plus AI support:** Tidio
+   > - **Best for agent-based support teams:** Freshchat
+=> > - **Best for technical teams that want usage-level control:** Botpress
+   > - **Best for AI billed by resolved value, not subscription volume:** Help Scout or Intercom
+   > - **Most important rule:** compare the _total operating cost_, not just the cheapest-looking starting plan
+   
+
+--- Context around line 20 ---
+   > - **Best for AI billed by resolved value, not subscription volume:** Help Scout or Intercom
+   > - **Most important rule:** compare the _total operating cost_, not just the cheapest-looking starting plan
+   
+=> AI chatbot pricing has become much harder to compare than it was even a year ago.
+   
+   On the surface, most vendors still present a simple plan table. In practice, buyers now have to untangle a mix of subscription fee
+   
+
+--- Context around line 22 ---
+   
+   AI chatbot pricing has become much harder to compare than it was even a year ago.
+   
+=> On the surface, most vendors still present a simple plan table. In practice, buyers now have to untangle a mix of subscription fee
+   
+   This guide compares the main chatbot pricing models in the market using current public vendor pricing pages. I’ll break down how e
+   
+
+--- Context around line 24 ---
+   
+   On the surface, most vendors still present a simple plan table. In practice, buyers now have to untangle a mix of subscription fee
+   
+=> This guide compares the main chatbot pricing models in the market using current public vendor pricing pages. I’ll break down how e
+   
+   ## Why AI chatbot pricing is so hard to compare
+   
+
+--- Context around line 26 ---
+   
+   This guide compares the main chatbot pricing models in the market using current public vendor pricing pages. I’ll break down how e
+   
+=> ## Why AI chatbot pricing is so hard to compare
+   
+   A chatbot is no longer just a chatbot.
+   
+
+--- Context around line 32 ---
+   
+   Some products are AI website assistants. Some are live chat platforms with AI layered on top. Some are full customer support suite
+   
+=> That is why “pricing comparison” often becomes an apples-to-oranges problem.
+   
+   ### The four main chatbot pricing models in 2026
+   
+
+--- Context around line 34 ---
+   
+   That is why “pricing comparison” often becomes an apples-to-oranges problem.
+   
+=> ### The four main chatbot pricing models in 2026
+   
+   #### 1\. Flat monthly subscription
+   
+
+--- Context around line 38 ---
+   
+   #### 1\. Flat monthly subscription
+   
+=> You pay a fixed monthly fee tied to a plan, with defined usage limits.
+   
+   This is the simplest model for budgeting. It is one of the reasons [FastBots pricing](https://fastbots.ai/pricing?ref=blog.fastbot
+   
+
+--- Context around line 40 ---
+   
+   You pay a fixed monthly fee tied to a plan, with defined usage limits.
+   
+=> This is the simplest model for budgeting. It is one of the reasons [FastBots pricing](https://fastbots.ai/pricing?ref=blog.fastbot
+   
+   #### 2\. Per-seat pricing
+   
+
+--- Context around line 42 ---
+   
+   This is the simplest model for budgeting. It is one of the reasons [FastBots pricing](https://fastbots.ai/pricing?ref=blog.fastbot
+   
+=> #### 2\. Per-seat pricing
+   
+   You pay for each team member or agent using the platform.
+   
+
+--- Context around line 48 ---
+   
+   This model can be fine for support teams, but it gets expensive quickly once more people need access.
+   
+=> #### 3\. Per-resolution or per-outcome pricing
+   
+   You are charged when the AI resolves a conversation or delivers a defined support outcome.
+   
+
+--- Context around line 66 ---
+   
+   - monthly base subscription
+   - included messages, conversations, or sessions
+=> - seat limits and extra seat pricing
+   - branding removal fees
+   - human handoff availability
+   - multi-channel support costs
+
+--- Context around line 75 ---
+   
+   ### Actionable Takeaway
+   
+=> - **Do not compare chatbot pricing by plan names.** Compare the billing unit.
+   - **Ask what causes your bill to rise first:** more agents, more conversations, more AI use, or more channels.
+   - **Model cost at your expected six-month usage, not your free-trial usage.**
+   
+
+--- Context around line 79 ---
+   - **Ask what causes your bill to rise first:** more agents, more conversations, more AI use, or more channels.
+   - **Model cost at your expected six-month usage, not your free-trial usage.**
+   
+=> ## How I compared AI chatbot pricing
+   
+   I reviewed current public pricing pages and compared each vendor based on what a real buyer is likely to care about.
+   
+
+--- Context around line 81 ---
+   
+   ## How I compared AI chatbot pricing
+   
+=> I reviewed current public pricing pages and compared each vendor based on what a real buyer is likely to care about.
+   
+   ### Evaluation criteria
+   
+
+--- Context around line 85 ---
+   
+   ### Evaluation criteria
+   
+=> #### Pricing clarity
+   
+   How easy is it to understand what you will actually pay?
+   
+
+--- Context around line 99 ---
+   
+   #### Scaling cost
+   
+=> What happens to pricing when usage, agents, or channels grow?
+   
+   #### Business fit
+   
+
+--- Context around line 103 ---
+   
+   #### Business fit
+   
+=> Is the pricing model sensible for a small business, a support team, an ecommerce brand, or a technical product team?
+   
+   ## AI chatbot pricing comparison: current public pricing by platform
+   
+
+--- Context around line 105 ---
+   
+   Is the pricing model sensible for a small business, a support team, an ecommerce brand, or a technical product team?
+   
+=> ## AI chatbot pricing comparison: current public pricing by platform
+   
+   ## 1\. FastBots.ai pricing, best for clear subscription-based value
+   
+
+--- Context around line 107 ---
+   
+   ## AI chatbot pricing comparison: current public pricing by platform
+   
+=> ## 1\. FastBots.ai pricing, best for clear subscription-based value
+   
+   [FastBots.ai](https://fastbots.ai/?ref=blog.fastbots.ai) uses the kind of pricing structure many businesses still prefer: a straig
+   
+
+--- Context around line 109 ---
+   
+   ## 1\. FastBots.ai pricing, best for clear subscription-based value
+   
+=> [FastBots.ai](https://fastbots.ai/?ref=blog.fastbots.ai) uses the kind of pricing structure many businesses still prefer: a straig
+   
+   ### Current public pricing
+   
+
+--- Context around line 111 ---
+   
+   [FastBots.ai](https://fastbots.ai/?ref=blog.fastbots.ai) uses the kind of pricing structure many businesses still prefer: a straig
+   
+=> ### Current public pricing
+   
+   Based on the current FastBots pricing page, plans are listed in USD as:
+   
+
+--- Context around line 113 ---
+   
+   ### Current public pricing
+   
+=> Based on the current FastBots pricing page, plans are listed in USD as:
+   
+   - **Free:** $0
+   - **Essential:** $39/month or $390/year
+
+--- Context around line 129 ---
+   - **Premium:** 10 chatbots and 10,000 messages per month
+   - **Reseller:** 30 chatbots and 30,000 messages per month
+   
+=> FastBots also supports multiple models, and the platform explains that some models consume more message credits than others. That 
+   
+   ### Why this pricing model works well
+   
+
+--- Context around line 131 ---
+   
+   FastBots also supports multiple models, and the platform explains that some models consume more message credits than others. That 
+   
+=> ### Why this pricing model works well
+   
+   #### Easy to forecast
+   
+
+--- Context around line 139 ---
+   
+   #### Good value for multi-bot and multi-channel use
+   
+=> FastBots is not just a website widget. It supports websites, WhatsApp, Telegram, Instagram, Facebook Pages, Slack, and more, which
+   
+   #### Good agency fit
+   
+
+--- Context around line 147 ---
+   
+   ### Potential trade-offs
+   
+=> - If you want ultra-granular infrastructure-level cost control, a usage-led model like Botpress may appeal more.
+   - If your business wants pricing tied only to successful resolutions, Help Scout or Intercom may feel more directly performance-ba
+   
+   ### Best for
+
+--- Context around line 148 ---
+   ### Potential trade-offs
+   
+   - If you want ultra-granular infrastructure-level cost control, a usage-led model like Botpress may appeal more.
+=> - If your business wants pricing tied only to successful resolutions, Help Scout or Intercom may feel more directly performance-ba
+   
+   ### Best for
+   
+
+--- Context around line 157 ---
+   - support and lead-generation teams
+   - businesses that want predictable costs and [multi-channel chatbot support](https://fastbots.ai/whatsapp-chatbots?ref=blog.fastbo
+   
+=> ## 2\. Chatbase pricing, best for simple website chatbot experiments
+   
+   Chatbase is one of the clearest examples of a tool that looks simple on the surface, but becomes more nuanced as usage grows.
+   
+
+--- Context around line 159 ---
+   
+   ## 2\. Chatbase pricing, best for simple website chatbot experiments
+   
+=> Chatbase is one of the clearest examples of a tool that looks simple on the surface, but becomes more nuanced as usage grows.
+   
+   ### Current public pricing
+   
+
+--- Context around line 161 ---
+   
+   Chatbase is one of the clearest examples of a tool that looks simple on the surface, but becomes more nuanced as usage grows.
+   
+=> ### Current public pricing
+   
+   Chatbase currently shows:
+   
+
+--- Context around line 163 ---
+   
+   ### Current public pricing
+   
+=> Chatbase currently shows:
+   
+   - **Free:** 50 monthly message credits, 1 agent, 400 KB training content
+   - **Hobby:** $40/month
+
+--- Context around line 174 ---
+   
+   - **Auto recharge credits:** $40 per 1,000 message credits
+   - **Extra agents:** $300 per AI agent per year
+=> - **Remove “Powered by Chatbase”:** $1,188 per year
+   
+   The pricing page also states training content limits of:
+   
+
+--- Context around line 176 ---
+   - **Extra agents:** $300 per AI agent per year
+   - **Remove “Powered by Chatbase”:** $1,188 per year
+   
+=> The pricing page also states training content limits of:
+   
+   - **Free:** 400 KB
+   - **Hobby:** 10 MB
+
+--- Context around line 183 ---
+   - **Standard:** 20 MB
+   - **Pro:** 40 MB
+   
+=> ### What Chatbase pricing gets right
+   
+   #### Fast path to testing
+   
+
+--- Context around line 187 ---
+   
+   #### Fast path to testing
+   
+=> For a founder or marketer who wants to test a website FAQ bot quickly, Chatbase is easy to grasp.
+   
+   #### Simple entry point
+   
+
+--- Context around line 201 ---
+   
+   #### Not always the best long-term value for broader support use
+   
+=> If your chatbot is expanding beyond simple web deployment, the pricing can become less compelling compared with platforms built fo
+   
+   ### Best for
+   
+
+--- Context around line 209 ---
+   - solo founders and small teams
+   - businesses mainly focused on a website-trained AI bot
+   
+=> ![Finance and support leaders reviewing chatbot pricing charts and software plans in a bright meeting room, with no readable text 
+   
+   ## 3\. Tidio pricing, best for teams blending live chat and AI
+   
+
+--- Context around line 211 ---
+   
+   ![Finance and support leaders reviewing chatbot pricing charts and software plans in a bright meeting room, with no readable text 
+   
+=> ## 3\. Tidio pricing, best for teams blending live chat and AI
+   
+   Tidio’s pricing is a good example of a platform where the product mix matters as much as the headline plan.
+   
+
+--- Context around line 213 ---
+   
+   ## 3\. Tidio pricing, best for teams blending live chat and AI
+   
+=> Tidio’s pricing is a good example of a platform where the product mix matters as much as the headline plan.
+   
+   It sells a customer service platform, Lyro AI Agent, and Flows. That gives flexibility, but it also means the final cost depends o
+   
+
+--- Context around line 217 ---
+   
+   It sells a customer service platform, Lyro AI Agent, and Flows. That gives flexibility, but it also means the final cost depends o
+   
+=> ### Current public pricing
+   
+   According to the current public pricing page, Tidio lists:
+   
+
+--- Context around line 219 ---
+   
+   ### Current public pricing
+   
+=> According to the current public pricing page, Tidio lists:
+   
+   #### Customer service platform
+   
+
+--- Context around line 226 ---
+   - **Starter:** $24.17/month billed annually
+   - **Growth:** starts at $49.17/month billed annually
+   - **Plus:** starts at $749/month billed annually
+=> - **Premium:** contact for pricing
+   
+   #### Lyro AI Agent
+   
+
+--- Context around line 233 ---
+   - **Starts at:** $32.50/month billed annually
+   - **From:** 50 Lyro AI conversations
+   
+=> The pricing page also references:
+   
+   - 100 billable conversations on Starter
+   - 50 one-off Lyro AI conversations on Starter
+
+--- Context around line 240 ---
+   - 100 flows visitors reached on Starter
+   - separate quota structures for customer service, Lyro AI, and Flows
+   
+=> ### What Tidio pricing gets right
+   
+   #### Flexible packaging
+   
+
+--- Context around line 248 ---
+   
+   #### Strong fit for support-led ecommerce teams
+   
+=> If live chat is core to your workflow, Tidio’s pricing makes more sense than if you just want a standalone AI chatbot.
+   
+   ### Where buyers need to be careful
+   
+
+--- Context around line 252 ---
+   
+   ### Where buyers need to be careful
+   
+=> #### Layered pricing logic
+   
+   Billable conversations, Lyro conversations, and flow visitors are different billing units. That means the effective monthly cost c
+   
+
+--- Context around line 266 ---
+   - support teams with live agents
+   - businesses that want AI inside a customer service stack rather than as a separate product
+   
+=> ## 4\. Freshchat pricing, best for per-agent support operations
+   
+   Freshchat is a cleaner example of seat-based pricing with AI add-ons.
+   
+
+--- Context around line 268 ---
+   
+   ## 4\. Freshchat pricing, best for per-agent support operations
+   
+=> Freshchat is a cleaner example of seat-based pricing with AI add-ons.
+   
+   For businesses already organised around support agents and shared inboxes, this model can feel familiar.
+   
+
+--- Context around line 272 ---
+   
+   For businesses already organised around support agents and shared inboxes, this model can feel familiar.
+   
+=> ### Current public pricing
+   
+   Freshchat currently lists:
+   
+
+--- Context around line 281 ---
+   - **Pro:** $49/agent/month billed annually
+   - **Enterprise:** $79/agent/month billed annually
+   
+=> AI pricing currently includes:
+   
+   - **Freddy AI Agent:** first 500 sessions included, then $49 per 100 sessions
+   - **Freddy AI Copilot:** $29/agent/month billed annually
+
+--- Context around line 286 ---
+   - **Freddy AI Agent:** first 500 sessions included, then $49 per 100 sessions
+   - **Freddy AI Copilot:** $29/agent/month billed annually
+   
+=> ### What Freshchat pricing gets right
+   
+   #### Familiar support software structure
+   
+
+--- Context around line 302 ---
+   
+   ### Where costs rise
+   
+=> #### Seat pricing scales with headcount
+   
+   A tool can look inexpensive until more team members need access.
+   
+
+--- Context around line 316 ---
+   - service businesses with multiple human agents
+   - companies that want AI alongside a more traditional help desk workflow
+   
+=> ## 5\. Crisp pricing, best for flat-rate predictability
+   
+   Crisp stands out because it leans into a flat-rate-per-workspace message rather than conversation-based billing.
+   
+
+--- Context around line 320 ---
+   
+   Crisp stands out because it leans into a flat-rate-per-workspace message rather than conversation-based billing.
+   
+=> That is genuinely attractive for businesses tired of pricing models that punish growth.
+   
+   ### Current public pricing
+   
+
+--- Context around line 322 ---
+   
+   That is genuinely attractive for businesses tired of pricing models that punish growth.
+   
+=> ### Current public pricing
+   
+   Crisp’s public pricing page currently lists:
+   
+
+--- Context around line 324 ---
+   
+   ### Current public pricing
+   
+=> Crisp’s public pricing page currently lists:
+   
+   - **Free:** $0
+   - **Mini:** $45/month
+
+--- Context around line 333 ---
+   
+   It also describes:
+   
+=> - flat pricing per workspace
+   - included agent licences by plan
+   - additional agents at $10/month
+   - included AI credits by plan rather than unlimited AI usage
+
+--- Context around line 336 ---
+   - flat pricing per workspace
+   - included agent licences by plan
+   - additional agents at $10/month
+=> - included AI credits by plan rather than unlimited AI usage
+   
+   ### What Crisp pricing gets right
+   
+
+--- Context around line 338 ---
+   - additional agents at $10/month
+   - included AI credits by plan rather than unlimited AI usage
+   
+=> ### What Crisp pricing gets right
+   
+   #### Very strong budget clarity
+   
+
+--- Context around line 342 ---
+   
+   #### Very strong budget clarity
+   
+=> The company explicitly positions its model around predictable workspace pricing and unlimited conversations.
+   
+   #### Broad value beyond the bot itself
+   
+
+--- Context around line 346 ---
+   
+   #### Broad value beyond the bot itself
+   
+=> If you want live chat, inbox workflows, integrations, help centre features, and AI in one system, Crisp’s pricing can look very se
+   
+   ### Where you need nuance
+   
+
+--- Context around line 350 ---
+   
+   ### Where you need nuance
+   
+=> #### Flat workspace does not mean unlimited everything
+   
+   AI features still depend on included credits and feature access by plan.
+   
+
+--- Context around line 364 ---
+   - companies with steady or high conversation volume
+   - businesses buying a support workspace, not just an AI bot
+   
+=> ## 6\. Botpress pricing, best for technical teams that want usage-level flexibility
+   
+   Botpress uses a very different logic from most of the platforms above. It combines plan pricing with separate AI spend and add-on 
+   
+
+--- Context around line 366 ---
+   
+   ## 6\. Botpress pricing, best for technical teams that want usage-level flexibility
+   
+=> Botpress uses a very different logic from most of the platforms above. It combines plan pricing with separate AI spend and add-on 
+   
+   That is not automatically bad. In some cases, it is exactly what a technical team wants.
+   
+
+--- Context around line 370 ---
+   
+   That is not automatically bad. In some cases, it is exactly what a technical team wants.
+   
+=> ### Current public pricing
+   
+   Botpress currently lists:
+   
+
+--- Context around line 372 ---
+   
+   ### Current public pricing
+   
+=> Botpress currently lists:
+   
+   - **Pay-as-you-go:** $0/month + AI spend
+   - **Included AI credit:** $5 monthly
+
+--- Context around line 380 ---
+   - **Team:** $495/month + AI spend
+   - **Managed:** $1,245/month + AI spend
+   
+=> The pricing page also highlights included quotas such as:
+   
+   - 500 incoming messages per month on PAYG
+   - 1 bot on PAYG
+
+--- Context around line 388 ---
+   - paid add-ons for more messages, bots, seats, and storage
+   - AI spend billed separately at provider cost without markup
+   
+=> ### What Botpress pricing gets right
+   
+   #### Fine-grained control
+   
+
+--- Context around line 414 ---
+   - technical founders
+   - companies building custom chatbot experiences or automation layers
+   
+=> ![A technical product team reviewing usage dashboards and chatbot infrastructure planning in a modern office, realistic style, no 
+   
+   ## 7\. Help Scout pricing, best for businesses that like AI billed by resolution
+   
+
+--- Context around line 416 ---
+   
+   ![A technical product team reviewing usage dashboards and chatbot infrastructure planning in a modern office, realistic style, no 
+   
+=> ## 7\. Help Scout pricing, best for businesses that like AI billed by resolution
+   
+   Help Scout is interesting because its AI pricing is easy to understand conceptually.
+   
+
+--- Context around line 418 ---
+   
+   ## 7\. Help Scout pricing, best for businesses that like AI billed by resolution
+   
+=> Help Scout is interesting because its AI pricing is easy to understand conceptually.
+   
+   Rather than making AI just another tiered bundle, it charges for AI Answers chatbot usage based on resolutions.
+   
+
+--- Context around line 422 ---
+   
+   Rather than making AI just another tiered bundle, it charges for AI Answers chatbot usage based on resolutions.
+   
+=> ### Current public pricing
+   
+   Help Scout’s current public pricing details include:
+   
+
+--- Context around line 424 ---
+   
+   ### Current public pricing
+   
+=> Help Scout’s current public pricing details include:
+   
+   - plans based on user and inbox limits
+   - **AI Answers chatbot:** $0.75 per resolution
+
+--- Context around line 426 ---
+   
+   Help Scout’s current public pricing details include:
+   
+=> - plans based on user and inbox limits
+   - **AI Answers chatbot:** $0.75 per resolution
+   - additional inboxes: $10/month when paid annually
+   - additional Docs sites: $20/month when paid annually
+
+--- Context around line 432 ---
+   - additional Docs sites: $20/month when paid annually
+   - a monthly spending cap option for AI Answers
+   
+=> The pricing page also explains that a resolution is counted only when AI answers a conversation without human help, and that custo
+   
+   ### What Help Scout pricing gets right
+   
+
+--- Context around line 434 ---
+   
+   The pricing page also explains that a resolution is counted only when AI answers a conversation without human help, and that custo
+   
+=> ### What Help Scout pricing gets right
+   
+   #### Strong value logic
+   
+
+--- Context around line 460 ---
+   - businesses that prefer value-based AI billing
+   - companies already considering Help Scout as their inbox platform
+   
+=> ## 8\. Intercom pricing, best for teams that want AI tied to business outcomes
+   
+   Intercom’s pricing is one of the best-known examples of outcome-based AI billing.
+   
+
+--- Context around line 462 ---
+   
+   ## 8\. Intercom pricing, best for teams that want AI tied to business outcomes
+   
+=> Intercom’s pricing is one of the best-known examples of outcome-based AI billing.
+   
+   ### Current public pricing
+   
+
+--- Context around line 464 ---
+   
+   Intercom’s pricing is one of the best-known examples of outcome-based AI billing.
+   
+=> ### Current public pricing
+   
+   Intercom currently states that:
+   
+
+--- Context around line 472 ---
+   - **Fin AI Agent** is priced at **$0.99 per outcome**
+   - at least one paid seat is required to use Fin on Intercom
+   
+=> The pricing page explains that an outcome is counted when Fin resolves a conversation or completes a defined procedure that leads 
+   
+   ### What Intercom pricing gets right
+   
+
+--- Context around line 474 ---
+   
+   The pricing page explains that an outcome is counted when Fin resolves a conversation or completes a defined procedure that leads 
+   
+=> ### What Intercom pricing gets right
+   
+   #### AI value is tied to successful work
+   
+
+--- Context around line 486 ---
+   
+   ### Where it becomes expensive
+   
+=> #### Seat pricing plus outcome pricing
+   
+   You are combining two cost models.
+   
+
+--- Context around line 500 ---
+   - mature support organisations
+   - teams already invested in Intercom workflows
+   
+=> ## Comparison table: AI chatbot pricing models in 2026
+   
+   | Platform | Entry pricing | Pricing model | Biggest advantage | Main trade-off |
+   | --- | --- | --- | --- | --- |
+
+--- Context around line 502 ---
+   
+   ## Comparison table: AI chatbot pricing models in 2026
+   
+=> | Platform | Entry pricing | Pricing model | Biggest advantage | Main trade-off |
+   | --- | --- | --- | --- | --- |
+   | FastBots.ai | Free, then $39/month | Subscription with message and bot allowances | Clear, predictable, multi-channel value | Le
+   | Chatbase | Free, then $40/month | Subscription plus add-ons | Fast and approachable | Add-ons change total cost quickly |
+
+--- Context around line 505 ---
+   | Platform | Entry pricing | Pricing model | Biggest advantage | Main trade-off |
+   | --- | --- | --- | --- | --- |
+   | FastBots.ai | Free, then $39/month | Subscription with message and bot allowances | Clear, predictable, multi-channel value | Le
+=> | Chatbase | Free, then $40/month | Subscription plus add-ons | Fast and approachable | Add-ons change total cost quickly |
+   | Tidio | From $24.17/month annually | Subscription plus separate AI and flow quotas | Flexible live chat + AI stack | More layere
+   | Freshchat | Free, then $19/agent/month | Per-seat plus AI add-ons | Familiar support-team pricing | Cost rises with headcount an
+   | Crisp | Free, then $45/month | Flat workspace subscription | Predictable billing | Best value if you need the full workspace |
+
+--- Context around line 507 ---
+   | FastBots.ai | Free, then $39/month | Subscription with message and bot allowances | Clear, predictable, multi-channel value | Le
+   | Chatbase | Free, then $40/month | Subscription plus add-ons | Fast and approachable | Add-ons change total cost quickly |
+   | Tidio | From $24.17/month annually | Subscription plus separate AI and flow quotas | Flexible live chat + AI stack | More layere
+=> | Freshchat | Free, then $19/agent/month | Per-seat plus AI add-ons | Familiar support-team pricing | Cost rises with headcount an
+   | Crisp | Free, then $45/month | Flat workspace subscription | Predictable billing | Best value if you need the full workspace |
+   | Botpress | $0 + AI spend | Platform fee plus AI usage and add-ons | Strong technical control | Harder forecasting |
+   | Help Scout | Plan-based plus $0.75/resolution | Support plan plus AI resolution billing | Spend tied to successful AI resolution
+
+--- Context around line 509 ---
+   | Tidio | From $24.17/month annually | Subscription plus separate AI and flow quotas | Flexible live chat + AI stack | More layere
+   | Freshchat | Free, then $19/agent/month | Per-seat plus AI add-ons | Familiar support-team pricing | Cost rises with headcount an
+   | Crisp | Free, then $45/month | Flat workspace subscription | Predictable billing | Best value if you need the full workspace |
+=> | Botpress | $0 + AI spend | Platform fee plus AI usage and add-ons | Strong technical control | Harder forecasting |
+   | Help Scout | Plan-based plus $0.75/resolution | Support plan plus AI resolution billing | Spend tied to successful AI resolution
+   | Intercom | From $29/seat/month + $0.99/outcome | Per-seat plus outcome billing | Value-based AI billing for mature teams | Can b
+   
+
+--- Context around line 513 ---
+   | Help Scout | Plan-based plus $0.75/resolution | Support plan plus AI resolution billing | Spend tied to successful AI resolution
+   | Intercom | From $29/seat/month + $0.99/outcome | Per-seat plus outcome billing | Value-based AI billing for mature teams | Can b
+   
+=> ## Which chatbot pricing model is best for your business?
+   
+   The answer depends less on the bot and more on how your business operates.
+   
+
+--- Context around line 517 ---
+   
+   The answer depends less on the bot and more on how your business operates.
+   
+=> ### Best pricing model for a small business
+   
+   If you are a smaller business and want cost clarity, subscription-based pricing is usually the safest choice.
+   
+
+--- Context around line 519 ---
+   
+   ### Best pricing model for a small business
+   
+=> If you are a smaller business and want cost clarity, subscription-based pricing is usually the safest choice.
+   
+   That is why FastBots and Crisp are strong here. They are easier to understand, easier to forecast, and less likely to surprise you
+   
+
+--- Context around line 523 ---
+   
+   That is why FastBots and Crisp are strong here. They are easier to understand, easier to forecast, and less likely to surprise you
+   
+=> ### Best pricing model for ecommerce and support-led brands
+   
+   If you still rely heavily on live agents, Tidio or Freshchat may make more sense. Their pricing maps more directly to support oper
+   
+
+--- Context around line 525 ---
+   
+   ### Best pricing model for ecommerce and support-led brands
+   
+=> If you still rely heavily on live agents, Tidio or Freshchat may make more sense. Their pricing maps more directly to support oper
+   
+   ### Best pricing model for technical teams
+   
+
+--- Context around line 527 ---
+   
+   If you still rely heavily on live agents, Tidio or Freshchat may make more sense. Their pricing maps more directly to support oper
+   
+=> ### Best pricing model for technical teams
+   
+   If you have developers and want more direct control over usage, Botpress deserves serious attention. The trade-off is that you wil
+   
+
+--- Context around line 529 ---
+   
+   ### Best pricing model for technical teams
+   
+=> If you have developers and want more direct control over usage, Botpress deserves serious attention. The trade-off is that you wil
+   
+   ### Best pricing model for value-based AI buyers
+   
+
+--- Context around line 531 ---
+   
+   If you have developers and want more direct control over usage, Botpress deserves serious attention. The trade-off is that you wil
+   
+=> ### Best pricing model for value-based AI buyers
+   
+   If you want to pay when AI actually resolves work, Help Scout and Intercom are the most straightforward examples of that logic.
+   
+
+--- Context around line 535 ---
+   
+   If you want to pay when AI actually resolves work, Help Scout and Intercom are the most straightforward examples of that logic.
+   
+=> ### Best pricing model for multi-channel growth
+   
+   If you want one AI chatbot platform that can start on the website and later expand into WhatsApp, Instagram, Telegram, or Slack, [
+   
+
+--- Context around line 582 ---
+   
+   - **Build a spreadsheet before buying.**
+   - **Run three scenarios:** low usage, expected usage, and growth usage.
+=> - **Ask whether pricing scales with success.** Some models reward growth; some penalise it.
+   
+   ## FAQ: AI chatbot pricing comparison
+   
+
+--- Context around line 584 ---
+   - **Run three scenarios:** low usage, expected usage, and growth usage.
+   - **Ask whether pricing scales with success.** Some models reward growth; some penalise it.
+   
+=> ## FAQ: AI chatbot pricing comparison
+   
+   ## How much does an AI chatbot cost in 2026?
+   
+
+--- Context around line 590 ---
+   
+   AI chatbot costs vary widely. Entry-level tools can start at $0 to $40 per month, while more advanced platforms can run into hundr
+   
+=> ## What is the cheapest AI chatbot pricing model?
+   
+   The cheapest starting point is often a free plan or a low subscription tier, but the cheapest model overall depends on your usage.
+   
+
+--- Context around line 592 ---
+   
+   ## What is the cheapest AI chatbot pricing model?
+   
+=> The cheapest starting point is often a free plan or a low subscription tier, but the cheapest model overall depends on your usage.
+   
+   ## Is per-resolution pricing better than monthly chatbot subscriptions?
+   
+
+--- Context around line 594 ---
+   
+   The cheapest starting point is often a free plan or a low subscription tier, but the cheapest model overall depends on your usage.
+   
+=> ## Is per-resolution pricing better than monthly chatbot subscriptions?
+   
+   Per-resolution pricing can be excellent if the AI consistently resolves issues and you want spend linked to delivered value. Month
+   
+
+--- Context around line 596 ---
+   
+   ## Is per-resolution pricing better than monthly chatbot subscriptions?
+   
+=> Per-resolution pricing can be excellent if the AI consistently resolves issues and you want spend linked to delivered value. Month
+   
+   ## What is the most predictable chatbot pricing structure?
+   
+
+--- Context around line 598 ---
+   
+   Per-resolution pricing can be excellent if the AI consistently resolves issues and you want spend linked to delivered value. Month
+   
+=> ## What is the most predictable chatbot pricing structure?
+   
+   Flat subscription pricing is usually the most predictable. Workspace-based pricing can also be strong for predictability if the in
+   
+
+--- Context around line 600 ---
+   
+   ## What is the most predictable chatbot pricing structure?
+   
+=> Flat subscription pricing is usually the most predictable. Workspace-based pricing can also be strong for predictability if the in
+   
+   ## Which chatbot has the best pricing for small business?
+   
+
+--- Context around line 602 ---
+   
+   Flat subscription pricing is usually the most predictable. Workspace-based pricing can also be strong for predictability if the in
+   
+=> ## Which chatbot has the best pricing for small business?
+   
+   For most small businesses, FastBots offers one of the best pricing structures because the plans are easy to understand, the value 
+   
+
+--- Context around line 604 ---
+   
+   ## Which chatbot has the best pricing for small business?
+   
+=> For most small businesses, FastBots offers one of the best pricing structures because the plans are easy to understand, the value 
+   
+   ## Why do some chatbot platforms charge per seat and others per resolution?
+   
+
+--- Context around line 608 ---
+   
+   ## Why do some chatbot platforms charge per seat and others per resolution?
+   
+=> It reflects the type of product. Support platforms often think in seats, because they are built around teams and inboxes. AI-first
+   
+   ## Can AI chatbot pricing get expensive quickly?
+   
+
+--- Context around line 610 ---
+   
+   It reflects the type of product. Support platforms often think in seats, because they are built around teams and inboxes. AI-first
+   
+=> ## Can AI chatbot pricing get expensive quickly?
+   
+   Yes. Costs usually rise through extra seats, extra AI usage, add-ons, branding removal, and channel expansion. That is why buyers 
+   
+
+--- Context around line 614 ---
+   
+   Yes. Costs usually rise through extra seats, extra AI usage, add-ons, branding removal, and channel expansion. That is why buyers 
+   
+=> ## Final verdict: which AI chatbot pricing model offers the best value?
+   
+   If you want the shortest possible answer, it is this.
+   
+
+--- Context around line 618 ---
+   
+   If you want the shortest possible answer, it is this.
+   
+=> For most businesses, the **best AI chatbot pricing model is the one you can understand before you need a finance meeting to explai
+   
+   That is why [FastBots.ai](https://fastbots.ai/?ref=blog.fastbots.ai) stands out. Its pricing is not just competitive. It is readab
+   
+
+--- Context around line 620 ---
+   
+   For most businesses, the **best AI chatbot pricing model is the one you can understand before you need a finance meeting to explai
+   
+=> That is why [FastBots.ai](https://fastbots.ai/?ref=blog.fastbots.ai) stands out. Its pricing is not just competitive. It is readab
+   
+   That does not mean every competitor is overpriced. It means they optimise for different things. **Crisp** is strong for flat works
+   
+
+--- Context around line 622 ---
+   
+   That is why [FastBots.ai](https://fastbots.ai/?ref=blog.fastbots.ai) stands out. Its pricing is not just competitive. It is readab
+   
+=> That does not mean every competitor is overpriced. It means they optimise for different things. **Crisp** is strong for flat works
+   
+   The right choice comes down to this question: **Do you want simple budgeting, support-stack alignment, developer control, or value
+   
+
+--- Context around line 626 ---
+   
+   The right choice comes down to this question: **Do you want simple budgeting, support-stack alignment, developer control, or value
+   
+=> If you want a pricing structure that stays practical while giving you room to grow across channels, start by reviewing [FastBots p
+   
+   ## Read more
+   
+
+--- Context around line 706 ---
+   ![tick](data:image/svg+xml,%3csvg%20width='17'%20height='17'%20viewBox='0%200%2017%2017'%20fill='none'%20xmlns='http://www.w3.org/
+   
+   
+=> ![tick](data:image/svg+xml,%3csvg%20width='17'%20height='17'%20viewBox='0%200%2017%2017'%20fill='none'%20xmlns='http://www.w3.org/
+   
+   
+   ![tick](data:image/svg+xml,%3csvg%20width='17'%20height='17'%20viewBox='0%200%2017%2017'%20fill='none'%20xmlns='http://www.w3.org/
+
+--- Context around line 712 ---
+   ![tick](data:image/svg+xml,%3csvg%20width='17'%20height='17'%20viewBox='0%200%2017%2017'%20fill='none'%20xmlns='http://www.w3.org/
+   
+   
+=> ![tick](data:image/svg+xml,%3csvg%20width='17'%20height='17'%20viewBox='0%200%2017%2017'%20fill='none'%20xmlns='http://www.w3.org/
+   
+   
+   Open-source software is always the first preference for businesses to build customized solutions and gain maximum benefits. Likewi
+
+--- Context around line 719 ---
+   
+   Businesses have a strong preference for open-source [AI chatbot platforms](https://pagergpt.ai/ai-chatbot/best-ai-chatbot-platform
+   
+=> We take a deep dive into the top open-source AI chatbot platforms, including their features, pros, cons, and pricing. We will also
+   
+   ## Understanding open-source AI chatbots
+   
+
+--- Context around line 742 ---
+   | **Aspect** | **Open-source chatbots** | **Closed-source chatbots** |
+   | --- | --- | --- |
+   | **Code Access** | Full code visibility | No code access |
+=> | **Customization** | Deep customization | Limited customization |
+   | **Hosting** | Self-hosted | Vendor-hosted |
+   | **Data Privacy** | Complete data control | Vendor-managed data |
+   | **Setup Time** | Longer setup | Instant setup |
+
+--- Context around line 767 ---
+   | **Platform** | **Key features** | **Best for** |
+   | --- | --- | --- |
+   | **Rasa** | Custom NLU, ML dialogs | Complex enterprise bots |
+=> | **Botpress** | Visual builder, modules | No-code + dev hybrid teams |
+   | **Microsoft Bot Framework** | SDK bots, Teams/Azure | Microsoft-centric companies |
+   | **DeepPavlov** | Strong NLP models | Research & advanced NLP |
+   | **BotKit** | JS messaging bots | Slack/Messenger bots in JS |
+
+--- Context around line 806 ---
+   - **Ongoing maintenance load:** RASA needs continuous updates, monitoring, and scaling.
+   
+   
+=> ##### **Pricing:**
+   
+   - **Open Source:** Core Rasa Open Source framework is completely free to use under the Apache 2.0 license.
+   
+
+--- Context around line 815 ---
+   - **Custom Enterprise Plan:** Large organizations can access tailored support, SLAs, training, and advanced security options throu
+   
+   
+=> For more information, check the [pricing page](https://rasa.com/pricing).
+   
+   ### **Botpress : Open-source visual bot builder**
+   
+
+--- Context around line 817 ---
+   
+   For more information, check the [pricing page](https://rasa.com/pricing).
+   
+=> ### **Botpress : Open-source visual bot builder**
+   
+   [Botpress](https://botpress.com/) is an open-source conversational AI platform designed to help teams build chatbots using a visua
+   
+
+--- Context around line 819 ---
+   
+   ### **Botpress : Open-source visual bot builder**
+   
+=> [Botpress](https://botpress.com/) is an open-source conversational AI platform designed to help teams build chatbots using a visua
+   
+   #### **Key features:**
+   
+
+--- Context around line 823 ---
+   
+   #### **Key features:**
+   
+=> - **Visual flow builder:** Botpress provides a drag-and-drop interface, Agent Studio, for designing conversational pathways withou
+   
+   - **Modular architecture:** Botpress uses a flexible module system that allows developers to extend functionality with custom code
+   
+
+--- Context around line 825 ---
+   
+   - **Visual flow builder:** Botpress provides a drag-and-drop interface, Agent Studio, for designing conversational pathways withou
+   
+=> - **Modular architecture:** Botpress uses a flexible module system that allows developers to extend functionality with custom code
+   
+   - **Autonomous engine:** Generative AI with structured logic enables developers and users to create multi-step workflows in Botpre
+   
+
+--- Context around line 827 ---
+   
+   - **Modular architecture:** Botpress uses a flexible module system that allows developers to extend functionality with custom code
+   
+=> - **Autonomous engine:** Generative AI with structured logic enables developers and users to create multi-step workflows in Botpre
+   
+   
+   ##### **Pros:**
+
+--- Context around line 832 ---
+   
+   ##### **Pros:**
+   
+=> - **Fast bot deployment: Botpress** allows rapid prototyping using visual tools and prebuilt components.
+   
+   - **Developer extensibility:** Supports custom scripting and plugins for deeper customization.
+   
+
+--- Context around line 843 ---
+   
+   - **Requires DevOps setup:** Self-hosting demands server management and deployment workflows.
+   
+=> - **Limited LLM-native features:** Out of the box, it is not optimized for modern LLM-driven chatbots.
+   
+   - **Scaling complexity:** Advanced, high-volume deployments may require additional engineering effort.
+   
+
+--- Context around line 848 ---
+   - **Scaling complexity:** Advanced, high-volume deployments may require additional engineering effort.
+   
+   
+=> ##### **Pricing:**
+   
+   - **Pay-as-you-go —** $0 + AI usage
+   
+
+--- Context around line 856 ---
+   
+   - **Team —** $495/month + AI usage
+   
+=> - **Enterprise —** Custom pricing
+   
+   
+   For more information, please check the [pricing page](https://botpress.com/pricing).
+
+--- Context around line 859 ---
+   - **Enterprise —** Custom pricing
+   
+   
+=> For more information, please check the [pricing page](https://botpress.com/pricing).
+   
+   ### **Microsoft Bot Framework - Developer bot SDK**
+   
+
+--- Context around line 892 ---
+   - **No Built-In NLP:** Requires separate NLP tools like Azure AI Language, as the framework lacks a native NLP engine.
+   
+   
+=> ##### **Pricing:**
+   
+   **Custom pricing**
+   
+
+--- Context around line 894 ---
+   
+   ##### **Pricing:**
+   
+=> **Custom pricing**
+   
+   ### **DeepPavlov** \- Advanced NLP research framework
+   
+
+--- Context around line 927 ---
+   - **Not beginner-friendly:** It is less suitable for no-code and straightforward chatbot setups.
+   
+   
+=> ##### **Pricing:**
+   
+   Completely free and open source under the Apache 2.0 license. Hosting and engineering costs are separate.
+   
+
+--- Context around line 957 ---
+   
+   - **Requires developer skills:** Not suitable for no-code users; needs JavaScript knowledge.
+   
+=> - **Limited built-in AI features:** Does not include native NLP or AI; requires external services.
+   
+   - **Reduced community activity:** Development and updates have slowed as newer frameworks have emerged.
+   
+
+--- Context around line 962 ---
+   - **Reduced community activity:** Development and updates have slowed as newer frameworks have emerged.
+   
+   
+=> ##### **Pricing:**
+   
+   Botkit is free and open source. Hosting, cloud services, or external AI tools may have separate costs.
+   
+
+--- Context around line 988 ---
+   - **Strong voice support:** Works well for building voice-enabled chatbots and assistants.
+   
+   
+=> ##### **Pricing:**
+   
+   Wit.ai is completely free with no usage fees.
+   
+
+--- Context around line 1018 ---
+   
+   - Requires technical expertise: Needs developer skills for setup, training, and deployment
+   
+=> - **Smaller community:** Has fewer resources and community support compared to larger frameworks like Rasa or Botpress.
+   
+   - **Limited no-code options:** Most tasks still need technical configuration, making it less friendly for non-technical users.
+   
+
+--- Context around line 1020 ---
+   
+   - **Smaller community:** Has fewer resources and community support compared to larger frameworks like Rasa or Botpress.
+   
+=> - **Limited no-code options:** Most tasks still need technical configuration, making it less friendly for non-technical users.
+   
+   
+   ##### **Pricing:**
+
+--- Context around line 1023 ---
+   - **Limited no-code options:** Most tasks still need technical configuration, making it less friendly for non-technical users.
+   
+   
+=> ##### **Pricing:**
+   
+   - **Free and open source:** Tock is fully open source with no licensing fees.
+   
+
+--- Context around line 1070 ---
+   
+   - **Not suitable for voice assistants:** Primarily focused on text-based platforms.
+   
+=> - **Smaller community:** Less active than larger bot frameworks like Botpress or Rasa.
+   
+   
+   ##### **Pricing:**
+
+--- Context around line 1073 ---
+   - **Smaller community:** Less active than larger bot frameworks like Botpress or Rasa.
+   
+   
+=> ##### **Pricing:**
+   
+   BotMan is completely free and open source; costs apply only for hosting or external NLP services.
+   
+
+--- Context around line 1103 ---
+   
+   - **Requires basic modelling knowledge:** Teams must understand conversation design concepts.
+   
+=> - **Smaller ecosystem:** The community and resources are more limited compared to larger frameworks.
+   
+   - **Not ideal for quick bots:** More suited for detailed, structured conversation design rather than fast prototypes.
+   
+
+--- Context around line 1108 ---
+   - **Not ideal for quick bots:** More suited for detailed, structured conversation design rather than fast prototypes.
+   
+   
+=> ##### **Pricing**
+   
+   OpenDialog is **open source and free,** with costs limited to hosting, infrastructure, and optional enterprise services.
+   
+
+--- Context around line 1110 ---
+   
+   ##### **Pricing**
+   
+=> OpenDialog is **open source and free,** with costs limited to hosting, infrastructure, and optional enterprise services.
+   
+   ### **Claudia Bot Builder** \- Serverless AWS chatbots
+   
+
+--- Context around line 1140 ---
+   
+   - **Not AI-focused:** Does not include NLP or AI features; requires external tools for language understanding.
+   
+=> - **Limited outside AWS:** Best suited for teams committed to the AWS ecosystem.
+   
+   
+   ##### **Pricing:**
+
+--- Context around line 1143 ---
+   - **Limited outside AWS:** Best suited for teams committed to the AWS ecosystem.
+   
+   
+=> ##### **Pricing:**
+   
+   The framework is **free and open source**. Costs apply for AWS Lambda, API Gateway, and any additional AWS services used.
+   
+
+--- Context around line 1171 ---
+   
+   ##### **Cons:**
+   
+=> - **Limited advanced AI features:** Requires external NLP tools for AI or language understanding.
+   
+   - **Smaller ecosystem:** Fewer plugins and community tools compared to larger bot frameworks.
+   
+
+--- Context around line 1178 ---
+   - **Text-focused:** Better for messaging channels than voice or complex conversational AI.
+   
+   
+=> ##### **Pricing:**
+   
+   Bottender is free and open source; any costs depend on hosting or third-party services used.
+   
+
+--- Context around line 1206 ---
+   
+   ##### **Cons:**
+   
+=> - **Some features are limited in free plan:** The basic free version supports only core live chat and lacks many channels and adva
+   
+   - **Requires hosting or infrastructure (if self-hosted)**: You must manage your own server or cloud hosting when you run it yourse
+   
+
+--- Context around line 1210 ---
+   
+   - **Requires hosting or infrastructure (if self-hosted)**: You must manage your own server or cloud hosting when you run it yourse
+   
+=> - **Paid plans scale with agents:** For cloud-hosted use, pricing grows per agent — costs may become significant for larger teams.
+   
+   
+   ##### **Pricing:**
+
+--- Context around line 1213 ---
+   - **Paid plans scale with agents:** For cloud-hosted use, pricing grows per agent — costs may become significant for larger teams.
+   
+   
+=> ##### **Pricing:**
+   
+   - **Hacker:** Free
+   
+
+--- Context around line 1224 ---
+   - **Enterprise:** $99 per agent/month
+   
+   
+=> ### **Flowise - Visual LLM workflow builder**
+   
+   [Flowise](https://flowiseai.com/) is an open-source visual workflow builder for creating LLM-powered chatbots and automated workfl
+   
+
+--- Context around line 1226 ---
+   
+   ### **Flowise - Visual LLM workflow builder**
+   
+=> [Flowise](https://flowiseai.com/) is an open-source visual workflow builder for creating LLM-powered chatbots and automated workfl
+   
+   #### **Key features:**
+   
+
+--- Context around line 1232 ---
+   
+   - **Visual drag-and-drop builder:** Allows users to create LLM workflows through a simple, no-code interface.
+   
+=> - **RAG and embeddings support:** Includes built-in nodes for vector databases, document loaders, and knowledge retrieval.
+   
+   - **Agent and tool integration:** Supports tools, APIs, memory, and multi-step agent logic.
+   
+
+--- Context around line 1252 ---
+   
+   - **Requires hosting setup:** Needs Docker or server knowledge for deployment.
+   
+=> - **Limited complex logic:** Very advanced agent behavior may require coding.
+   
+   
+   ##### **Pricing:**
+
+--- Context around line 1255 ---
+   - **Limited complex logic:** Very advanced agent behavior may require coding.
+   
+   
+=> ##### **Pricing:**
+   
+   Flowise is free and open source; hosting, cloud costs, and external LLM/model usage fees apply separately.
+   
+
+--- Context around line 1257 ---
+   
+   ##### **Pricing:**
+   
+=> Flowise is free and open source; hosting, cloud costs, and external LLM/model usage fees apply separately.
+   
+   ### **AnythingLLM - Privacy-focused AI document manager**
+   
+
+--- Context around line 1259 ---
+   
+   Flowise is free and open source; hosting, cloud costs, and external LLM/model usage fees apply separately.
+   
+=> ### **AnythingLLM - Privacy-focused AI document manager**
+   
+   [AnythingLLM](http://anythingllm.com/) is an open-source, privacy-focused platform for managing documents and building local AI as
+   
+
+--- Context around line 1261 ---
+   
+   ### **AnythingLLM - Privacy-focused AI document manager**
+   
+=> [AnythingLLM](http://anythingllm.com/) is an open-source, privacy-focused platform for managing documents and building local AI as
+   
+   #### **Key features:**
+   
+
+--- Context around line 1267 ---
+   
+   - **Local document chat:** Lets users chat with PDFs, text files, and knowledge bases without sending data to the cloud.
+   
+=> - **Built-in RAG pipeline:** Automatically embeds and indexes documents for accurate retrieval.
+   
+   - **Self-hosting options:** Can run on desktops, local servers, or private cloud environments.
+   
+
+--- Context around line 1285 ---
+   
+   - **Heavy local resource use:** Running local models may require powerful hardware.
+   
+=> - **Limited automation**: Focused mainly on document chat rather than full AI agent workflows.
+   
+   - **Smaller ecosystem:** Fewer integrations compared to large chatbot platforms.
+   
+
+--- Context around line 1290 ---
+   - **Smaller ecosystem:** Fewer integrations compared to large chatbot platforms.
+   
+   
+=> ##### **Pricing:**
+   
+   AnythingLLM is free and open source; costs apply only for hardware, hosting, or external LLM usage.
+   
+
+--- Context around line 1292 ---
+   
+   ##### **Pricing:**
+   
+=> AnythingLLM is free and open source; costs apply only for hardware, hosting, or external LLM usage.
+   
+   ### Botonic - React-based full-stack chatbot framework
+   
+
+--- Context around line 1320 ---
+   
+   - **Requires React knowledge:** Not suitable for non-developers or teams unfamiliar with frontend frameworks.
+   
+=> - **Limited advanced AI features:** Needs third-party NLP or LLM tools for deeper intelligence.
+   
+   - **Smaller ecosystem:** Less adoption compared to larger frameworks like Botpress or Rasa.
+   
+
+--- Context around line 1322 ---
+   
+   - **Limited advanced AI features:** Needs third-party NLP or LLM tools for deeper intelligence.
+   
+=> - **Smaller ecosystem:** Less adoption compared to larger frameworks like Botpress or Rasa.
+   
+   
+   ##### **Pricing:**
+
+--- Context around line 1325 ---
+   - **Smaller ecosystem:** Less adoption compared to larger frameworks like Botpress or Rasa.
+   
+   
+=> ##### **Pricing:**
+   
+   Botonic is **free and open source**; any hosting or NLP services may incur separate costs.
+   
+
+--- Context around line 1381 ---
+   
+   ### **Why pagergpt stands out:**
+   
+=> Open-source chatbots require significant engineering investment and ongoing maintenance. pagergpt eliminates this burden with pred
+   
+   pagergpt handles everything behind the scenes: AI models, infrastructure, security, updates, and scaling, so that your team never 
+   
+
+--- Context around line 1547 ---
+   \\
+   Alternative\\
+   \\
+=> Yellow.ai Pricing 2025: Plans, Hidden Costs, and pagergpt Comparison\\
+   \\
+   ![Deepa Majumder](https://images.ctfassets.net/8vo9f8cb4106/5Q9NiwpEcSRWdxuWFv8ei5/b4a6a44104d6cab906dc8b9ef4b23cd7/deepa.png)\\
+   \\
+
+--- Context around line 1555 ---
+   \\
+   Senior content writer\\
+   \\
+=> 14 Oct 2025](https://pagergpt.ai/alternative/yellow-ai-pricing)
+   
+   [![Blog Image 2](https://images.ctfassets.net/8vo9f8cb4106/7IuJEN6HZN3D9cP0PT12UL/6c1e082a2a48f0b574a565172d903705/Tidio_Pricing.s
+   \\
+
+--- Context around line 1557 ---
+   \\
+   14 Oct 2025](https://pagergpt.ai/alternative/yellow-ai-pricing)
+   
+=> [![Blog Image 2](https://images.ctfassets.net/8vo9f8cb4106/7IuJEN6HZN3D9cP0PT12UL/6c1e082a2a48f0b574a565172d903705/Tidio_Pricing.s
+   \\
+   Alternative\\
+   \\
+
+--- Context around line 1561 ---
+   \\
+   Alternative\\
+   \\
+=> Tidio Pricing Explained: Plans, Costs, and Alternatives\\
+   \\
+   ![Deepa Majumder](https://images.ctfassets.net/8vo9f8cb4106/5Q9NiwpEcSRWdxuWFv8ei5/b4a6a44104d6cab906dc8b9ef4b23cd7/deepa.png)\\
+   \\
+
+--- Context around line 1569 ---
+   \\
+   Senior content writer\\
+   \\
+=> 13 Oct 2025](https://pagergpt.ai/alternative/tidio-pricing)
+   
+   ---
+   
+
+--- Context around line 1580 ---
+   
+   ---
+   
+=> ## 4. AI Chatbot Pricing 2026: What 7 Platforms Actually Cost - Docuyond
+   **URL:** https://docuyond.com/blog/ai-chatbot-pricing-small-business
+   
+   [Blog](https://docuyond.com/blog)·Pricing·Mar 8, 2026
+
+--- Context around line 1581 ---
+   ---
+   
+   ## 4. AI Chatbot Pricing 2026: What 7 Platforms Actually Cost - Docuyond
+=> **URL:** https://docuyond.com/blog/ai-chatbot-pricing-small-business
+   
+   [Blog](https://docuyond.com/blog)·Pricing·Mar 8, 2026
+   
+
+--- Context around line 1583 ---
+   ## 4. AI Chatbot Pricing 2026: What 7 Platforms Actually Cost - Docuyond
+   **URL:** https://docuyond.com/blog/ai-chatbot-pricing-small-business
+   
+=> [Blog](https://docuyond.com/blog)·Pricing·Mar 8, 2026
+   
+   # AI Chatbot Pricing 2026: What 7 Platforms Actually Cost
+   
+
+--- Context around line 1585 ---
+   
+   [Blog](https://docuyond.com/blog)·Pricing·Mar 8, 2026
+   
+=> # AI Chatbot Pricing 2026: What 7 Platforms Actually Cost
+   
+   Chatbase: $40-500/mo. Intercom: $0.99/chat. We compare 7 AI chatbots on real pricing, hidden fees, and free tiers. Find the best p
+   
+
+--- Context around line 1587 ---
+   
+   # AI Chatbot Pricing 2026: What 7 Platforms Actually Cost
+   
+=> Chatbase: $40-500/mo. Intercom: $0.99/chat. We compare 7 AI chatbots on real pricing, hidden fees, and free tiers. Find the best p
+   
+   [![Author avatar](https://docuyond.com/images/blog/author.jpg) Rares](https://x.com/Raress96_)
+   
+
+--- Context around line 1591 ---
+   
+   [![Author avatar](https://docuyond.com/images/blog/author.jpg) Rares](https://x.com/Raress96_)
+   
+=> # AI Chatbot Pricing 2026: What 7 Platforms Actually Cost
+   
+   ![AI Chatbot Pricing 2026](https://images.pexels.com/photos/6214452/pexels-photo-6214452.jpeg?auto=compress&cs=tinysrgb&h=650&w=94
+   
+
+--- Context around line 1593 ---
+   
+   # AI Chatbot Pricing 2026: What 7 Platforms Actually Cost
+   
+=> ![AI Chatbot Pricing 2026](https://images.pexels.com/photos/6214452/pexels-photo-6214452.jpeg?auto=compress&cs=tinysrgb&h=650&w=94
+   
+   _Photo by Nataliya Vaitkevich on [Pexels](https://pexels.com/)_
+   
+
+--- Context around line 1597 ---
+   
+   _Photo by Nataliya Vaitkevich on [Pexels](https://pexels.com/)_
+   
+=> ## [Introduction — Why AI Chatbot Pricing Matters](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#introduction-why-a
+   
+   Unexpected chatbot bills can derail your budget. Surprise costs after traffic spikes eat margins and force rushed decisions — espe
+   
+
+--- Context around line 1601 ---
+   
+   Unexpected chatbot bills can derail your budget. Surprise costs after traffic spikes eat margins and force rushed decisions — espe
+   
+=> This guide breaks down what 7 major AI chatbot platforms actually charge in 2026, including hidden fees most pricing pages don't m
+   
+   **Why this matters:** If you can't predict support costs, you can't budget marketing effectively.
+   
+
+--- Context around line 1605 ---
+   
+   **Why this matters:** If you can't predict support costs, you can't budget marketing effectively.
+   
+=> ## [Table of Contents](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#table-of-contents)
+   
+   - AI Chatbot Pricing Comparison (2026)
+   - What Drives AI Chatbot Pricing for Small Businesses
+
+--- Context around line 1607 ---
+   
+   ## [Table of Contents](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#table-of-contents)
+   
+=> - AI Chatbot Pricing Comparison (2026)
+   - What Drives AI Chatbot Pricing for Small Businesses
+   - Total cost of ownership and hidden expenses
+   - Pricing models compared
+
+--- Context around line 1608 ---
+   ## [Table of Contents](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#table-of-contents)
+   
+   - AI Chatbot Pricing Comparison (2026)
+=> - What Drives AI Chatbot Pricing for Small Businesses
+   - Total cost of ownership and hidden expenses
+   - Pricing models compared
+   - A simple decision framework
+
+--- Context around line 1610 ---
+   - AI Chatbot Pricing Comparison (2026)
+   - What Drives AI Chatbot Pricing for Small Businesses
+   - Total cost of ownership and hidden expenses
+=> - Pricing models compared
+   - A simple decision framework
+   - Implementation and ROI playbook
+   - FAQs
+
+--- Context around line 1615 ---
+   - Implementation and ROI playbook
+   - FAQs
+   
+=> ## [AI Chatbot Pricing Comparison (2026)](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#ai-chatbot-pricing-comparis
+   
+   Before diving into cost drivers, here's what the major AI customer service chatbot platforms actually charge in 2026:
+   
+
+--- Context around line 1619 ---
+   
+   Before diving into cost drivers, here's what the major AI customer service chatbot platforms actually charge in 2026:
+   
+=> ### [Quick Comparison: AI Chatbot Pricing](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#quick-comparison-ai-chatbo
+   
+   | Platform | Free Tier | Starter | Mid-Tier | High Volume | Pricing Model |
+   | --- | --- | --- | --- | --- | --- |
+
+--- Context around line 1621 ---
+   
+   ### [Quick Comparison: AI Chatbot Pricing](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#quick-comparison-ai-chatbo
+   
+=> | Platform | Free Tier | Starter | Mid-Tier | High Volume | Pricing Model |
+   | --- | --- | --- | --- | --- | --- |
+   | **Chatbase** | 50 msg/mo | $40/mo | $150/mo | $500/mo | Per message credits |
+   | **Tidio + Lyro** | 50 convos (one-time) | $29 + $39/mo | $59 + $78/mo | $749/mo | Base + AI add-on |
+
+--- Context around line 1623 ---
+   
+   | Platform | Free Tier | Starter | Mid-Tier | High Volume | Pricing Model |
+   | --- | --- | --- | --- | --- | --- |
+=> | **Chatbase** | 50 msg/mo | $40/mo | $150/mo | $500/mo | Per message credits |
+   | **Tidio + Lyro** | 50 convos (one-time) | $29 + $39/mo | $59 + $78/mo | $749/mo | Base + AI add-on |
+   | **Intercom Fin** | None | $29/seat + $0.99/resolution | - | Scales with volume | Per resolution |
+   | **Zendesk AI** | None | $55/agent | $115/agent | $169/agent + add-ons | Per agent + AI add-on |
+
+--- Context around line 1630 ---
+   | **CustomGPT** | 7-day trial | $89/mo | $449/mo | Custom | Flat monthly |
+   | **Docuyond** | 200 replies | $19/mo | $39/mo | $79/mo | Flat monthly |
+   
+=> ### [Chatbase Pricing (2026)](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#chatbase-pricing-2026)
+   
+   [Chatbase](https://www.chatbase.co/pricing) uses a credit-based system where different AI models cost different amounts of credits
+   
+
+--- Context around line 1632 ---
+   
+   ### [Chatbase Pricing (2026)](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#chatbase-pricing-2026)
+   
+=> [Chatbase](https://www.chatbase.co/pricing) uses a credit-based system where different AI models cost different amounts of credits
+   
+   - **Free:** 50 messages/month, 1 chatbot (deleted after 14 days of inactivity)
+   - **Hobby:** $40/month for 1,500 messages
+
+--- Context around line 1641 ---
+   
+   **Watch out for:** GPT-5.2 uses 2 credits per response, Claude Opus uses 5. So 1,500 credits means 300-750 actual responses depend
+   
+=> **Missing feature:** No human escalation—if the AI can't answer, the conversation just ends. See our [Chatbase pricing breakdown](
+   
+   ### [Tidio + Lyro AI Pricing (2026)](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#tidio-lyro-ai-pricing-2026)
+   
+
+--- Context around line 1643 ---
+   
+   **Missing feature:** No human escalation—if the AI can't answer, the conversation just ends. See our [Chatbase pricing breakdown](
+   
+=> ### [Tidio + Lyro AI Pricing (2026)](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#tidio-lyro-ai-pricing-2026)
+   
+   [Tidio](https://www.tidio.com/pricing/) separates their base platform from Lyro AI, so you pay for both:
+   
+
+--- Context around line 1645 ---
+   
+   ### [Tidio + Lyro AI Pricing (2026)](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#tidio-lyro-ai-pricing-2026)
+   
+=> [Tidio](https://www.tidio.com/pricing/) separates their base platform from Lyro AI, so you pay for both:
+   
+   - **Free/Starter:** Includes 50 Lyro AI conversations (one-time, not monthly)
+   - **Starter:** $29/month (live chat) + ~$39/month (Lyro add-on for 50 conversations/mo)
+
+--- Context around line 1651 ---
+   - **Starter:** $29/month (live chat) + ~$39/month (Lyro add-on for 50 conversations/mo)
+   - **Growth:** From $59/month + Lyro add-on (~$78/month for 200 conversations/mo)
+   
+=> **Real cost:** A typical small business pays $68-150/month for Tidio + Lyro combined. For a complete breakdown of every tier and a
+   
+   **Good for:** Businesses wanting live chat AND AI in one platform.
+   
+
+--- Context around line 1655 ---
+   
+   **Good for:** Businesses wanting live chat AND AI in one platform.
+   
+=> ### [Intercom Fin Pricing (2026)](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#intercom-fin-pricing-2026)
+   
+   [Intercom Fin](https://www.intercom.com/pricing) charges per resolution, which sounds good until you do the math:
+   
+
+--- Context around line 1657 ---
+   
+   ### [Intercom Fin Pricing (2026)](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#intercom-fin-pricing-2026)
+   
+=> [Intercom Fin](https://www.intercom.com/pricing) charges per resolution, which sounds good until you do the math:
+   
+   - **Base:** $29/seat/month minimum (Essential plan)
+   - **Fin AI:** $0.99 per resolution
+
+--- Context around line 1671 ---
+   
+   **Good for:** Very low volume support. **Avoid if:** You expect growth—costs scale linearly with every conversation.
+   
+=> ### [Zendesk AI Pricing (2026)](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#zendesk-ai-pricing-2026)
+   
+   [Zendesk](https://www.zendesk.com/pricing/) is built for larger teams with per-agent pricing:
+   
+
+--- Context around line 1673 ---
+   
+   ### [Zendesk AI Pricing (2026)](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#zendesk-ai-pricing-2026)
+   
+=> [Zendesk](https://www.zendesk.com/pricing/) is built for larger teams with per-agent pricing:
+   
+   - **Suite Team:** $55/agent/month
+   - **Suite Professional:** $115/agent/month
+
+--- Context around line 1683 ---
+   
+   **Good for:** Companies already using Zendesk. **Overkill for:** Small businesses with 1-2 support people.
+   
+=> ### [CustomGPT Pricing (2026)](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#customgpt-pricing-2026)
+   
+   [CustomGPT](https://customgpt.ai/pricing/) focuses on custom-trained chatbots:
+   
+
+--- Context around line 1685 ---
+   
+   ### [CustomGPT Pricing (2026)](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#customgpt-pricing-2026)
+   
+=> [CustomGPT](https://customgpt.ai/pricing/) focuses on custom-trained chatbots:
+   
+   - **Standard:** $89/month (1,000 GPT-5 queries, 10 chatbots)
+   - **Premium:** $449/month (higher limits, 100 chatbots)
+
+--- Context around line 1688 ---
+   [CustomGPT](https://customgpt.ai/pricing/) focuses on custom-trained chatbots:
+   
+   - **Standard:** $89/month (1,000 GPT-5 queries, 10 chatbots)
+=> - **Premium:** $449/month (higher limits, 100 chatbots)
+   - **Enterprise:** Custom pricing
+   
+   **Good for:** Businesses needing multiple specialized chatbots.
+
+--- Context around line 1689 ---
+   
+   - **Standard:** $89/month (1,000 GPT-5 queries, 10 chatbots)
+   - **Premium:** $449/month (higher limits, 100 chatbots)
+=> - **Enterprise:** Custom pricing
+   
+   **Good for:** Businesses needing multiple specialized chatbots.
+   
+
+--- Context around line 1693 ---
+   
+   **Good for:** Businesses needing multiple specialized chatbots.
+   
+=> ### [Docuyond Pricing (2026)](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#docuyond-pricing-2026)
+   
+   [Docuyond](https://docuyond.com/) offers flat monthly pricing with no per-message surprises:
+   
+
+--- Context around line 1695 ---
+   
+   ### [Docuyond Pricing (2026)](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#docuyond-pricing-2026)
+   
+=> [Docuyond](https://docuyond.com/) offers flat monthly pricing with no per-message surprises:
+   
+   - **Free:** $0/month (5 documents, 200 AI replies)
+   - **Starter:** $19/month (20 documents, 2,000 AI replies, human escalation)
+
+--- Context around line 1702 ---
+   - **Standard:** $39/month (50 documents, 5,000 AI replies, self-learning AI)
+   - **Pro:** $79/month (100 documents, 10,000 AI replies, website crawling)
+   
+=> **Key differences:** Includes human escalation on all paid plans (Chatbase doesn't). Self-learning feature automatically improves 
+   
+   ### [Which Chatbot Pricing Model is Best for Small Business?](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#which-c
+   
+
+--- Context around line 1704 ---
+   
+   **Key differences:** Includes human escalation on all paid plans (Chatbase doesn't). Self-learning feature automatically improves 
+   
+=> ### [Which Chatbot Pricing Model is Best for Small Business?](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#which-c
+   
+   | If you need... | Best option | Why |
+   | --- | --- | --- |
+
+--- Context around line 1708 ---
+   
+   | If you need... | Best option | Why |
+   | --- | --- | --- |
+=> | Lowest starting price | Docuyond ($19/mo) | Flat pricing, includes escalation |
+   | Free tier for testing | Chatbase or Tidio | More free messages, but limited |
+   | Live chat + AI combined | Tidio ($68+/mo) | All-in-one platform |
+   | Enterprise features | Zendesk or Intercom | Built for large teams |
+
+--- Context around line 1709 ---
+   | If you need... | Best option | Why |
+   | --- | --- | --- |
+   | Lowest starting price | Docuyond ($19/mo) | Flat pricing, includes escalation |
+=> | Free tier for testing | Chatbase or Tidio | More free messages, but limited |
+   | Live chat + AI combined | Tidio ($68+/mo) | All-in-one platform |
+   | Enterprise features | Zendesk or Intercom | Built for large teams |
+   | Predictable billing | Docuyond or CustomGPT | No per-message/resolution fees |
+
+--- Context around line 1714 ---
+   | Enterprise features | Zendesk or Intercom | Built for large teams |
+   | Predictable billing | Docuyond or CustomGPT | No per-message/resolution fees |
+   
+=> **Bottom line:** Per-resolution pricing (Intercom) and credit-based pricing (Chatbase) can spiral quickly. For predictable costs w
+   
+   ## [What Drives AI Chatbot Pricing for Small Businesses](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#what-drives-
+   
+
+--- Context around line 1716 ---
+   
+   **Bottom line:** Per-resolution pricing (Intercom) and credit-based pricing (Chatbase) can spiral quickly. For predictable costs w
+   
+=> ## [What Drives AI Chatbot Pricing for Small Businesses](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#what-drives-
+   
+   Pricing comes down to content, compute, integrations, and ongoing operations.
+   
+
+--- Context around line 1718 ---
+   
+   ## [What Drives AI Chatbot Pricing for Small Businesses](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#what-drives-
+   
+=> Pricing comes down to content, compute, integrations, and ongoing operations.
+   
+   ### [Count Content and Ingestion Work](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#count-content-and-ingestion-wo
+   
+
+--- Context around line 1720 ---
+   
+   Pricing comes down to content, compute, integrations, and ongoing operations.
+   
+=> ### [Count Content and Ingestion Work](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#count-content-and-ingestion-wo
+   
+   Start by counting product pages, FAQs, and help articles. If you run an e-commerce store, export your product catalog to see how m
+   
+
+--- Context around line 1734 ---
+   
+   **Key takeaway:** A quick Shopify export reveals most ingestion requirements.
+   
+=> ### [Estimate Conversation and Query Costs](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#estimate-conversation-and
+   
+   Costs follow usage patterns. Use your analytics to track site traffic and estimate potential chatbot interactions.
+   
+
+--- Context around line 1747 ---
+   - Monthly conversations: 20 × 30 = 600 conversations
+   - Docuyond Starter tier: $19/month for up to 2,000 AI replies
+   
+=> **Docuyond pricing tiers:**
+   
+   - **Free:** $0/month (5 documents, 200 AI replies)
+   - **Starter:** $19/month (20 documents, 2,000 AI replies)
+
+--- Context around line 1756 ---
+   
+   **Key takeaway:** Costs scale with conversations, not just page count.
+   
+=> ### [Map Integrations and Routing](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#map-integrations-and-routing)
+   
+   Connecting to Zendesk, Gorgias, or Slack adds setup time but improves efficiency.
+   
+
+--- Context around line 1764 ---
+   
+   **Key takeaway:** Simple integrations reduce hidden connector costs.
+   
+=> ### [Plan for Maintenance](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#plan-for-maintenance)
+   
+   Bots need regular updates. Budget 2-6 hours monthly for:
+   
+
+--- Context around line 1774 ---
+   
+   **Pro tip:** Assign one person to review bot-captured answers weekly to maintain accuracy and relevance.
+   
+=> ## [Total Cost of Ownership and Hidden Expenses](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#total-cost-of-owners
+   
+   TCO = upfront setup + monthly subscription + indirect costs
+   
+
+--- Context around line 1778 ---
+   
+   TCO = upfront setup + monthly subscription + indirect costs
+   
+=> ### [Upfront vs Recurring Costs](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#upfront-vs-recurring-costs)
+   
+   **Upfront (one-time):**
+   
+
+--- Context around line 1792 ---
+   - Maintenance hours (2-6 hours)
+   - Optional: escalation handling time
+   
+=> ### [Hidden Costs to Consider](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#hidden-costs-to-consider)
+   
+   Common blind spots:
+   
+
+--- Context around line 1802 ---
+   
+   **Risk calculation:** Average order value × conversion drop × affected visits
+   
+=> **Key takeaway:** Docuyond's conversation limits are clear upfront—no surprise bills.
+   
+   ## [Pricing Models Compared](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#pricing-models-compared)
+   
+
+--- Context around line 1804 ---
+   
+   **Key takeaway:** Docuyond's conversation limits are clear upfront—no surprise bills.
+   
+=> ## [Pricing Models Compared](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#pricing-models-compared)
+   
+   ### [SaaS Subscriptions (Like Docuyond)](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#saas-subscriptions-like-docu
+   
+
+--- Context around line 1806 ---
+   
+   ## [Pricing Models Compared](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#pricing-models-compared)
+   
+=> ### [SaaS Subscriptions (Like Docuyond)](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#saas-subscriptions-like-docu
+   
+   **Pros:**
+   
+
+--- Context around line 1821 ---
+   
+   **Best for:** Small to medium businesses wanting predictable costs.
+   
+=> ### [Pay-As-You-Go Models](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#pay-as-you-go-models)
+   
+   **Pros:**
+   
+
+--- Context around line 1835 ---
+   
+   **Best for:** Highly variable or seasonal traffic.
+   
+=> ### [Self-Hosted Solutions](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#self-hosted-solutions)
+   
+   **Pros:**
+   
+
+--- Context around line 1850 ---
+   
+   **Best for:** Teams with dedicated technical resources.
+   
+=> ## [Simple Decision Framework](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#simple-decision-framework)
+   
+   ### [Step 1 — Define Success Metrics](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#step-1-define-success-metrics)
+   
+
+--- Context around line 1852 ---
+   
+   ## [Simple Decision Framework](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#simple-decision-framework)
+   
+=> ### [Step 1 — Define Success Metrics](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#step-1-define-success-metrics)
+   
+   Pick three KPIs:
+   
+
+--- Context around line 1862 ---
+   
+   Pull baseline data from your ticketing system before starting.
+   
+=> ### [Step 2 — Map Risk by Query Type](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#step-2-map-risk-by-query-type)
+   
+   Classify queries:
+   
+
+--- Context around line 1870 ---
+   - **Medium risk:** Shipping, orders → bot with human review
+   - **Low risk:** Product info, FAQ → fully automated
+   
+=> ### [Step 3 — Run a 7-14 Day Pilot](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#step-3-run-a-7-14-day-pilot)
+   
+   1. Select 4-8 high-traffic pages
+   2. Use Docuyond's free tier to test
+
+--- Context around line 1885 ---
+   - Reduction: 67%
+   - Time saved: 180 minutes/day
+   
+=> ### [Step 4 — Evaluate and Scale](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#step-4-evaluate-and-scale)
+   
+   Vendor checklist:
+   
+
+--- Context around line 1890 ---
+   Vendor checklist:
+   
+   - ✓ Works on your platform (WordPress, Shopify, custom sites)
+=> - ✓ Clear conversation limits
+   - ✓ Automatic answer learning
+   - ✓ Human escalation path
+   - ✓ GDPR compliance
+
+--- Context around line 1895 ---
+   - ✓ Human escalation path
+   - ✓ GDPR compliance
+   
+=> ## [Implementation and ROI Playbook](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#implementation-and-roi-playbook)
+   
+   ### [7-Day Quick Start](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#_7-day-quick-start)
+   
+
+--- Context around line 1897 ---
+   
+   ## [Implementation and ROI Playbook](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#implementation-and-roi-playbook)
+   
+=> ### [7-Day Quick Start](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#_7-day-quick-start)
+   
+   **Days 1-2: Content audit and preparation**
+   
+
+--- Context around line 1917 ---
+   - Track deflection rate
+   - Gather team feedback
+   
+=> ### [Calculate Your ROI](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#calculate-your-roi)
+   
+   **Simple ROI formula:**
+   
+
+--- Context around line 1941 ---
+   ROI (%) = ((Savings + Additional Revenue - Total Monthly Costs) / Total Monthly Costs) × 100
+   ```
+   
+=> ## [FAQs](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#faqs)
+   
+   **Q: How much should a small business budget for a chatbot?**
+   A: With Docuyond, $0-$79/month depending on conversation volume. Industry pricing ranges from $29-$499/month for standard plans. S
+
+--- Context around line 1944 ---
+   ## [FAQs](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#faqs)
+   
+   **Q: How much should a small business budget for a chatbot?**
+=> A: With Docuyond, $0-$79/month depending on conversation volume. Industry pricing ranges from $29-$499/month for standard plans. S
+   
+   **Q: Will it handle GDPR and data privacy?**
+   A: Yes, Docuyond includes data retention controls and DPA compliance. GDPR-compliant chatbots must obtain user consent, minimize d
+
+--- Context around line 1961 ---
+   **Q: How quickly will I see results?**
+   A: Most stores see measurable ticket reduction within 7-14 days. Businesses report reducing customer support costs by 30-80% with 
+   
+=> ## [Next Steps](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#next-steps)
+   
+   1. **Audit your support content** to assess content volume
+   2. **Start with Docuyond's free tier** (5 documents, 200 AI replies/month)
+
+--- Context around line 1971 ---
+   
+   Ready to reduce support costs? [Start your free Docuyond pilot today](https://docuyond.com/signup)—no credit card required for the
+   
+=> ## [Related Articles](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#related-articles)
+   
+   - **[Docuyond vs Chatbase (2026)](https://docuyond.com/blog/docuyond-vs-chatbase)** — Head-to-head pricing and feature comparison
+   - **[7 Best Customer Service Chatbots in 2026](https://docuyond.com/blog/best-customer-service-chatbots)** — Detailed comparison o
+
+--- Context around line 1973 ---
+   
+   ## [Related Articles](https://docuyond.com/blog/ai-chatbot-pricing-small-business\#related-articles)
+   
+=> - **[Docuyond vs Chatbase (2026)](https://docuyond.com/blog/docuyond-vs-chatbase)** — Head-to-head pricing and feature comparison
+   - **[7 Best Customer Service Chatbots in 2026](https://docuyond.com/blog/best-customer-service-chatbots)** — Detailed comparison o
+   - **[5 Questions to Ask When Choosing an AI Chatbot](https://docuyond.com/blog/5-questions-choosing-ai-chatbot)** — Evaluation fra
+   - **[7 Best Real Estate Chatbots in 2026](https://docuyond.com/blog/best-real-estate-chatbots)** — Comparison of Structurely, Ylop
+
+--- Context around line 1977 ---
+   - **[7 Best Customer Service Chatbots in 2026](https://docuyond.com/blog/best-customer-service-chatbots)** — Detailed comparison o
+   - **[5 Questions to Ask When Choosing an AI Chatbot](https://docuyond.com/blog/5-questions-choosing-ai-chatbot)** — Evaluation fra
+   - **[7 Best Real Estate Chatbots in 2026](https://docuyond.com/blog/best-real-estate-chatbots)** — Comparison of Structurely, Ylop
+=> - **[Tidio Pricing & Lyro AI in 2026: Full Breakdown](https://docuyond.com/blog/docuyond-vs-tidio)** — Tidio's add-on pricing mode
+   
+   _Note: All calculations and percentages in examples are illustrative. Actual results vary based on your specific implementation, t
+   
+
+--- Context around line 1985 ---
+   
+   Train an AI agent on your knowledge base to handle up to 67% of support questions instantly. Set up in 5 minutes, no coding requir
+   
+=> [Start Free Trial](https://docuyond.com/signup) [View All Plans](https://docuyond.com/#pricing)
+   
+   5-Minute Setup
+   
+
+--- Context around line 2003 ---
+   \\
+   Compare AI chat agents to human customer service with real data. See which performs better for speed, cost, satisfaction, and when
+   \\
+=> From $19/mo FAQ bots to $99/mo AI coaching clones. We compare 7 AI chatbots for course creators on pricing, student support, and p
+   
+   ![Logo](https://docuyond.com/widgets/047a6c7d-bb21-43d0-bdcb-5aa7536ec784/logo)
+   
+
+--- Context around line 2010 ---
+   ---
+   
+   ## 5. g2.com
+=> **URL:** https://www.g2.com/compare/botpress-vs-chatbase-chatbase
+   
+   Please enable JS and disable any ad blocker
+   
+
+==================================================
+FILE: synthetic_dataset_banking.md
+==================================================
+
+--- Context around line 74 ---
+   
+   Other (141)97%
+   
+=> How can I open a new bank account?To open a new bank account, visit our website and click on 'Open Account' or visit any of our br
+   
+   ## Data Explorer
+   
+
+--- Context around line 673 ---
+   
+   Banks and financial firms face a fundamental tension. On the one hand, they need vast amounts of data to train AI models that can 
+   
+=> Traditional approaches to this problem have been limited. Data anonymization techniques often fall short, and researchers have rep
+   
+   This is where synthetic data offers a compelling middle path. Instead of trying to strip identifying information from real data, s
+   
+
+--- Context around line 681 ---
+   
+   The process begins with analyzing the underlying structure of real financial data. Advanced machine learning models, often based o
+   
+=> Once trained, these models can generate unlimited amounts of synthetic data that preserves these relationships while creating enti
+   
+   The quality of synthetic data can be measured by how well it preserves the statistical properties of the original dataset. Good sy
+   
+
+--- Context around line 723 ---
+   
+   ### **2\. Bias inheritance**
+   
+=> Synthetic data inherits the biases embedded in the original dataset. If a bank’s historical lending data reflects discriminatory p
+   
+   **Governance tip:** Any synthetic data pipeline for credit, lending, or customer segmentation applications should include bias aud
+   
+
+--- Context around line 1012 ---
+   | [Using personnal question/replies in live chats](https://community.openai.com/t/using-personnal-question-replies-in-live-chats/6
+   | [Better format for knowledge base](https://community.openai.com/t/better-format-for-knowledge-base/743585)<br>[API](https://comm
+   | [What is the best way to give an Assistant knowledge about our product?](https://community.openai.com/t/what-is-the-best-way-to-
+=> | [Embedding a GPT in website](https://community.openai.com/t/embedding-a-gpt-in-website/484098)<br>[API](https://community.openai
+   
+   Topic list, column headers with buttons are sortable.
+   

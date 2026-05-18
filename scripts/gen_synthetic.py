@@ -2,7 +2,7 @@ from faker import Faker
 import pandas as pd
 import random
 
-fake = Faker(['es_PE', 'es_MX', 'es_CO'])
+fake = Faker(['es_MX', 'es_CO'])
 
 # 500 clientes sintéticos
 customers = []

@@ -1,0 +1,201 @@
+conv_id,user_question,bot_responded,escalated_to_human,resolution,response_time_ms
+1,¿Aceptan pagos en cuotas?,False,False,resolved,1339
+2,¿Cómo puedo cancelar mi cuenta?,True,False,resolved,1762
+3,¿Cómo puedo cancelar mi cuenta?,True,False,escalated,1330
+4,El pago no me procesó,True,False,escalated,1829
+5,¿Aceptan pagos en cuotas?,True,False,resolved,1282
+6,¿Cuáles son sus horarios de atención?,True,False,abandoned,1588
+7,¿Tienen sucursal en Miraflores?,False,False,resolved,1967
+8,¿Cuánto tarda el envío?,True,False,resolved,258
+9,¿Cómo restablezco mi contraseña?,True,False,abandoned,1458
+10,¿Cómo restablezco mi contraseña?,True,False,resolved,1502
+11,¿Cómo restablezco mi contraseña?,True,False,escalated,2235
+12,¿Tienen sucursal en Miraflores?,True,True,resolved,407
+13,¿Cuánto tarda el envío?,True,False,abandoned,2859
+14,Necesito hablar con un humano,False,False,resolved,1800
+15,¿Aceptan pagos en cuotas?,True,True,resolved,2401
+16,¿Cuál es la política de devoluciones?,True,False,escalated,2313
+17,¿Cómo puedo cancelar mi cuenta?,True,False,abandoned,2684
+18,¿Cuál es la política de devoluciones?,True,False,resolved,2271
+19,¿Cómo puedo cancelar mi cuenta?,False,False,resolved,2890
+20,El pago no me procesó,True,False,resolved,1142
+21,¿Cuánto tarda el envío?,True,True,resolved,2723
+22,¿Cuánto tarda el envío?,False,False,resolved,1334
+23,¿Cómo puedo cancelar mi cuenta?,True,False,resolved,1884
+24,El pago no me procesó,False,False,escalated,1523
+25,Necesito hablar con un humano,True,False,abandoned,2891
+26,Necesito hablar con un humano,True,False,escalated,1475
+27,¿Cómo restablezco mi contraseña?,True,False,resolved,1464
+28,¿Cómo puedo cancelar mi cuenta?,True,False,abandoned,1094
+29,¿Cómo restablezco mi contraseña?,True,False,resolved,1915
+30,¿Tienen sucursal en Miraflores?,True,False,abandoned,1887
+31,¿Cuál es la política de devoluciones?,True,False,abandoned,1033
+32,¿Aceptan pagos en cuotas?,True,False,resolved,1712
+33,¿Aceptan pagos en cuotas?,True,False,resolved,1817
+34,¿Cómo restablezco mi contraseña?,False,False,abandoned,805
+35,Necesito hablar con un humano,False,True,resolved,2351
+36,¿Aceptan pagos en cuotas?,True,False,resolved,502
+37,¿Cómo puedo cancelar mi cuenta?,True,True,resolved,1067
+38,¿Tienen sucursal en Miraflores?,True,False,resolved,503
+39,¿Aceptan pagos en cuotas?,True,False,resolved,2608
+40,¿Aceptan pagos en cuotas?,True,True,abandoned,2418
+41,¿Aceptan pagos en cuotas?,True,False,resolved,1802
+42,¿Cuánto tarda el envío?,False,True,abandoned,500
+43,¿Cómo restablezco mi contraseña?,True,False,escalated,2559
+44,¿Aceptan pagos en cuotas?,True,False,escalated,2387
+45,¿Cómo puedo cancelar mi cuenta?,True,False,resolved,1039
+46,¿Cómo restablezco mi contraseña?,True,False,escalated,2283
+47,¿Cuál es la política de devoluciones?,False,True,escalated,2786
+48,El pago no me procesó,False,False,abandoned,1009
+49,¿Aceptan pagos en cuotas?,True,False,escalated,2466
+50,¿Cuánto tarda el envío?,True,True,abandoned,2408
+51,¿Tienen sucursal en Miraflores?,False,False,resolved,1421
+52,¿Cómo puedo cancelar mi cuenta?,True,False,abandoned,1124
+53,Necesito hablar con un humano,True,False,escalated,2836
+54,¿Aceptan pagos en cuotas?,False,False,abandoned,463
+55,¿Tienen sucursal en Miraflores?,True,False,abandoned,789
+56,¿Cuáles son sus horarios de atención?,True,False,resolved,2355
+57,¿Aceptan pagos en cuotas?,True,True,abandoned,2975
+58,¿Tienen sucursal en Miraflores?,True,False,resolved,621
+59,¿Cuál es la política de devoluciones?,True,False,escalated,1488
+60,¿Aceptan pagos en cuotas?,True,False,resolved,1127
+61,¿Aceptan pagos en cuotas?,True,False,resolved,2108
+62,El pago no me procesó,True,False,abandoned,1960
+63,¿Cómo puedo cancelar mi cuenta?,False,False,escalated,2466
+64,¿Aceptan pagos en cuotas?,False,True,resolved,1048
+65,¿Cómo restablezco mi contraseña?,True,False,resolved,1797
+66,El pago no me procesó,False,False,resolved,1886
+67,¿Cuánto tarda el envío?,True,False,abandoned,1175
+68,¿Cuáles son sus horarios de atención?,True,False,resolved,2513
+69,El pago no me procesó,True,False,escalated,2395
+70,¿Cuál es la política de devoluciones?,True,False,resolved,1860
+71,¿Cuánto tarda el envío?,True,False,escalated,630
+72,El pago no me procesó,False,False,resolved,587
+73,¿Cómo puedo cancelar mi cuenta?,False,False,escalated,497
+74,¿Cómo puedo cancelar mi cuenta?,True,False,resolved,2559
+75,Necesito hablar con un humano,False,False,escalated,2917
+76,¿Cuáles son sus horarios de atención?,True,False,escalated,640
+77,¿Tienen sucursal en Miraflores?,True,False,resolved,1883
+78,¿Cuánto tarda el envío?,True,False,resolved,259
+79,¿Cuánto tarda el envío?,True,False,abandoned,783
+80,¿Cuáles son sus horarios de atención?,True,False,resolved,2347
+81,¿Cómo restablezco mi contraseña?,True,False,escalated,2335
+82,¿Aceptan pagos en cuotas?,True,False,escalated,2683
+83,¿Cómo restablezco mi contraseña?,False,False,abandoned,2083
+84,¿Cómo puedo cancelar mi cuenta?,True,False,resolved,2008
+85,¿Cuáles son sus horarios de atención?,True,True,abandoned,2344
+86,¿Cuánto tarda el envío?,True,False,escalated,605
+87,¿Aceptan pagos en cuotas?,False,False,escalated,1969
+88,Necesito hablar con un humano,True,False,resolved,407
+89,¿Cuál es la política de devoluciones?,False,False,abandoned,1677
+90,El pago no me procesó,True,False,abandoned,2386
+91,¿Aceptan pagos en cuotas?,True,False,escalated,1884
+92,¿Tienen sucursal en Miraflores?,True,False,escalated,375
+93,¿Cuáles son sus horarios de atención?,True,True,resolved,394
+94,El pago no me procesó,True,False,resolved,2914
+95,¿Cuáles son sus horarios de atención?,True,False,resolved,2129
+96,Necesito hablar con un humano,False,False,abandoned,1970
+97,¿Cómo restablezco mi contraseña?,False,True,resolved,2738
+98,¿Tienen sucursal en Miraflores?,True,False,resolved,2495
+99,¿Cuál es la política de devoluciones?,True,False,abandoned,1199
+100,¿Cuáles son sus horarios de atención?,True,False,escalated,880
+101,Necesito hablar con un humano,False,True,abandoned,1616
+102,¿Cómo puedo cancelar mi cuenta?,False,True,resolved,2144
+103,¿Cuáles son sus horarios de atención?,True,False,abandoned,1667
+104,¿Cómo restablezco mi contraseña?,True,False,abandoned,1860
+105,¿Cómo puedo cancelar mi cuenta?,True,False,abandoned,2129
+106,El pago no me procesó,True,True,resolved,2146
+107,El pago no me procesó,True,False,resolved,1061
+108,¿Tienen sucursal en Miraflores?,True,False,resolved,1484
+109,¿Aceptan pagos en cuotas?,True,False,abandoned,2428
+110,Necesito hablar con un humano,True,False,resolved,1142
+111,¿Cómo puedo cancelar mi cuenta?,False,False,resolved,445
+112,¿Cómo restablezco mi contraseña?,True,True,escalated,1107
+113,¿Cuánto tarda el envío?,True,False,abandoned,2230
+114,¿Cuáles son sus horarios de atención?,True,True,resolved,1796
+115,Necesito hablar con un humano,True,False,resolved,2159
+116,¿Cuál es la política de devoluciones?,True,False,abandoned,2876
+117,¿Cómo puedo cancelar mi cuenta?,True,True,escalated,2820
+118,¿Cuál es la política de devoluciones?,True,False,resolved,1715
+119,¿Cuál es la política de devoluciones?,True,False,resolved,1420
+120,¿Cómo puedo cancelar mi cuenta?,True,False,abandoned,1769
+121,Necesito hablar con un humano,True,False,abandoned,473
+122,¿Cuáles son sus horarios de atención?,True,False,escalated,1317
+123,¿Cuánto tarda el envío?,True,False,resolved,677
+124,¿Cómo restablezco mi contraseña?,True,False,resolved,2241
+125,¿Cuál es la política de devoluciones?,True,False,resolved,2145
+126,¿Cómo puedo cancelar mi cuenta?,True,False,resolved,2939
+127,¿Cuál es la política de devoluciones?,True,False,escalated,2003
+128,¿Cuál es la política de devoluciones?,True,False,escalated,1544
+129,Necesito hablar con un humano,True,False,resolved,2299
+130,¿Cómo restablezco mi contraseña?,False,False,resolved,2916
+131,¿Tienen sucursal en Miraflores?,True,False,resolved,1634
+132,¿Cuál es la política de devoluciones?,True,True,resolved,1419
+133,El pago no me procesó,False,False,escalated,2993
+134,¿Tienen sucursal en Miraflores?,True,True,resolved,1475
+135,¿Cómo puedo cancelar mi cuenta?,True,False,escalated,2995
+136,¿Aceptan pagos en cuotas?,True,False,resolved,266
+137,¿Cuánto tarda el envío?,True,False,abandoned,1510
+138,¿Aceptan pagos en cuotas?,True,False,resolved,783
+139,¿Cómo restablezco mi contraseña?,True,False,abandoned,633
+140,¿Tienen sucursal en Miraflores?,True,True,resolved,352
+141,¿Cuáles son sus horarios de atención?,True,True,resolved,1058
+142,Necesito hablar con un humano,True,False,resolved,2066
+143,¿Cómo restablezco mi contraseña?,True,False,resolved,2085
+144,¿Cómo restablezco mi contraseña?,True,False,resolved,2036
+145,¿Tienen sucursal en Miraflores?,True,False,resolved,499
+146,¿Cuánto tarda el envío?,True,True,resolved,2927
+147,El pago no me procesó,True,False,escalated,1535
+148,¿Cuánto tarda el envío?,True,False,resolved,2230
+149,¿Cuáles son sus horarios de atención?,True,True,resolved,2331
+150,¿Cómo restablezco mi contraseña?,False,False,abandoned,1073
+151,El pago no me procesó,False,False,abandoned,201
+152,¿Cómo puedo cancelar mi cuenta?,True,False,resolved,1024
+153,El pago no me procesó,True,False,escalated,1000
+154,Necesito hablar con un humano,True,True,resolved,533
+155,¿Cuáles son sus horarios de atención?,True,True,abandoned,1088
+156,Necesito hablar con un humano,False,True,escalated,948
+157,¿Cuánto tarda el envío?,True,True,resolved,2497
+158,Necesito hablar con un humano,True,True,escalated,388
+159,¿Cómo puedo cancelar mi cuenta?,True,False,resolved,2940
+160,¿Cuáles son sus horarios de atención?,True,False,resolved,1384
+161,¿Cuánto tarda el envío?,False,False,resolved,2003
+162,¿Aceptan pagos en cuotas?,False,False,resolved,2261
+163,¿Cuáles son sus horarios de atención?,True,False,abandoned,2980
+164,El pago no me procesó,True,True,abandoned,1363
+165,¿Cuánto tarda el envío?,False,False,abandoned,1430
+166,¿Tienen sucursal en Miraflores?,True,False,escalated,1888
+167,¿Tienen sucursal en Miraflores?,True,False,abandoned,1834
+168,¿Aceptan pagos en cuotas?,False,False,escalated,2526
+169,¿Aceptan pagos en cuotas?,True,True,abandoned,1291
+170,¿Cuánto tarda el envío?,True,False,escalated,2876
+171,¿Cómo restablezco mi contraseña?,True,True,escalated,1876
+172,¿Cómo restablezco mi contraseña?,False,False,escalated,2409
+173,El pago no me procesó,True,False,resolved,2569
+174,Necesito hablar con un humano,False,False,resolved,1060
+175,¿Cuánto tarda el envío?,False,False,escalated,932
+176,¿Aceptan pagos en cuotas?,True,True,resolved,2474
+177,¿Aceptan pagos en cuotas?,False,True,abandoned,533
+178,El pago no me procesó,False,False,resolved,1031
+179,¿Cómo restablezco mi contraseña?,True,True,resolved,2395
+180,El pago no me procesó,True,True,resolved,2951
+181,¿Cómo puedo cancelar mi cuenta?,False,True,abandoned,957
+182,¿Cuál es la política de devoluciones?,False,False,abandoned,771
+183,El pago no me procesó,True,False,resolved,1477
+184,¿Tienen sucursal en Miraflores?,False,False,abandoned,2916
+185,¿Aceptan pagos en cuotas?,False,False,resolved,2660
+186,¿Cuál es la política de devoluciones?,True,True,escalated,1761
+187,¿Tienen sucursal en Miraflores?,True,True,resolved,1432
+188,¿Cuáles son sus horarios de atención?,False,False,escalated,1785
+189,¿Cuál es la política de devoluciones?,True,True,resolved,1335
+190,Necesito hablar con un humano,True,True,resolved,1655
+191,¿Aceptan pagos en cuotas?,True,True,escalated,2548
+192,El pago no me procesó,True,True,escalated,2071
+193,Necesito hablar con un humano,False,False,resolved,1675
+194,El pago no me procesó,True,True,resolved,2516
+195,¿Aceptan pagos en cuotas?,True,True,resolved,516
+196,¿Aceptan pagos en cuotas?,True,False,resolved,1700
+197,¿Cuáles son sus horarios de atención?,False,False,resolved,1744
+198,¿Tienen sucursal en Miraflores?,True,True,resolved,2325
+199,¿Tienen sucursal en Miraflores?,True,True,abandoned,735
+200,¿Cuánto tarda el envío?,True,True,abandoned,966

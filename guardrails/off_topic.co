@@ -1,0 +1,5 @@
+define flow check off topic
+  $off_topic = execute check_off_topic
+  if $off_topic
+    bot say "Solo puedo responder preguntas relacionadas con nuestros servicios."
+    stop

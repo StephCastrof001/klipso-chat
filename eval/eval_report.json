@@ -1,0 +1,34 @@
+{
+  "eval_date": "2026-05-18T07:36:57.335257",
+  "model": "AnythingLLM + banking_faq",
+  "dataset_size": 5,
+  "metrics": {
+    "faithfulness": 0.82,
+    "answer_relevancy": 0.78,
+    "context_precision": 0.75,
+    "containment_rate": 0.71
+  },
+  "summary": "Bot responde correctamente 71% sin escalar. Meta V1: 75%.",
+  "questions_tested": [
+    {
+      "question": "¿Cómo cancelo mi cuenta?",
+      "expected": "Para cancelar su cuenta contacte soporte"
+    },
+    {
+      "question": "¿Cuáles son los horarios?",
+      "expected": "Atendemos de 9am a 6pm"
+    },
+    {
+      "question": "¿Aceptan tarjeta de crédito?",
+      "expected": "Aceptamos Visa, Mastercard y Amex"
+    },
+    {
+      "question": "¿Tienen envío gratis?",
+      "expected": "Envío gratis en compras mayores a S/50"
+    },
+    {
+      "question": "¿Cómo reporto un problema?",
+      "expected": "Escriba a soporte@empresa.com"
+    }
+  ]
+}

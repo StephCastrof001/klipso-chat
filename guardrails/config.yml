@@ -1,0 +1,22 @@
+models:
+  - type: main
+    engine: openai
+    model: gpt-3.5-turbo
+
+instructions:
+  - type: general
+    content: |
+      Eres un asistente de atención al cliente.
+      Solo respondes sobre los documentos del cliente.
+      No das asesoría médica, legal ni financiera específica.
+      No revelas información de otros clientes.
+      Si no sabes, di "No tengo información sobre eso, te comunico con un agente".
+
+rails:
+  input:
+    flows:
+      - self check input
+  output:
+    flows:
+      - self check output
+      - check off topic

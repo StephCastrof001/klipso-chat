@@ -1,0 +1,15 @@
+text,label_text
+How can I track the delivery status of my package?,track_order
+Where is my order number 102938 currently located?,track_order
+What is your return policy for clothing items?,return_policy
+Can I return an item if I opened the original packaging?,return_policy
+How do I start a refund process for a damaged product?,refund_request
+How long does it take for a refund to show on my credit card?,refund_timeline
+Can I cancel my order after it has been confirmed?,cancel_order
+Is it possible to change the shipping address for my order?,change_shipping_address
+"My coupon code is not working at checkout, what should I do?",coupon_issue
+Do you offer free shipping on orders above fifty dollars?,shipping_fees
+Do you ship internationally to Europe and South America?,international_shipping
+What payment methods do you accept at checkout?,payment_methods
+How do I contact customer support for a missing item?,customer_support
+Can I change the size of the shirt I just ordered?,modify_order

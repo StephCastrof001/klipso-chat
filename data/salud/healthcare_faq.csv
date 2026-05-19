@@ -1,0 +1,15 @@
+text,label_text
+How do I schedule an appointment with a general doctor?,schedule_appointment
+I want to book a virtual consultation with a specialist.,schedule_appointment
+Is it possible to reschedule my appointment for next Tuesday?,reschedule_appointment
+How can I cancel my doctor appointment for tomorrow?,cancel_appointment
+Can I request a prescription refill through the patient portal?,prescription_refill
+"My doctor prescribed a medication, how do I get a refill?",prescription_refill
+Where can I view the results of my latest blood test?,view_lab_results
+Are my lab reports available online yet?,view_lab_results
+What should I do if I have a sudden medical emergency?,medical_emergency
+Who do I contact for urgent medical care?,medical_emergency
+How do I update my health insurance provider details?,insurance_update
+Is my current insurance plan accepted at your clinic?,insurance_check
+Can I pay my medical bill online using a credit card?,bill_payment
+How do I get a copy of my medical records?,medical_records

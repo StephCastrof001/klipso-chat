@@ -38,9 +38,6 @@ Workspace principal optimizado para responder consultas financieras y de atenci�
 | Dataset | Propósito | Fuente / Origen |
 | :--- | :--- | :--- |
 | **`data/banking77_train.csv`** | Base de conocimientos RAG y evaluación RAG. 10,000 preguntas reales de banca comercial clasificadas en 77 intenciones. | [PolyAI Banking77 (HuggingFace)](https://huggingface.co/datasets/PolyAI/banking77) |
-| **`data/adversarial_banking.csv`** | Pruebas de Red-Teaming y robustez del modelo frente a ataques. | Curado para pruebas de inyección/jailbreak |
-| **`data/synthetic_customers_500.csv`** | 500 perfiles de clientes de prueba sin PII real. | Generado sintéticamente con Faker + SDV |
-| **`data/synthetic_conversations_200.csv`** | 200 historiales de chat simulados para análisis de flujos conversacionales complejos. | Generado sintéticamente con Faker + LLMs |
 | **`data/salud/healthcare_faq.csv`** | Preguntas y respuestas frecuentes de atención médica (citas, recetas, laboratorio) para demostración multisector. | Sintético estructurado con estructura similar a `banking77` |
 | **`data/ecommerce/ecommerce_faq.csv`** | Consultas frecuentes de comercio electrónico (envíos, devoluciones, cupones, tracking) para demostración multisector. | Sintético estructurado con estructura similar a `banking77` |
 
@@ -107,3 +104,15 @@ FIRECRAWL_API_KEY=your_firecrawl_api_key_here
 ```
 
 *Nota: Por motivos de seguridad de la infraestructura bancaria, los valores reales de producción se inyectan a través de las variables de entorno del sistema operativo en el host EC2 y nunca deben ser expuestos en el código fuente ni subidos al repositorio git.*
+
+---
+
+## 🗺️ Roadmap - Datasets Pendientes
+
+Los siguientes conjuntos de datos están planificados para futuras fases de pruebas avanzadas y simulaciones complejas de RAG:
+
+| Dataset | Propósito | Fuente / Origen | Estado |
+| :--- | :--- | :--- | :--- |
+| **`data/adversarial_banking.csv`** | Pruebas de Red-Teaming y robustez del modelo frente a ataques. | Curado para pruebas de inyección/jailbreak | ⏳ Pendiente |
+| **`data/synthetic_customers_500.csv`** | 500 perfiles de clientes de prueba sin PII real. | Generado sintéticamente con Faker + SDV | ⏳ Pendiente |
+| **`data/synthetic_conversations_200.csv`** | 200 historiales de chat simulados para análisis de flujos conversacionales complejos. | Generado sintéticamente con Faker + LLMs | ⏳ Pendiente |
